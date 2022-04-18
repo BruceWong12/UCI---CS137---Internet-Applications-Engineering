@@ -1,0 +1,56 @@
+html, body {
+    font: 15px/1.5 Arial, Helvetica,sans-serif;
+    padding:0;
+    margin:0;
+    background-color:white; /*#f4f4f4;*/
+    height: 100%;
+    position: relative;
+}
+
+
+.topNav {
+    /*position: relative;*/
+    background-color: lightyellow;/*#333;*/
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topNav a {
+    float: left;
+    color: black; /*#f2f2f2;*/
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 12px;/*17px;*/
+    font-family: Tahoma, Verdana, Arial, sans-serif; /* RG: added this */
+}
+
+/* Change the color of links on hover */
+.topNav a:hover {
+    background-color: #ddd;
+    color: black;
+    font-weight: bold;
+}
+
+/* Add a color to the active/current link */
+.topNav a.active{
+    background-color: orange; /*#4CAF50;*/
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;   font-weight: bold;
+    font-style : italic;
+}
+
+/* Right-aligned section inside the top navigation */
+.topNav-right {
+    float: right;
+}
+
+.intro{
+    font-family: "ui-rounded";
+    font-size: 40px;
+    background-color: white;
+    margin: 1px;
+    text-align: center;
+    line-height: 80%;
+
+}
