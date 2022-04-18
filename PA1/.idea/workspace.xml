@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f673c8f3-68a5-4da4-a013-5fcd82fd7bf8" name="Changes" comment="update the computer_cases_category">
-      <change afterPath="$PROJECT_DIR$/products/memory(ram)/memory(ram).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f673c8f3-68a5-4da4-a013-5fcd82fd7bf8" name="Changes" comment="update the memory_category" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,8 +55,16 @@
       <updated>1650240895394</updated>
       <workItem from="1650240896540" duration="7732000" />
       <workItem from="1650261567674" duration="5911000" />
-      <workItem from="1650269170903" duration="750000" />
+      <workItem from="1650269170903" duration="969000" />
     </task>
+    <task id="LOCAL-00001" summary="update the memory_category">
+      <created>1650270136245</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1650270136245</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -75,5 +80,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update the memory_category" />
+    <option name="LAST_COMMIT_MESSAGE" value="update the memory_category" />
   </component>
 </project>
