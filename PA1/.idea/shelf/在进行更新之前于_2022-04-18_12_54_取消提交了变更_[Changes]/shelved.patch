@@ -1,0 +1,100 @@
+Index: products.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <title>Product Categories</title>\r\n    <meta charset=\"UTF-8\">\r\n    <link href=\"./css/style.css\" rel=\"stylesheet\">\r\n    <link href=\"./css/products.css\" rel =\"stylesheet\">\r\n<!--    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\"-->\r\n<!--          integrity=\"sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3\" crossorigin=\"anonymous\">-->\r\n    <!-- JavaScript Bundle with Popper -->\r\n<!--    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\"-->\r\n<!--            integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>-->\r\n    <header>\r\n        <div class=\"topNav\">\r\n            <!-- Left-aligned links -->\r\n            <a href=\"index.html\">Home</a>\r\n            <!-- https://www.w3schools.com/howto/howto_css_subnav.asp -->\r\n            <!--<a href=\"#about\">About</a>-->\r\n            <a class=\"active\" href = \"../../products.html\">Products</a>\r\n            <a href=\"team.html\">Team</a>\r\n            <!-- <a href=\"#careers\">Careers</a> -->\r\n            <a href=\"contact.html\">Contact</a>\r\n\r\n            <!-- Right-aligned links-->\r\n            <div class=\"topNav-right\">\r\n                <!--<a href=\"#search\">Search</a>-->\r\n                <a href=\"shoppingcart.html\"><i class=\"fas fa-shopping-cart\"></i> Shopping Cart</a>\r\n            </div>\r\n        </div>\r\n    </header>\r\n</head>\r\n<body>\r\n<h1 style=\"font-family: ui-rounded;font-size: 40px\">Categories</h1>\r\n\r\n<!--Product Categories -->\r\n\r\n<main-container>\r\n    <div class=\"basic-grid\">\r\n        <div class=\"card\"><!--1-->\r\n            <a href=\"./products/productcategory_ps4.html\">\r\n                <img class= \"product-img\" src=\"img/storage.jpg\" alt=\"storage\">\r\n                <h2 style=\"alignment-baseline: baseline;alignment: center\">Hard Drives, SSD & Storage</h2>\r\n            </a>\r\n        </div>\r\n        <div class=\"card\"><!--2-->\r\n            <a href=\"./products/productcategory_xbox.html\">\r\n                <img class= \"product-img\" src=\"img/graphicCard.jpg\" alt=\"Video Graphics Cards\">\r\n                <h2 style=\"alignment-baseline: baseline;alignment: center\">Video Graphics Cards</h2>\r\n            </a>\r\n        </div>\r\n        <div class=\"card\"><!--3-->\r\n            <a href=\"./products/productcategory_switch.html\">\r\n                <img class= \"product-img\" src=\"img/cpu.jpg\" alt=\"CPUs & Processors\">\r\n                <h2 style=\"alignment-baseline: baseline;alignment: center\">CPUs & Processors</h2>\r\n            </a>\r\n        </div>\r\n        <div class=\"card\"><!--4-->\r\n            <a href=\"./products/productcategory_pc.html\">\r\n                <img class= \"product-img\" src=\"img/RAM.jpeg\" alt=\"Memory (RAM)\">\r\n                <h2 style=\"alignment-baseline: baseline;alignment: center\">Memory (RAM)</h2>\r\n            </a>\r\n        </div>\r\n        <div class=\"card\"><!--5-->\r\n            <a href=\"./products/productcategory_accessories.html\">\r\n                <img class= \"product-img\" src=\"img/motherboard.jpeg\" alt=\"Accessories\">\r\n                <h2 >Motherboards</h2>\r\n            </a>\r\n        </div>\r\n        <div class=\"card\"><!--6-->\r\n            <a href=\"./products/computer_cases/computer_cases_category.html\">\r\n                <img class=\"product-img\" src=\"img/computercases.jpeg\" alt=\"Computer Cases\">\r\n                <h2>Computer Cases</h2>\r\n            </a>\r\n        </div>\r\n        <div class=\"card\"><!--7-->\r\n            <a href=\"./products/productcategory_apparel.html\">\r\n                <img class=\"product-img\" src=\"img/powerSupply.jpg\" alt=\"Power Supplies\">\r\n                <h2>Power Supplies</h2>\r\n            </a>\r\n        </div>\r\n        <div class=\"card\"><!--7-->\r\n            <a href=\"./products/productcategory_apparel.html\">\r\n                <img class=\"product-img\" src=\"img/fans.jpg\" alt=\"Fans, Heatsinks & Cooling\">\r\n                <h2>Fans, Heatsinks & Cooling</h2>\r\n            </a>\r\n        </div>\r\n    </div>\r\n</main-container>\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/products.html b/products.html
+--- a/products.html	(revision dcc956ee87f2de9bbee351c7bd68287378362df3)
++++ b/products.html	(date 1650310594013)
+@@ -5,11 +5,6 @@
+     <meta charset="UTF-8">
+     <link href="./css/style.css" rel="stylesheet">
+     <link href="./css/products.css" rel ="stylesheet">
+-<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"-->
+-<!--          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">-->
+-    <!-- JavaScript Bundle with Popper -->
+-<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"-->
+-<!--            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
+     <header>
+         <div class="topNav">
+             <!-- Left-aligned links -->
+Index: .idea/PA1.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module type=\"WEB_MODULE\" version=\"4\">\r\n  <component name=\"NewModuleRootManager\">\r\n    <content url=\"file://$MODULE_DIR$\">\r\n      <excludeFolder url=\"file://$MODULE_DIR$/temp\" />\r\n      <excludeFolder url=\"file://$MODULE_DIR$/.tmp\" />\r\n      <excludeFolder url=\"file://$MODULE_DIR$/tmp\" />\r\n    </content>\r\n    <orderEntry type=\"inheritedJdk\" />\r\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/PA1.iml b/.idea/PA1.iml
+--- a/.idea/PA1.iml	(revision dcc956ee87f2de9bbee351c7bd68287378362df3)
++++ b/.idea/PA1.iml	(date 1650307034089)
+@@ -8,5 +8,6 @@
+     </content>
+     <orderEntry type="inheritedJdk" />
+     <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="module" module-name="PA-1" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectModuleManager\">\r\n    <modules>\r\n      <module fileurl=\"file://$PROJECT_DIR$/.idea/PA1.iml\" filepath=\"$PROJECT_DIR$/.idea/PA1.iml\" />\r\n    </modules>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+--- a/.idea/modules.xml	(revision dcc956ee87f2de9bbee351c7bd68287378362df3)
++++ b/.idea/modules.xml	(date 1650307034172)
+@@ -2,6 +2,7 @@
+ <project version="4">
+   <component name="ProjectModuleManager">
+     <modules>
++      <module fileurl="file://$PROJECT_DIR$/../../reference/e-commerce-master/PA-1/.idea/PA-1.iml" filepath="$PROJECT_DIR$/../../reference/e-commerce-master/PA-1/.idea/PA-1.iml" />
+       <module fileurl="file://$PROJECT_DIR$/.idea/PA1.iml" filepath="$PROJECT_DIR$/.idea/PA1.iml" />
+     </modules>
+   </component>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"f673c8f3-68a5-4da4-a013-5fcd82fd7bf8\" name=\"Changes\" comment=\"update the memory_category\">\r\n      <change afterPath=\"$PROJECT_DIR$/contact.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/products/computer_cases/computer_cases_detail_iCUE.html\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/team.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/index.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/index.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/products.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/products.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/products/computer_cases/computer_cases_category.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/products/computer_cases/computer_cases_category.html\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"JavaScript File\" />\r\n        <option value=\"HTML File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"27wpF0icdCrOkNASO6ixyO9gCcB\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;D:/Documents/Lectures of Courses in UCI/CS137 Internet Application/UCI-CS137-Internet-Applications-Engineering/PA1/products/video_craphics_cards&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"D:\\Documents\\Lectures of Courses in UCI\\CS137 Internet Application\\UCI-CS137-Internet-Applications-Engineering\\PA1\\products\\video_craphics_cards\" />\r\n      <recent name=\"D:\\Documents\\Lectures of Courses in UCI\\CS137 Internet Application\\UCI-CS137-Internet-Applications-Engineering\\PA1\\products\\motherboards\" />\r\n      <recent name=\"D:\\Documents\\Lectures of Courses in UCI\\CS137 Internet Application\\UCI-CS137-Internet-Applications-Engineering\\PA1\\products\\memory(ram)\" />\r\n      <recent name=\"D:\\Documents\\Lectures of Courses in UCI\\CS137 Internet Application\\UCI-CS137-Internet-Applications-Engineering\\PA1\\products\\hard_drives_&amp;_ssd_&amp;_storage\" />\r\n      <recent name=\"D:\\Documents\\Lectures of Courses in UCI\\CS137 Internet Application\\UCI-CS137-Internet-Applications-Engineering\\PA1\\img\\products\\cpus_&amp;_processors\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"f673c8f3-68a5-4da4-a013-5fcd82fd7bf8\" name=\"Changes\" comment=\"\" />\r\n      <created>1650240895394</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1650240895394</updated>\r\n      <workItem from=\"1650240896540\" duration=\"7732000\" />\r\n      <workItem from=\"1650261567674\" duration=\"5911000\" />\r\n      <workItem from=\"1650269170903\" duration=\"969000\" />\r\n      <workItem from=\"1650271020638\" duration=\"1282000\" />\r\n      <workItem from=\"1650273140337\" duration=\"2497000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"update the memory_category\">\r\n      <created>1650270136245</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1650270136245</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"update the memory_category\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"update the memory_category\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision dcc956ee87f2de9bbee351c7bd68287378362df3)
++++ b/.idea/workspace.xml	(date 1650311305107)
+@@ -2,13 +2,10 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="f673c8f3-68a5-4da4-a013-5fcd82fd7bf8" name="Changes" comment="update the memory_category">
+-      <change afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/products/computer_cases/computer_cases_detail_iCUE.html" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/team.html" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/PA1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PA1.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/products.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/products/computer_cases/computer_cases_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/computer_cases/computer_cases_category.html" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -25,6 +22,7 @@
+   </component>
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
++    <option name="UPDATE_TYPE" value="REBASE" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+@@ -67,6 +65,7 @@
+       <workItem from="1650269170903" duration="969000" />
+       <workItem from="1650271020638" duration="1282000" />
+       <workItem from="1650273140337" duration="2497000" />
++      <workItem from="1650304946706" duration="2671000" />
+     </task>
+     <task id="LOCAL-00001" summary="update the memory_category">
+       <created>1650270136245</created>

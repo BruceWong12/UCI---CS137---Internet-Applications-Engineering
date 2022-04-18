@@ -5,58 +5,21 @@
     <link href="../../css/style.css" rel="stylesheet">
     <link href="../../css/products.css" rel="stylesheet">
     <link href="../../css/product_category.css" rel ="stylesheet">
-    <!-- internal css -->
-    <style>
-    </style>
 
-
-    <!-- JavaScript -->
-    <script type="text/javascript">
-        $(document).ready(function () {
-            /* Go to Top Button */
-            var elmClass = '.gotopbtn'; // Adjust this accordingly.
-
-            //Check to see if the window is top if not then display button
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 300) { // 300px from top
-                    $(elmClass).fadeIn();
-                } else {
-                    $(elmClass).fadeOut();
-                }
-            });
-
-            //Click event to scroll to top
-            $(elmClass).click(function () {
-                $('html, body').animate({ scrollTop: 0 }, 800);
-                return false;
-            });
-            /*----------------------------*/
-        });
-        function openSearch() {
-            document.getElementById("myOverlay").style.display = "block";
-        }
-
-        function closeSearch() {
-            document.getElementById("myOverlay").style.display = "none";
-        }
-    </script>
     <script src="../../js/product_category.js"></script>
     <header>
         <div class="topNav">
             <!-- Left-aligned links -->
-            <!--<a id="topnav-logo" href="index.html"><img src="img/logo_placeholder.png" alt="Logo"></a>-->
-            <a href="index.html">Home</a>
+
+            <a href="../../index.html">Home</a>
             <!-- https://www.w3schools.com/howto/howto_css_subnav.asp -->
-            <!--<a href="#about">About</a>-->
-            <a class="active" href = "products.html">Products</a>
-            <a href="team.html">Team</a>
-            <!-- <a href="#careers">Careers</a> -->
-            <a href="contact.html">Contact</a>
+            <a class="active" href = "../../products.html">Products</a>
+            <a href="../../team.html">Team</a>
+            <a href="../../contact.html">Contact</a>
 
             <!-- Right-aligned links-->
             <div class="topNav-right">
-                <!--<a href="#search">Search</a>-->
-                <a href="shoppingcart.html"><i class="fas fa-shopping-cart"></i> Shopping Cart</a>
+                <a><i class="fas fa-shopping-cart"></i>Shopping Cart</a>
             </div>
         </div>
     </header>
@@ -66,7 +29,7 @@
 <!-- Computer Cases Categories -->
 <div class="main-container">
     <div class="main">
-        <p><a href="../products.html">Back to Products Page</a></p>
+        <a href="../../products.html"><button>Back to Products Page</button></a>
 
         <!-- Product Table -->
         <div class="product-table">
