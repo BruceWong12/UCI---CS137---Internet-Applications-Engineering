@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-
-    <list default="true" id="f673c8f3-68a5-4da4-a013-5fcd82fd7bf8" name="Changes" comment="update the memory_category" />
-
+    <list default="true" id="f673c8f3-68a5-4da4-a013-5fcd82fd7bf8" name="Changes" comment="update the memory_category">
+      <change afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/computer_cases/computer_cases_detail_iCUE.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/team.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/products.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/computer_cases/computer_cases_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/computer_cases/computer_cases_category.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-
         <option value="HTML File" />
-
       </list>
     </option>
   </component>
@@ -31,33 +35,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Documents/Lectures of Courses in UCI/CS137 Internet Application/UCI-CS137-Internet-Applications-Engineering/PA1/products/video_craphics_cards&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Documents/Lectures of Courses in UCI/CS137 Internet Application/UCI-CS137-Internet-Applications-Engineering/PA1/products/memory(ram)",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Documents\Lectures of Courses in UCI\CS137 Internet Application\UCI-CS137-Internet-Applications-Engineering\PA1\products\video_craphics_cards" />
+      <recent name="D:\Documents\Lectures of Courses in UCI\CS137 Internet Application\UCI-CS137-Internet-Applications-Engineering\PA1\products\motherboards" />
       <recent name="D:\Documents\Lectures of Courses in UCI\CS137 Internet Application\UCI-CS137-Internet-Applications-Engineering\PA1\products\memory(ram)" />
       <recent name="D:\Documents\Lectures of Courses in UCI\CS137 Internet Application\UCI-CS137-Internet-Applications-Engineering\PA1\products\hard_drives_&amp;_ssd_&amp;_storage" />
       <recent name="D:\Documents\Lectures of Courses in UCI\CS137 Internet Application\UCI-CS137-Internet-Applications-Engineering\PA1\img\products\cpus_&amp;_processors" />
-      <recent name="D:\Documents\Lectures of Courses in UCI\CS137 Internet Application\UCI-CS137-Internet-Applications-Engineering\PA1\img\products\power_supplies" />
     </key>
   </component>
-
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -67,9 +63,10 @@
       <option name="presentableId" value="Default" />
       <updated>1650240895394</updated>
       <workItem from="1650240896540" duration="7732000" />
-
       <workItem from="1650261567674" duration="5911000" />
       <workItem from="1650269170903" duration="969000" />
+      <workItem from="1650271020638" duration="1282000" />
+      <workItem from="1650273140337" duration="2497000" />
     </task>
     <task id="LOCAL-00001" summary="update the memory_category">
       <created>1650270136245</created>
@@ -79,13 +76,11 @@
       <updated>1650270136245</updated>
     </task>
     <option name="localTasksCounter" value="2" />
-
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -101,5 +96,4 @@
     <MESSAGE value="update the memory_category" />
     <option name="LAST_COMMIT_MESSAGE" value="update the memory_category" />
   </component>
-
 </project>
