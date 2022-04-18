@@ -3,6 +3,14 @@ table, th, td {
     padding: 10px;
 }
 
+button{
+    background-color: orange;
+    font-family: ui-rounded;
+    border: 0px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
 .productcategory-card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
