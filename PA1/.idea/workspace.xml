@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f673c8f3-68a5-4da4-a013-5fcd82fd7bf8" name="Changes" comment="update the memory_category">
-      <change afterPath="$PROJECT_DIR$/products/computer_cases/computer_cases_detail_H501i.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products/cpus_&amp;_processors/cpus_&amp;_processors_category_detail_Core_i7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products/cpus_&amp;_processors/cpus_&amp;_processors_category_detail_Ryzen_9.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category_Kraken_Z63.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category_iCUE_H100i.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products/mouses/mouses_catgory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/computer_cases/computer_cases_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/computer_cases/computer_cases_category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/cpus_&amp;_processors/cpus_&amp;_processors_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/cpus_&amp;_processors/cpus_&amp;_processors_category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html" afterDir="false" />
-    </list>
+    <list default="true" id="f673c8f3-68a5-4da4-a013-5fcd82fd7bf8" name="Changes" comment="update the details&#10;- computer cases&#10;- cpus&#10;- fans" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,16 +27,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Documents/Lectures of Courses in UCI/CS137 Internet Application/UCI-CS137-Internet-Applications-Engineering/PA1/products/fans_heatsinks_cooling",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Documents/Lectures of Courses in UCI/CS137 Internet Application/UCI-CS137-Internet-Applications-Engineering/PA1/products/fans_heatsinks_cooling&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Documents\Lectures of Courses in UCI\CS137 Internet Application\UCI-CS137-Internet-Applications-Engineering\PA1\products\fans_heatsinks_cooling" />
@@ -72,7 +61,7 @@
       <workItem from="1650273140337" duration="2497000" />
       <workItem from="1650304946706" duration="2671000" />
       <workItem from="1650311554892" duration="2517000" />
-      <workItem from="1650314618448" duration="5168000" />
+      <workItem from="1650314618448" duration="5525000" />
     </task>
     <task id="LOCAL-00001" summary="update the memory_category">
       <created>1650270136245</created>
@@ -81,7 +70,21 @@
       <option name="project" value="LOCAL" />
       <updated>1650270136245</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update the details&#10;- computer cases&#10;- cpus&#10;- fans">
+      <created>1650321555491</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650321555491</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update the details&#10;- computer cases&#10;- cpus&#10;- fans">
+      <created>1650321663584</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1650321663584</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,7 +103,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update the memory_category" />
-    <option name="LAST_COMMIT_MESSAGE" value="update the memory_category" />
+    <MESSAGE value="update the details&#10;- computer cases&#10;- cpus&#10;- fans" />
+    <option name="LAST_COMMIT_MESSAGE" value="update the details&#10;- computer cases&#10;- cpus&#10;- fans" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>

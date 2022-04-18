@@ -1,0 +1,148 @@
+Index: products/mouses/mouses_catgory.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/products/mouses/mouses_catgory.html b/products/mouses/mouses_catgory.html
+new file mode 100644
+--- /dev/null	(date 1650317133627)
++++ b/products/mouses/mouses_catgory.html	(date 1650317133627)
+@@ -0,0 +1,99 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <link href="../../css/style.css" rel="stylesheet">
++    <link href="../../css/products.css" rel="stylesheet">
++    <link href="../../css/product_category.css" rel ="stylesheet">
++
++    <script src="../../js/product_category.js"></script>
++    <header>
++        <div class="topNav">
++            <!-- Left-aligned links -->
++
++            <a href="../../index.html">Home</a>
++            <!-- https://www.w3schools.com/howto/howto_css_subnav.asp -->
++            <a class="active" href = "../../products.html">Products</a>
++            <a href="../../team.html">Team</a>
++            <a href="../../contact.html">Contact</a>
++
++            <!-- Right-aligned links-->
++            <div class="topNav-right">
++                <a><i class="fas fa-shopping-cart"></i>Shopping Cart</a>
++            </div>
++        </div>
++    </header>
++</head>
++<body>
++<main-container>
++    <div class="basic-grid">
++        <div class="card"><!--1-->
++            <a href="./products/hard_drives_&_ssd_&_storage/hard_drives_&_ssd_&_storage_category.html">
++                <img class= "product-img" src="img/storage.jpg" alt="storage">
++                <h2 style="alignment-baseline: baseline;alignment: center">Hard Drives, SSD & Storage</h2>
++
++            </a>
++        </div>
++        <div class="card"><!--2-->
++            <a href="products/video_graphics_cards/video_graphics_cards_category.html">
++                <img class= "product-img" src="img/graphicCard.jpg" alt="Video Graphics Cards">
++                <h2 style="alignment-baseline: baseline;alignment: center">Video Graphics Cards</h2>
++            </a>
++        </div>
++        <div class="card"><!--3-->
++            <a href="./products/cpus_&_processors/cpus_&_processors_category.html">
++                <img class= "product-img" src="img/cpu.jpg" alt="CPUs & Processors">
++                <h2 style="alignment-baseline: baseline;alignment: center">CPUs & Processors</h2>
++            </a>
++        </div>
++        <div class="card"><!--4-->
++            <a href="products/memory(ram)/memory(ram)_category.html">
++                <img class= "product-img" src="img/RAM.jpeg" alt="Memory (RAM)">
++                <h2 style="alignment-baseline: baseline;alignment: center">Memory (RAM)</h2>
++            </a>
++        </div>
++        <div class="card"><!--5-->
++            <a href="./products/motherboards/motherboards_category.html">
++                <img class= "product-img" src="img/motherboard.jpeg" alt="Accessories">
++                <h2 >Motherboards</h2>
++            </a>
++        </div>
++        <div class="card"><!--6-->
++            <a href="./products/computer_cases/computer_cases_category.html">
++                <img class="product-img" src="img/computercases.jpeg" alt="Computer Cases">
++                <h2>Computer Cases</h2>
++            </a>
++        </div>
++        <div class="card"><!--7-->
++            <a href="./products/power_supplies/power_supplies_category.html">
++                <img class="product-img" src="img/powerSupply.jpg" alt="Power Supplies">
++                <h2>Power Supplies</h2>
++            </a>
++        </div>
++        <div class="card"><!--7-->
++            <a href="./products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html">
++                <img class="product-img" src="img/fans.jpg" alt="Fans, Heatsinks & Cooling">
++                <h2>Fans, Heatsinks & Cooling</h2>
++            </a>
++        </div>
++        <div class="card"><!--7-->
++            <a href="./products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html">
++                <img class="product-img" src="img/fans.jpg" alt="Fans, Heatsinks & Cooling">
++                <h2>Fans, Heatsinks & Cooling</h2>
++            </a>
++        </div>
++        <div class="card"><!--7-->
++            <a href="./products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html">
++                <img class="product-img" src="img/fans.jpg" alt="Fans, Heatsinks & Cooling">
++<!--                <h2>Fans, Heatsinks & Cooling</h2>-->
++                <h4><b>RM1000x 80 PLUS Gold Fully Modular ATX Power Supply</b></h4>
++                <p>Producer: CORSAIR</p>
++                <p>Color: Black</p>
++                <p>Price: $59.9</p>
++                <p>Currently In Stock: 10</p>
++            </a>
++        </div>
++        </div>
++</main-container>
++</body>
++</html>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"f673c8f3-68a5-4da4-a013-5fcd82fd7bf8\" name=\"Changes\" comment=\"update the memory_category\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/PA1.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/PA1.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/modules.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/modules.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/products.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/products.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/products/computer_cases/computer_cases_category.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/products/computer_cases/computer_cases_category.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/products/cpus_&amp;_processors/cpus_&amp;_processors_category.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/products/cpus_&amp;_processors/cpus_&amp;_processors_category.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/products/hard_drives_&amp;_ssd_&amp;_storage/hard_drives_&amp;_ssd_&amp;_storage_category.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/products/hard_drives_&amp;_ssd_&amp;_storage/hard_drives_&amp;_ssd_&amp;_storage_category.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/products/memory(ram)/memory(ram).html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/products/memory(ram)/memory(ram)_category.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/products/motherboards/motherboards.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/products/motherboards/motherboards_category.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/products/power_supplies/power_supplies_category.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/products/power_supplies/power_supplies_category.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/products/video_graphics_cards/video_graphics_cards.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/products/video_graphics_cards/video_graphics_cards_category.html\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"JavaScript File\" />\r\n        <option value=\"HTML File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"27wpF0icdCrOkNASO6ixyO9gCcB\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;D:/Documents/Lectures of Courses in UCI/CS137 Internet Application/UCI-CS137-Internet-Applications-Engineering/PA1/products/video_craphics_cards&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"D:\\Documents\\Lectures of Courses in UCI\\CS137 Internet Application\\UCI-CS137-Internet-Applications-Engineering\\PA1\\products\\video_craphics_cards\" />\r\n      <recent name=\"D:\\Documents\\Lectures of Courses in UCI\\CS137 Internet Application\\UCI-CS137-Internet-Applications-Engineering\\PA1\\products\\motherboards\" />\r\n      <recent name=\"D:\\Documents\\Lectures of Courses in UCI\\CS137 Internet Application\\UCI-CS137-Internet-Applications-Engineering\\PA1\\products\\memory(ram)\" />\r\n      <recent name=\"D:\\Documents\\Lectures of Courses in UCI\\CS137 Internet Application\\UCI-CS137-Internet-Applications-Engineering\\PA1\\products\\hard_drives_&amp;_ssd_&amp;_storage\" />\r\n      <recent name=\"D:\\Documents\\Lectures of Courses in UCI\\CS137 Internet Application\\UCI-CS137-Internet-Applications-Engineering\\PA1\\img\\products\\cpus_&amp;_processors\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"f673c8f3-68a5-4da4-a013-5fcd82fd7bf8\" name=\"Changes\" comment=\"\" />\r\n      <created>1650240895394</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1650240895394</updated>\r\n      <workItem from=\"1650240896540\" duration=\"7732000\" />\r\n      <workItem from=\"1650261567674\" duration=\"5911000\" />\r\n      <workItem from=\"1650269170903\" duration=\"969000\" />\r\n      <workItem from=\"1650271020638\" duration=\"1282000\" />\r\n      <workItem from=\"1650273140337\" duration=\"2497000\" />\r\n      <workItem from=\"1650304946706\" duration=\"2671000\" />\r\n      <workItem from=\"1650311554892\" duration=\"2517000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"update the memory_category\">\r\n      <created>1650270136245</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1650270136245</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"update the memory_category\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"update the memory_category\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 0ebb41d2445997c99e9359b377175dbc8219857e)
++++ b/.idea/workspace.xml	(date 1650318822446)
+@@ -2,18 +2,8 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="f673c8f3-68a5-4da4-a013-5fcd82fd7bf8" name="Changes" comment="update the memory_category">
+-      <change beforePath="$PROJECT_DIR$/.idea/PA1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PA1.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/products/mouses/mouses_catgory.html" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/products.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/products/computer_cases/computer_cases_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/computer_cases/computer_cases_category.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/products/cpus_&amp;_processors/cpus_&amp;_processors_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/cpus_&amp;_processors/cpus_&amp;_processors_category.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/products/hard_drives_&amp;_ssd_&amp;_storage/hard_drives_&amp;_ssd_&amp;_storage_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/hard_drives_&amp;_ssd_&amp;_storage/hard_drives_&amp;_ssd_&amp;_storage_category.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/products/memory(ram)/memory(ram).html" beforeDir="false" afterPath="$PROJECT_DIR$/products/memory(ram)/memory(ram)_category.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/products/motherboards/motherboards.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/motherboards/motherboards_category.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/products/power_supplies/power_supplies_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/power_supplies/power_supplies_category.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/products/video_graphics_cards/video_graphics_cards.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/video_graphics_cards/video_graphics_cards_category.html" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -74,6 +64,7 @@
+       <workItem from="1650273140337" duration="2497000" />
+       <workItem from="1650304946706" duration="2671000" />
+       <workItem from="1650311554892" duration="2517000" />
++      <workItem from="1650314618448" duration="2688000" />
+     </task>
+     <task id="LOCAL-00001" summary="update the memory_category">
+       <created>1650270136245</created>

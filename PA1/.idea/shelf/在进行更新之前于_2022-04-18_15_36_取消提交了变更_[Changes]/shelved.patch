@@ -1,0 +1,1265 @@
+Index: products/computer_cases/computer_cases_category.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <link href=\"../../css/style.css\" rel=\"stylesheet\">\r\n    <link href=\"../../css/products.css\" rel=\"stylesheet\">\r\n    <link href=\"../../css/product_category.css\" rel =\"stylesheet\">\r\n    <!-- JavaScript -->\r\n    <header>\r\n        <div class=\"topNav\">\r\n            <!-- Left-aligned links -->\r\n            <a href=\"../../index.html\">Home</a>\r\n            <!-- https://www.w3schools.com/howto/howto_css_subnav.asp -->\r\n            <a class=\"active\" href = \"../../products.html\">Products</a>\r\n            <a href=\"../../team.html\">Team</a>\r\n            <a href=\"../../about.html\">About</a>\r\n            <!-- Right-aligned links-->\r\n            <div class=\"topNav-right\">\r\n                <!--<a href=\"#search\">Search</a>-->\r\n                <a href=\"shoppingcart.html\"><i class=\"fas fa-shopping-cart\"></i> Shopping Cart</a>\r\n            </div>\r\n        </div>\r\n    </header>\r\n</head>\r\n<body>\r\n\r\n<!-- Computer Cases Categories -->\r\n<div class=\"main-container\">\r\n    <div class=\"main\">\r\n        <a href=\"../../products.html\"><button>Back to Products Page</button></a>\r\n\r\n        <!-- Product Table -->\r\n        <div class=\"product-table\">\r\n            <table>\r\n                <caption><h1>PComputer Cases</h1></caption>\r\n                <thead>\r\n                <tbody>\r\n                <!-- First Row -->\r\n                <tr>\r\n                    <td>\r\n                        <div class=\"productcategory-card\">\r\n                            <a href=\"productdetails_PS4_ff7remake.html\">\r\n                                <img src=\"../../img/products/computer_cases/iCue220T.jpg\" alt=\"iCue220T\" style=\"width:100%\">\r\n                            </a>\r\n                            <div class=\"productcategory-card-container\">\r\n                                <h4><b>iCUE 220T RGB Airflow ATX Mid-Tower Smart Case</b></h4>\r\n                                <p>Producer: CORSAIR</p>\r\n                                <p>Color: Black</p>\r\n                                <p>Price: $59.9</p>\r\n                                <p>Currently In Stock: 10</p>\r\n                            </div>\r\n                        </div>\r\n                    </td>\r\n\r\n                    <td>\r\n                        <div class=\"productcategory-card\">\r\n                            <a href=\"productdetails_PS4_TLOU2.html\">\r\n                                <img src=\"../../img/products/computer_cases/H510i.jpg\" alt=\"H510i\" style=\"max-width:100%\">\r\n                            </a>\r\n                            <div class=\"productcategory-card-container\">\r\n                                <h4><b>H510i Compact ATX Mid-Tower Case with RGB Lighting</b></h4>\r\n                                <p>Producer: NZXT</p>\r\n                                <p>Color: Matte White</p>\r\n                                <p>Price: $59.9</p>\r\n                                <p>Currently Out of Stock</p>\r\n                            </div>\r\n                        </div>\r\n                    </td>\r\n                </tr>\r\n                </tbody>\r\n            </table>\r\n        </div> <!-- end of \"product-table\" div tag -->\r\n    </div> <!-- end of \"main\" div tag -->\r\n</div>\r\n\r\n\r\n<footer>\r\n    <p>BestDuck Web Design, Copyright &copy; 2022</p>\r\n</footer>\r\n\r\n\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/products/computer_cases/computer_cases_category.html b/products/computer_cases/computer_cases_category.html
+--- a/products/computer_cases/computer_cases_category.html	(revision df45638357412d1d2028e8890e271a8eccedf29c)
++++ b/products/computer_cases/computer_cases_category.html	(date 1650319347320)
+@@ -39,7 +39,7 @@
+                 <tr>
+                     <td>
+                         <div class="productcategory-card">
+-                            <a href="productdetails_PS4_ff7remake.html">
++                            <a href="computer_cases_detail_iCUE.html">
+                                 <img src="../../img/products/computer_cases/iCue220T.jpg" alt="iCue220T" style="width:100%">
+                             </a>
+                             <div class="productcategory-card-container">
+@@ -54,7 +54,7 @@
+ 
+                     <td>
+                         <div class="productcategory-card">
+-                            <a href="productdetails_PS4_TLOU2.html">
++                            <a href="computer_cases_detail_H501i.html">
+                                 <img src="../../img/products/computer_cases/H510i.jpg" alt="H510i" style="max-width:100%">
+                             </a>
+                             <div class="productcategory-card-container">
+@@ -62,7 +62,7 @@
+                                 <p>Producer: NZXT</p>
+                                 <p>Color: Matte White</p>
+                                 <p>Price: $59.9</p>
+-                                <p>Currently Out of Stock</p>
++                                <p>Currently in Stock: 5</p>
+                             </div>
+                         </div>
+                     </td>
+Index: products/fans_heatsinks_cooling/fans_heatsinks_cooling_category_iCUE_H100i.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category_iCUE_H100i.html b/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category_iCUE_H100i.html
+new file mode 100644
+--- /dev/null	(date 1650321009166)
++++ b/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category_iCUE_H100i.html	(date 1650321009166)
+@@ -0,0 +1,184 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>iCUE 220t</title>
++    <link href="../../css/style.css" rel="stylesheet">
++    <link href="../../css/product_details.css" rel="products stylesheet">
++    <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
++    <script src = ../../js/product_detail.js></script>
++    <header>
++        <div class="topNav">
++            <a href="../../index.html">Home</a>
++            <a class="active" href = "../../products.html">Products</a>
++            <a href="../../team.html">Team</a>
++            <a href="../../about.html">About</a>
++            <!-- Right-aligned links-->
++            <div class="topNav-right">
++                <a><i class="fas fa-shopping-cart"></i> Shopping Cart</a>
++            </div>
++        </div>
++    </header>
++</head>
++<body>
++<!-- product detail-->
++    <div class="product_detail-card" >
++        <img src="../../img/products/fans_heatsinks_cooling/iCUE_H100i.jpg" alt="iCUE_H100i.jpg" >
++        <h4><b>Kraken Z63 280mm</b></h4>
++        <p>SKU: 6422732</p>
++        <p>Producer: CORSAIR</p>
++        <p>Color: Black</p>
++        <p>Price: $59.9</p>
++        <p>Currently In Stock: 5</p>
++        <p>Description:
++            The CORSAIR iCUE H100i ELITE CAPELLIX Liquid CPU Cooler delivers powerful,
++            low-noise cooling for your CPU, with a 240mm radiator and two CORSAIR ML120
++            RGB Magnetic Levitation PWM fans controllable between 400 RPM and 2,400 RPM.
++            33 Ultra-bright CAPELLIX LEDs on the pump head and eight RGB LEDs per fan
++            let you completely personalize your cooler’s look. Connect to the included
++            CORSAIR iCUE Commander CORE and powerful CORSAIR iCUE software to orchestrate
++            synchronized RGB lighting, adjust fan speeds, and enable Zero RPM mode on up
++            to six fans. Easy to install on most major CPU sockets, with a thermally
++            optimized split-flow cold plate and low-noise centrifugal pump for exceptional
++            performance, the H100i ELITE CAPELLIX puts the spotlight on your cooling.
++
++        </p>
++    </div>
++<!-- order form-->
++    <div class="w3-card-4 orderForm-card" style="width:48%; float:right;">
++        <form action="" name="orderForm" onsubmit="return(validate());">
++            <div class="col-50">
++                <strong><h2>Order Form</h2></strong>
++                <h4>Shipping Information</h4>
++
++                <div class="row">
++                    <div class="col-50">
++                        <label for = "firstName">First Name</label>
++                        <input type="text" id="firstName" name="firstname" placeholder="Yang" required>
++                    </div>
++
++                    <div class="col-50">
++                        <label for = "lastName">Last Name</label>
++                        <input type="text" id="lastName" name="lastname" placeholder="Li" required>
++                    </div>
++                </div>
++
++                <label for="address">Address</label>
++                <input type="text" id="address" name="address" placeholder="166 Esplanade" required>
++
++                <label for="city">City</label>
++                <input type="text" id="city" name="city" placeholder="Irvine" required>
++
++                <div class="row">
++                    <div class="col-50">
++                        <label for ="state">State</label>
++                        <select id = "state"class="select-css" name="state">
++                            <option value="AL">Alabama</option>
++                            <option value="AK">Alaska</option>
++                            <option value="AZ">Arizona</option>
++                            <option value="AR">Arkansas</option>
++                            <option value="CA">California</option>
++                            <option value="CO">Colorado</option>
++                            <option value="CT">Connecticut</option>
++                            <option value="DE">Delaware</option>
++                            <option value="DC">District Of Columbia</option>
++                            <option value="FL">Florida</option>
++                            <option value="GA">Georgia</option>
++                            <option value="HI">Hawaii</option>
++                            <option value="ID">Idaho</option>
++                            <option value="IL">Illinois</option>
++                            <option value="IN">Indiana</option>
++                            <option value="IA">Iowa</option>
++                            <option value="KS">Kansas</option>
++                            <option value="KY">Kentucky</option>
++                            <option value="LA">Louisiana</option>
++                            <option value="ME">Maine</option>
++                            <option value="MD">Maryland</option>
++                            <option value="MA">Massachusetts</option>
++                            <option value="MI">Michigan</option>
++                            <option value="MN">Minnesota</option>
++                            <option value="MS">Mississippi</option>
++                            <option value="MO">Missouri</option>
++                            <option value="MT">Montana</option>
++                            <option value="NE">Nebraska</option>
++                            <option value="NV">Nevada</option>
++                            <option value="NH">New Hampshire</option>
++                            <option value="NJ">New Jersey</option>
++                            <option value="NM">New Mexico</option>
++                            <option value="NY">New York</option>
++                            <option value="NC">North Carolina</option>
++                            <option value="ND">North Dakota</option>
++                            <option value="OH">Ohio</option>
++                            <option value="OK">Oklahoma</option>
++                            <option value="OR">Oregon</option>
++                            <option value="PA">Pennsylvania</option>
++                            <option value="RI">Rhode Island</option>
++                            <option value="SC">South Carolina</option>
++                            <option value="SD">South Dakota</option>
++                            <option value="TN">Tennessee</option>
++                            <option value="TX">Texas</option>
++                            <option value="UT">Utah</option>
++                            <option value="VT">Vermont</option>
++                            <option value="VA">Virginia</option>
++                            <option value="WA">Washington</option>
++                            <option value="WV">West Virginia</option>
++                            <option value="WI">Wisconsin</option>
++                            <option value="WY">Wyoming</option>
++                        </select>
++                    </div>
++
++                    <div class="col-50">
++                        <label for="zip">Zip</label>
++                        <input type="text" id="zip" name="zip" placeholder="92612" required>
++                    </div>
++
++                </div>
++
++                <label for = "shippingMethod">Shipping Method:</label>
++
++                <select class="select-css" id="shippingMethod" name="shippingMethod">
++                    <option value="overnight">Overnight</option>
++                    <option value="2-day">2-Days Expedited</option>
++                    <option value="6-day">6-Days Ground</option>
++                </select>
++
++                <h4>Billing Information</h4>
++                <div class="row">
++                    <div class="col-50">
++                        <label id="SKU">SKU</label>
++                        <input type="text"  name="SKU" placeholder="6338995">
++                    </div>
++                    <div class="col-50">
++                        <label for="qty">Quantity (5 Max)</label>
++                        <input type="number" id="qty" name="qty" placeholder="1" min="0" max="5" required>
++                    </div>
++                </div>
++
++                <label for="ccnum">Credit card number</label>
++                <input type="text" id="ccnum" placeholder="1111-2222-3333-4444" required>
++
++                <label for="expmonth">Exp Month</label>
++                <input type="text" id="expmonth" placeholder="01" pattern="[0-9]{2}" required>
++
++                <div class="row">
++                    <div class="col-50">
++                        <label for="expYear">Exp Year</label>
++                        <input type="text" id="expYear" placeholder="2022" min="2022" max="2100" required>
++                    </div>
++
++                    <div class="col-50">
++                        <label for="cvv">CVV</label>
++                        <input type="text" id="cvv" name="cvv" placeholder="777" pattern="[0-9]{3}" required>
++                    </div>
++                </div>
++                <h4>Receipt/Tracking</h4>
++                <label for="phone">Phone Number</label>
++                    <input type="tel" id="phone" name="phone" placeholder="1-555-666-7777" required>
++                <label for="email">Email</label>
++                    <input type="email" id="email" name="email" placeholder="yang@example.com" required>
++                    <input type="submit" value="Submit" on/>
++            </div>
++        </form>
++    </div>
++</body>
++</html>
+\ No newline at end of file
+Index: products/fans_heatsinks_cooling/fans_heatsinks_cooling_category_Kraken_Z63.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category_Kraken_Z63.html b/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category_Kraken_Z63.html
+new file mode 100644
+--- /dev/null	(date 1650321017831)
++++ b/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category_Kraken_Z63.html	(date 1650321017831)
+@@ -0,0 +1,180 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>iCUE 220t</title>
++    <link href="../../css/style.css" rel="stylesheet">
++    <link href="../../css/product_details.css" rel="products stylesheet">
++    <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
++    <script src = ../../js/product_detail.js></script>
++    <header>
++        <div class="topNav">
++            <a href="../../index.html">Home</a>
++            <a class="active" href = "../../products.html">Products</a>
++            <a href="../../team.html">Team</a>
++            <a href="../../about.html">About</a>
++            <!-- Right-aligned links-->
++            <div class="topNav-right">
++                <a><i class="fas fa-shopping-cart"></i> Shopping Cart</a>
++            </div>
++        </div>
++    </header>
++</head>
++<body>
++<!-- product detail-->
++    <div class="product_detail-card" >
++        <img src="../../img/products/fans_heatsinks_cooling/Kraken_Z63.jpg" alt="Kraken_Z63" >
++        <h4><b>Kraken Z63 280mm</b></h4>
++        <p>SKU: 6447507</p>
++        <p>Producer: NZXT</p>
++        <p>Color: Black</p>
++        <p>Price: $59.9</p>
++        <p>Currently In Stock: 10</p>
++        <p>Description:
++            The all-new Kraken Z Series lets you personalize your all-in-one
++            liquid cooler like never before Through CAM’s unique software
++            interface you can do more than simply fine-tune settings you can
++            now display your favorite images and animated gifs or CAM system
++            information allowing for total customization Backed by a 6-year
++            the Kraken Z Series provides superior performance in liquid cooling
++            simple installation and a look that is uniquely your own.
++        </p>
++    </div>
++<!-- order form-->
++    <div class="w3-card-4 orderForm-card" style="width:48%; float:right;">
++        <form action="" name="orderForm" onsubmit="return(validate());">
++            <div class="col-50">
++                <strong><h2>Order Form</h2></strong>
++                <h4>Shipping Information</h4>
++
++                <div class="row">
++                    <div class="col-50">
++                        <label for = "firstName">First Name</label>
++                        <input type="text" id="firstName" name="firstname" placeholder="Yang" required>
++                    </div>
++
++                    <div class="col-50">
++                        <label for = "lastName">Last Name</label>
++                        <input type="text" id="lastName" name="lastname" placeholder="Li" required>
++                    </div>
++                </div>
++
++                <label for="address">Address</label>
++                <input type="text" id="address" name="address" placeholder="166 Esplanade" required>
++
++                <label for="city">City</label>
++                <input type="text" id="city" name="city" placeholder="Irvine" required>
++
++                <div class="row">
++                    <div class="col-50">
++                        <label for ="state">State</label>
++                        <select id = "state"class="select-css" name="state">
++                            <option value="AL">Alabama</option>
++                            <option value="AK">Alaska</option>
++                            <option value="AZ">Arizona</option>
++                            <option value="AR">Arkansas</option>
++                            <option value="CA">California</option>
++                            <option value="CO">Colorado</option>
++                            <option value="CT">Connecticut</option>
++                            <option value="DE">Delaware</option>
++                            <option value="DC">District Of Columbia</option>
++                            <option value="FL">Florida</option>
++                            <option value="GA">Georgia</option>
++                            <option value="HI">Hawaii</option>
++                            <option value="ID">Idaho</option>
++                            <option value="IL">Illinois</option>
++                            <option value="IN">Indiana</option>
++                            <option value="IA">Iowa</option>
++                            <option value="KS">Kansas</option>
++                            <option value="KY">Kentucky</option>
++                            <option value="LA">Louisiana</option>
++                            <option value="ME">Maine</option>
++                            <option value="MD">Maryland</option>
++                            <option value="MA">Massachusetts</option>
++                            <option value="MI">Michigan</option>
++                            <option value="MN">Minnesota</option>
++                            <option value="MS">Mississippi</option>
++                            <option value="MO">Missouri</option>
++                            <option value="MT">Montana</option>
++                            <option value="NE">Nebraska</option>
++                            <option value="NV">Nevada</option>
++                            <option value="NH">New Hampshire</option>
++                            <option value="NJ">New Jersey</option>
++                            <option value="NM">New Mexico</option>
++                            <option value="NY">New York</option>
++                            <option value="NC">North Carolina</option>
++                            <option value="ND">North Dakota</option>
++                            <option value="OH">Ohio</option>
++                            <option value="OK">Oklahoma</option>
++                            <option value="OR">Oregon</option>
++                            <option value="PA">Pennsylvania</option>
++                            <option value="RI">Rhode Island</option>
++                            <option value="SC">South Carolina</option>
++                            <option value="SD">South Dakota</option>
++                            <option value="TN">Tennessee</option>
++                            <option value="TX">Texas</option>
++                            <option value="UT">Utah</option>
++                            <option value="VT">Vermont</option>
++                            <option value="VA">Virginia</option>
++                            <option value="WA">Washington</option>
++                            <option value="WV">West Virginia</option>
++                            <option value="WI">Wisconsin</option>
++                            <option value="WY">Wyoming</option>
++                        </select>
++                    </div>
++
++                    <div class="col-50">
++                        <label for="zip">Zip</label>
++                        <input type="text" id="zip" name="zip" placeholder="92612" required>
++                    </div>
++
++                </div>
++
++                <label for = "shippingMethod">Shipping Method:</label>
++
++                <select class="select-css" id="shippingMethod" name="shippingMethod">
++                    <option value="overnight">Overnight</option>
++                    <option value="2-day">2-Days Expedited</option>
++                    <option value="6-day">6-Days Ground</option>
++                </select>
++
++                <h4>Billing Information</h4>
++                <div class="row">
++                    <div class="col-50">
++                        <label id="SKU">SKU</label>
++                        <input type="text"  name="SKU" placeholder="6338995">
++                    </div>
++                    <div class="col-50">
++                        <label for="qty">Quantity (5 Max)</label>
++                        <input type="number" id="qty" name="qty" placeholder="1" min="0" max="5" required>
++                    </div>
++                </div>
++
++                <label for="ccnum">Credit card number</label>
++                <input type="text" id="ccnum" placeholder="1111-2222-3333-4444" required>
++
++                <label for="expmonth">Exp Month</label>
++                <input type="text" id="expmonth" placeholder="01" pattern="[0-9]{2}" required>
++
++                <div class="row">
++                    <div class="col-50">
++                        <label for="expYear">Exp Year</label>
++                        <input type="text" id="expYear" placeholder="2022" min="2022" max="2100" required>
++                    </div>
++
++                    <div class="col-50">
++                        <label for="cvv">CVV</label>
++                        <input type="text" id="cvv" name="cvv" placeholder="777" pattern="[0-9]{3}" required>
++                    </div>
++                </div>
++                <h4>Receipt/Tracking</h4>
++                <label for="phone">Phone Number</label>
++                    <input type="tel" id="phone" name="phone" placeholder="1-555-666-7777" required>
++                <label for="email">Email</label>
++                    <input type="email" id="email" name="email" placeholder="yang@example.com" required>
++                    <input type="submit" value="Submit" on/>
++            </div>
++        </form>
++    </div>
++</body>
++</html>
+\ No newline at end of file
+Index: products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <link href=\"../../css/style.css\" rel=\"stylesheet\">\r\n    <link href=\"../../css/products.css\" rel=\"stylesheet\">\r\n    <link href=\"../../css/product_category.css\" rel =\"stylesheet\">\r\n\r\n    <script src=\"../../js/product_category.js\"></script>\r\n    <header>\r\n        <div class=\"topNav\">\r\n            <!-- Left-aligned links -->\r\n\r\n            <a href=\"../../index.html\">Home</a>\r\n            <!-- https://www.w3schools.com/howto/howto_css_subnav.asp -->\r\n            <a class=\"active\" href = \"../../products.html\">Products</a>\r\n            <a href=\"../../team.html\">Team</a>\r\n            <a href=\"../../contact.html\">Contact</a>\r\n\r\n            <!-- Right-aligned links-->\r\n            <div class=\"topNav-right\">\r\n                <a><i class=\"fas fa-shopping-cart\"></i>Shopping Cart</a>\r\n            </div>\r\n        </div>\r\n    </header>\r\n</head>\r\n<body>\r\n\r\n<!-- Computer Cases Categories -->\r\n<div class=\"main-container\">\r\n    <div class=\"main\">\r\n        <a href=\"../../products.html\"><button>Back to Products Page</button></a>\r\n\r\n        <!-- Product Table -->\r\n        <div class=\"product-table\">\r\n            <table>\r\n                <caption><h1>Fans, Heatsinks & Cooling</h1></caption>\r\n                <thead>\r\n                <tr>\r\n                    <!--<th>Table Header</th>-->\r\n                </tr>\r\n                </thead>\r\n                <tfoot>\r\n                <tr>\r\n                    <!--<td colspan=\"3\">Copyright &copy; 2018 Example Organization</td>-->\r\n                </tr>\r\n                </tfoot>\r\n                <tbody>\r\n\r\n                <!-- First Row -->\r\n                <tr>\r\n                    <td>\r\n                        <div class=\"productcategory-card\">\r\n                            <a href=\"productdetails_PS4_ff7remake.html\">\r\n                                <img src=\"../../img/products/fans_heatsinks_cooling/Kraken_Z63.jpg\" alt=\"Kraken_Z63\" style=\"width:100%\">\r\n                            </a>\r\n                            <div class=\"productcategory-card-container\">\r\n                                <h4><b>Kraken Z63 280mm</b></h4>\r\n                                <p>Producer: NZXT</p>\r\n                                <p>Color: Black</p>\r\n                                <p>Price: $59.9</p>\r\n                                <p>Currently In Stock: 10</p>\r\n                            </div>\r\n                        </div>\r\n                    </td>\r\n\r\n                    <td>\r\n                        <div class=\"productcategory-card\">\r\n                            <a href=\"productdetails_PS4_TLOU2.html\">\r\n                                <img src=\"../../img/products/fans_heatsinks_cooling/iCUE_H100i.jpg\" alt=\"iCUE_H100i\" style=\"width:100%\">\r\n                            </a>\r\n                            <div class=\"productcategory-card-container\">\r\n                                <h4><b>iCUE H100i ELITE CAPELLIX CPU Cooler</b></h4>\r\n                                <p>Producer: CORSAIR</p>\r\n                                <p>Color: Black</p>\r\n                                <p>Price: $59.9</p>\r\n                                <p>Currently Out of Stock</p>\r\n                            </div>\r\n                        </div>\r\n                    </td>\r\n                </tr>\r\n                </tbody>\r\n            </table>\r\n        </div> <!-- end of \"product-table\" div tag -->\r\n    </div> <!-- end of \"main\" div tag -->\r\n</div>\r\n\r\n\r\n<!-- Footer -->\r\n<!-- <div class=\"footer\">\r\n  <p>Footer</p>\r\n</div> -->\r\n<footer>\r\n    <p>BestDuck Web Design, Copyright &copy; 2022</p>\r\n</footer>\r\n\r\n\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html b/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html
+--- a/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html	(revision df45638357412d1d2028e8890e271a8eccedf29c)
++++ b/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html	(date 1650321009129)
+@@ -51,7 +51,7 @@
+                 <tr>
+                     <td>
+                         <div class="productcategory-card">
+-                            <a href="productdetails_PS4_ff7remake.html">
++                            <a href="fans_heatsinks_cooling_category_Kraken_Z63.html">
+                                 <img src="../../img/products/fans_heatsinks_cooling/Kraken_Z63.jpg" alt="Kraken_Z63" style="width:100%">
+                             </a>
+                             <div class="productcategory-card-container">
+@@ -66,7 +66,7 @@
+ 
+                     <td>
+                         <div class="productcategory-card">
+-                            <a href="productdetails_PS4_TLOU2.html">
++                            <a href="fans_heatsinks_cooling_category_iCUE_H100i.html">
+                                 <img src="../../img/products/fans_heatsinks_cooling/iCUE_H100i.jpg" alt="iCUE_H100i" style="width:100%">
+                             </a>
+                             <div class="productcategory-card-container">
+@@ -74,7 +74,7 @@
+                                 <p>Producer: CORSAIR</p>
+                                 <p>Color: Black</p>
+                                 <p>Price: $59.9</p>
+-                                <p>Currently Out of Stock</p>
++                                <p>Currently in Stock: 5</p>
+                             </div>
+                         </div>
+                     </td>
+Index: products/cpus_&_processors/cpus_&_processors_category_detail_Ryzen_9.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/products/cpus_&_processors/cpus_&_processors_category_detail_Ryzen_9.html b/products/cpus_&_processors/cpus_&_processors_category_detail_Ryzen_9.html
+new file mode 100644
+--- /dev/null	(date 1650320108294)
++++ b/products/cpus_&_processors/cpus_&_processors_category_detail_Ryzen_9.html	(date 1650320108294)
+@@ -0,0 +1,176 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>iCUE 220t</title>
++    <link href="../../css/style.css" rel="stylesheet">
++    <link href="../../css/product_details.css" rel="products stylesheet">
++    <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
++    <script src = ../../js/product_detail.js></script>
++    <header>
++        <div class="topNav">
++            <a href="../../index.html">Home</a>
++            <a class="active" href = "../../products.html">Products</a>
++            <a href="../../team.html">Team</a>
++            <a href="../../about.html">About</a>
++            <!-- Right-aligned links-->
++            <div class="topNav-right">
++                <a><i class="fas fa-shopping-cart"></i> Shopping Cart</a>
++            </div>
++        </div>
++    </header>
++</head>
++<body>
++<!-- product detail-->
++    <div class="product_detail-card" >
++        <img src="../../img/products/cpus_&_processors/Ryzen_9.jpg" alt="Ryzen_9" >
++        <h4><b>Ryzen 9 5900X 4th Gen 12-core, 24-threads Unlocked Desktop Processor</b></h4>
++        <p>SKU: 6438942</p>
++        <p>Producer: AMD</p>
++        <p>Price: $59.9</p>
++        <p>Currently In Stock: 5</p>
++        <p>Description:
++            12 cores to power through gaming, streaming and more. Get the
++            high-speed gaming performance of the world’s best desktop processor.
++            A fast and easy way to expand and accelerate the storage in a desktop
++            PC with an AMD Ryzen processor.
++        </p>
++    </div>
++<!-- order form-->
++    <div class="w3-card-4 orderForm-card" style="width:48%; float:right;">
++        <form action="" name="orderForm" onsubmit="return(validate());">
++            <div class="col-50">
++                <strong><h2>Order Form</h2></strong>
++                <h4>Shipping Information</h4>
++
++                <div class="row">
++                    <div class="col-50">
++                        <label for = "firstName">First Name</label>
++                        <input type="text" id="firstName" name="firstname" placeholder="Yang" required>
++                    </div>
++
++                    <div class="col-50">
++                        <label for = "lastName">Last Name</label>
++                        <input type="text" id="lastName" name="lastname" placeholder="Li" required>
++                    </div>
++                </div>
++
++                <label for="address">Address</label>
++                <input type="text" id="address" name="address" placeholder="166 Esplanade" required>
++
++                <label for="city">City</label>
++                <input type="text" id="city" name="city" placeholder="Irvine" required>
++
++                <div class="row">
++                    <div class="col-50">
++                        <label for ="state">State</label>
++                        <select id = "state"class="select-css" name="state">
++                            <option value="AL">Alabama</option>
++                            <option value="AK">Alaska</option>
++                            <option value="AZ">Arizona</option>
++                            <option value="AR">Arkansas</option>
++                            <option value="CA">California</option>
++                            <option value="CO">Colorado</option>
++                            <option value="CT">Connecticut</option>
++                            <option value="DE">Delaware</option>
++                            <option value="DC">District Of Columbia</option>
++                            <option value="FL">Florida</option>
++                            <option value="GA">Georgia</option>
++                            <option value="HI">Hawaii</option>
++                            <option value="ID">Idaho</option>
++                            <option value="IL">Illinois</option>
++                            <option value="IN">Indiana</option>
++                            <option value="IA">Iowa</option>
++                            <option value="KS">Kansas</option>
++                            <option value="KY">Kentucky</option>
++                            <option value="LA">Louisiana</option>
++                            <option value="ME">Maine</option>
++                            <option value="MD">Maryland</option>
++                            <option value="MA">Massachusetts</option>
++                            <option value="MI">Michigan</option>
++                            <option value="MN">Minnesota</option>
++                            <option value="MS">Mississippi</option>
++                            <option value="MO">Missouri</option>
++                            <option value="MT">Montana</option>
++                            <option value="NE">Nebraska</option>
++                            <option value="NV">Nevada</option>
++                            <option value="NH">New Hampshire</option>
++                            <option value="NJ">New Jersey</option>
++                            <option value="NM">New Mexico</option>
++                            <option value="NY">New York</option>
++                            <option value="NC">North Carolina</option>
++                            <option value="ND">North Dakota</option>
++                            <option value="OH">Ohio</option>
++                            <option value="OK">Oklahoma</option>
++                            <option value="OR">Oregon</option>
++                            <option value="PA">Pennsylvania</option>
++                            <option value="RI">Rhode Island</option>
++                            <option value="SC">South Carolina</option>
++                            <option value="SD">South Dakota</option>
++                            <option value="TN">Tennessee</option>
++                            <option value="TX">Texas</option>
++                            <option value="UT">Utah</option>
++                            <option value="VT">Vermont</option>
++                            <option value="VA">Virginia</option>
++                            <option value="WA">Washington</option>
++                            <option value="WV">West Virginia</option>
++                            <option value="WI">Wisconsin</option>
++                            <option value="WY">Wyoming</option>
++                        </select>
++                    </div>
++
++                    <div class="col-50">
++                        <label for="zip">Zip</label>
++                        <input type="text" id="zip" name="zip" placeholder="92612" required>
++                    </div>
++
++                </div>
++
++                <label for = "shippingMethod">Shipping Method:</label>
++
++                <select class="select-css" id="shippingMethod" name="shippingMethod">
++                    <option value="overnight">Overnight</option>
++                    <option value="2-day">2-Days Expedited</option>
++                    <option value="6-day">6-Days Ground</option>
++                </select>
++
++                <h4>Billing Information</h4>
++                <div class="row">
++                    <div class="col-50">
++                        <label id="SKU">SKU</label>
++                        <input type="text"  name="SKU" placeholder="6338995">
++                    </div>
++                    <div class="col-50">
++                        <label for="qty">Quantity (5 Max)</label>
++                        <input type="number" id="qty" name="qty" placeholder="1" min="0" max="5" required>
++                    </div>
++                </div>
++
++                <label for="ccnum">Credit card number</label>
++                <input type="text" id="ccnum" placeholder="1111-2222-3333-4444" required>
++
++                <label for="expmonth">Exp Month</label>
++                <input type="text" id="expmonth" placeholder="01" pattern="[0-9]{2}" required>
++
++                <div class="row">
++                    <div class="col-50">
++                        <label for="expYear">Exp Year</label>
++                        <input type="text" id="expYear" placeholder="2022" min="2022" max="2100" required>
++                    </div>
++
++                    <div class="col-50">
++                        <label for="cvv">CVV</label>
++                        <input type="text" id="cvv" name="cvv" placeholder="777" pattern="[0-9]{3}" required>
++                    </div>
++                </div>
++                <h4>Receipt/Tracking</h4>
++                <label for="phone">Phone Number</label>
++                    <input type="tel" id="phone" name="phone" placeholder="1-555-666-7777" required>
++                <label for="email">Email</label>
++                    <input type="email" id="email" name="email" placeholder="yang@example.com" required>
++                    <input type="submit" value="Submit" on/>
++            </div>
++        </form>
++    </div>
++</body>
++</html>
+\ No newline at end of file
+Index: products/cpus_&_processors/cpus_&_processors_category_detail_Core_i7.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/products/cpus_&_processors/cpus_&_processors_category_detail_Core_i7.html b/products/cpus_&_processors/cpus_&_processors_category_detail_Core_i7.html
+new file mode 100644
+--- /dev/null	(date 1650320674428)
++++ b/products/cpus_&_processors/cpus_&_processors_category_detail_Core_i7.html	(date 1650320674428)
+@@ -0,0 +1,179 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>iCUE 220t</title>
++    <link href="../../css/style.css" rel="stylesheet">
++    <link href="../../css/product_details.css" rel="products stylesheet">
++    <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
++    <script src = ../../js/product_detail.js></script>
++    <header>
++        <div class="topNav">
++            <a href="../../index.html">Home</a>
++            <a class="active" href = "../../products.html">Products</a>
++            <a href="../../team.html">Team</a>
++            <a href="../../about.html">About</a>
++            <!-- Right-aligned links-->
++            <div class="topNav-right">
++                <a><i class="fas fa-shopping-cart"></i> Shopping Cart</a>
++            </div>
++        </div>
++    </header>
++</head>
++<body>
++<!-- product detail-->
++    <div class="product_detail-card" >
++        <img src="../../img/products/cpus_&_processors/Core_i7.jpg" alt="Core_i7" >
++        <h4><b>Core i7-12700K Desktop Processor 12 (8P+4E) Cores up to 5.0 GHz</b></h4>
++        <p>SKU: 6483672</p>
++        <p>Producer: Intel</p>
++        <p>Price: $59.9</p>
++        <p>Currently In Stock: 10</p>
++        <p>Description:
++            12th Gen Intel® Core™ i7-12700K unlocked desktop processor. Featuring
++            Intel® Turbo Boost Max Technology 3.0 and PCIe Gen 4.0 support,
++            unlocked 12th Gen Intel® Core™ desktop processors are optimized for
++            enthusiast gamers and serious creators and help deliver high
++            performance overclocking for an added boost. Thermal solution NOT
++            included in the box. Compatible with 600 series chipset based
++            motherboards 125W.
++        </p>
++    </div>
++<!-- order form-->
++    <div class="w3-card-4 orderForm-card" style="width:48%; float:right;">
++        <form action="" name="orderForm" onsubmit="return(validate());">
++            <div class="col-50">
++                <strong><h2>Order Form</h2></strong>
++                <h4>Shipping Information</h4>
++
++                <div class="row">
++                    <div class="col-50">
++                        <label for = "firstName">First Name</label>
++                        <input type="text" id="firstName" name="firstname" placeholder="Yang" required>
++                    </div>
++
++                    <div class="col-50">
++                        <label for = "lastName">Last Name</label>
++                        <input type="text" id="lastName" name="lastname" placeholder="Li" required>
++                    </div>
++                </div>
++
++                <label for="address">Address</label>
++                <input type="text" id="address" name="address" placeholder="166 Esplanade" required>
++
++                <label for="city">City</label>
++                <input type="text" id="city" name="city" placeholder="Irvine" required>
++
++                <div class="row">
++                    <div class="col-50">
++                        <label for ="state">State</label>
++                        <select id = "state"class="select-css" name="state">
++                            <option value="AL">Alabama</option>
++                            <option value="AK">Alaska</option>
++                            <option value="AZ">Arizona</option>
++                            <option value="AR">Arkansas</option>
++                            <option value="CA">California</option>
++                            <option value="CO">Colorado</option>
++                            <option value="CT">Connecticut</option>
++                            <option value="DE">Delaware</option>
++                            <option value="DC">District Of Columbia</option>
++                            <option value="FL">Florida</option>
++                            <option value="GA">Georgia</option>
++                            <option value="HI">Hawaii</option>
++                            <option value="ID">Idaho</option>
++                            <option value="IL">Illinois</option>
++                            <option value="IN">Indiana</option>
++                            <option value="IA">Iowa</option>
++                            <option value="KS">Kansas</option>
++                            <option value="KY">Kentucky</option>
++                            <option value="LA">Louisiana</option>
++                            <option value="ME">Maine</option>
++                            <option value="MD">Maryland</option>
++                            <option value="MA">Massachusetts</option>
++                            <option value="MI">Michigan</option>
++                            <option value="MN">Minnesota</option>
++                            <option value="MS">Mississippi</option>
++                            <option value="MO">Missouri</option>
++                            <option value="MT">Montana</option>
++                            <option value="NE">Nebraska</option>
++                            <option value="NV">Nevada</option>
++                            <option value="NH">New Hampshire</option>
++                            <option value="NJ">New Jersey</option>
++                            <option value="NM">New Mexico</option>
++                            <option value="NY">New York</option>
++                            <option value="NC">North Carolina</option>
++                            <option value="ND">North Dakota</option>
++                            <option value="OH">Ohio</option>
++                            <option value="OK">Oklahoma</option>
++                            <option value="OR">Oregon</option>
++                            <option value="PA">Pennsylvania</option>
++                            <option value="RI">Rhode Island</option>
++                            <option value="SC">South Carolina</option>
++                            <option value="SD">South Dakota</option>
++                            <option value="TN">Tennessee</option>
++                            <option value="TX">Texas</option>
++                            <option value="UT">Utah</option>
++                            <option value="VT">Vermont</option>
++                            <option value="VA">Virginia</option>
++                            <option value="WA">Washington</option>
++                            <option value="WV">West Virginia</option>
++                            <option value="WI">Wisconsin</option>
++                            <option value="WY">Wyoming</option>
++                        </select>
++                    </div>
++
++                    <div class="col-50">
++                        <label for="zip">Zip</label>
++                        <input type="text" id="zip" name="zip" placeholder="92612" required>
++                    </div>
++
++                </div>
++
++                <label for = "shippingMethod">Shipping Method:</label>
++
++                <select class="select-css" id="shippingMethod" name="shippingMethod">
++                    <option value="overnight">Overnight</option>
++                    <option value="2-day">2-Days Expedited</option>
++                    <option value="6-day">6-Days Ground</option>
++                </select>
++
++                <h4>Billing Information</h4>
++                <div class="row">
++                    <div class="col-50">
++                        <label id="SKU">SKU</label>
++                        <input type="text"  name="SKU" placeholder="6338995">
++                    </div>
++                    <div class="col-50">
++                        <label for="qty">Quantity (5 Max)</label>
++                        <input type="number" id="qty" name="qty" placeholder="1" min="0" max="5" required>
++                    </div>
++                </div>
++
++                <label for="ccnum">Credit card number</label>
++                <input type="text" id="ccnum" placeholder="1111-2222-3333-4444" required>
++
++                <label for="expmonth">Exp Month</label>
++                <input type="text" id="expmonth" placeholder="01" pattern="[0-9]{2}" required>
++
++                <div class="row">
++                    <div class="col-50">
++                        <label for="expYear">Exp Year</label>
++                        <input type="text" id="expYear" placeholder="2022" min="2022" max="2100" required>
++                    </div>
++
++                    <div class="col-50">
++                        <label for="cvv">CVV</label>
++                        <input type="text" id="cvv" name="cvv" placeholder="777" pattern="[0-9]{3}" required>
++                    </div>
++                </div>
++                <h4>Receipt/Tracking</h4>
++                <label for="phone">Phone Number</label>
++                    <input type="tel" id="phone" name="phone" placeholder="1-555-666-7777" required>
++                <label for="email">Email</label>
++                    <input type="email" id="email" name="email" placeholder="yang@example.com" required>
++                    <input type="submit" value="Submit" on/>
++            </div>
++        </form>
++    </div>
++</body>
++</html>
+\ No newline at end of file
+Index: products/computer_cases/computer_cases_detail_H501i.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/products/computer_cases/computer_cases_detail_H501i.html b/products/computer_cases/computer_cases_detail_H501i.html
+new file mode 100644
+--- /dev/null	(date 1650319441223)
++++ b/products/computer_cases/computer_cases_detail_H501i.html	(date 1650319441223)
+@@ -0,0 +1,179 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <title>iCUE 220t</title>
++    <link href="../../css/style.css" rel="stylesheet">
++    <link href="../../css/product_details.css" rel="products stylesheet">
++    <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
++    <script src = ../../js/product_detail.js></script>
++    <header>
++        <div class="topNav">
++            <a href="../../index.html">Home</a>
++            <a class="active" href = "../../products.html">Products</a>
++            <a href="../../team.html">Team</a>
++            <a href="../../about.html">About</a>
++            <!-- Right-aligned links-->
++            <div class="topNav-right">
++                <a><i class="fas fa-shopping-cart"></i> Shopping Cart</a>
++            </div>
++        </div>
++    </header>
++</head>
++<body>
++<!-- product detail-->
++    <div class="product_detail-card" >
++        <img src="../../img/products/computer_cases/H510i.jpg" alt="H501i" >
++        <h4><b>H510i Compact ATX Mid-Tower Case with RGB Lighting</b></h4>
++        <p>SKU: 6365750</p>
++        <p>Producer: NZXT</p>
++        <p>Color: Matte White</p>
++        <p>Price: $59.9</p>
++        <p>Currently In Stock: 5</p>
++        <p>Description:
++            Build a customized PC from scratch with this NZXT compact mid-tower.
++            The front-facing USB-C connector offers easier connectivity to smartphones
++            or external storage, while the cable management system includes
++            pre-installed channels for intuitive wiring. This NZXT compact mid-tower
++            features a tempered glass side panel to showcase your build and has dual
++            fans for optimum airflow.
++        </p>
++    </div>
++<!-- order form-->
++    <div class="w3-card-4 orderForm-card" style="width:48%; float:right;">
++        <form action="" name="orderForm" onsubmit="return(validate());">
++            <div class="col-50">
++                <strong><h2>Order Form</h2></strong>
++                <h4>Shipping Information</h4>
++
++                <div class="row">
++                    <div class="col-50">
++                        <label for = "firstName">First Name</label>
++                        <input type="text" id="firstName" name="firstname" placeholder="Yang" required>
++                    </div>
++
++                    <div class="col-50">
++                        <label for = "lastName">Last Name</label>
++                        <input type="text" id="lastName" name="lastname" placeholder="Li" required>
++                    </div>
++                </div>
++
++                <label for="address">Address</label>
++                <input type="text" id="address" name="address" placeholder="166 Esplanade" required>
++
++                <label for="city">City</label>
++                <input type="text" id="city" name="city" placeholder="Irvine" required>
++
++                <div class="row">
++                    <div class="col-50">
++                        <label for ="state">State</label>
++                        <select id = "state"class="select-css" name="state">
++                            <option value="AL">Alabama</option>
++                            <option value="AK">Alaska</option>
++                            <option value="AZ">Arizona</option>
++                            <option value="AR">Arkansas</option>
++                            <option value="CA">California</option>
++                            <option value="CO">Colorado</option>
++                            <option value="CT">Connecticut</option>
++                            <option value="DE">Delaware</option>
++                            <option value="DC">District Of Columbia</option>
++                            <option value="FL">Florida</option>
++                            <option value="GA">Georgia</option>
++                            <option value="HI">Hawaii</option>
++                            <option value="ID">Idaho</option>
++                            <option value="IL">Illinois</option>
++                            <option value="IN">Indiana</option>
++                            <option value="IA">Iowa</option>
++                            <option value="KS">Kansas</option>
++                            <option value="KY">Kentucky</option>
++                            <option value="LA">Louisiana</option>
++                            <option value="ME">Maine</option>
++                            <option value="MD">Maryland</option>
++                            <option value="MA">Massachusetts</option>
++                            <option value="MI">Michigan</option>
++                            <option value="MN">Minnesota</option>
++                            <option value="MS">Mississippi</option>
++                            <option value="MO">Missouri</option>
++                            <option value="MT">Montana</option>
++                            <option value="NE">Nebraska</option>
++                            <option value="NV">Nevada</option>
++                            <option value="NH">New Hampshire</option>
++                            <option value="NJ">New Jersey</option>
++                            <option value="NM">New Mexico</option>
++                            <option value="NY">New York</option>
++                            <option value="NC">North Carolina</option>
++                            <option value="ND">North Dakota</option>
++                            <option value="OH">Ohio</option>
++                            <option value="OK">Oklahoma</option>
++                            <option value="OR">Oregon</option>
++                            <option value="PA">Pennsylvania</option>
++                            <option value="RI">Rhode Island</option>
++                            <option value="SC">South Carolina</option>
++                            <option value="SD">South Dakota</option>
++                            <option value="TN">Tennessee</option>
++                            <option value="TX">Texas</option>
++                            <option value="UT">Utah</option>
++                            <option value="VT">Vermont</option>
++                            <option value="VA">Virginia</option>
++                            <option value="WA">Washington</option>
++                            <option value="WV">West Virginia</option>
++                            <option value="WI">Wisconsin</option>
++                            <option value="WY">Wyoming</option>
++                        </select>
++                    </div>
++
++                    <div class="col-50">
++                        <label for="zip">Zip</label>
++                        <input type="text" id="zip" name="zip" placeholder="92612" required>
++                    </div>
++
++                </div>
++
++                <label for = "shippingMethod">Shipping Method:</label>
++
++                <select class="select-css" id="shippingMethod" name="shippingMethod">
++                    <option value="overnight">Overnight</option>
++                    <option value="2-day">2-Days Expedited</option>
++                    <option value="6-day">6-Days Ground</option>
++                </select>
++
++                <h4>Billing Information</h4>
++                <div class="row">
++                    <div class="col-50">
++                        <label id="SKU">SKU</label>
++                        <input type="text"  name="SKU" placeholder="6338995">
++                    </div>
++                    <div class="col-50">
++                        <label for="qty">Quantity (5 Max)</label>
++                        <input type="number" id="qty" name="qty" placeholder="1" min="0" max="5" required>
++                    </div>
++                </div>
++
++                <label for="ccnum">Credit card number</label>
++                <input type="text" id="ccnum" placeholder="1111-2222-3333-4444" required>
++
++                <label for="expmonth">Exp Month</label>
++                <input type="text" id="expmonth" placeholder="01" pattern="[0-9]{2}" required>
++
++                <div class="row">
++                    <div class="col-50">
++                        <label for="expYear">Exp Year</label>
++                        <input type="text" id="expYear" placeholder="2022" min="2022" max="2100" required>
++                    </div>
++
++                    <div class="col-50">
++                        <label for="cvv">CVV</label>
++                        <input type="text" id="cvv" name="cvv" placeholder="777" pattern="[0-9]{3}" required>
++                    </div>
++                </div>
++                <h4>Receipt/Tracking</h4>
++                <label for="phone">Phone Number</label>
++                    <input type="tel" id="phone" name="phone" placeholder="1-555-666-7777" required>
++                <label for="email">Email</label>
++                    <input type="email" id="email" name="email" placeholder="yang@example.com" required>
++                    <input type="submit" value="Submit" on/>
++            </div>
++        </form>
++    </div>
++</body>
++</html>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"f673c8f3-68a5-4da4-a013-5fcd82fd7bf8\" name=\"Changes\" comment=\"update the memory_category\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/PA1.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/PA1.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/modules.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/modules.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/products.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/products.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/products/computer_cases/computer_cases_category.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/products/computer_cases/computer_cases_category.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/products/cpus_&amp;_processors/cpus_&amp;_processors_category.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/products/cpus_&amp;_processors/cpus_&amp;_processors_category.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/products/hard_drives_&amp;_ssd_&amp;_storage/hard_drives_&amp;_ssd_&amp;_storage_category.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/products/hard_drives_&amp;_ssd_&amp;_storage/hard_drives_&amp;_ssd_&amp;_storage_category.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/products/memory(ram)/memory(ram).html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/products/memory(ram)/memory(ram)_category.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/products/motherboards/motherboards.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/products/motherboards/motherboards_category.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/products/power_supplies/power_supplies_category.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/products/power_supplies/power_supplies_category.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/products/video_graphics_cards/video_graphics_cards.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/products/video_graphics_cards/video_graphics_cards_category.html\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"JavaScript File\" />\r\n        <option value=\"HTML File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"27wpF0icdCrOkNASO6ixyO9gCcB\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;D:/Documents/Lectures of Courses in UCI/CS137 Internet Application/UCI-CS137-Internet-Applications-Engineering/PA1/products/video_craphics_cards&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"D:\\Documents\\Lectures of Courses in UCI\\CS137 Internet Application\\UCI-CS137-Internet-Applications-Engineering\\PA1\\products\\video_craphics_cards\" />\r\n      <recent name=\"D:\\Documents\\Lectures of Courses in UCI\\CS137 Internet Application\\UCI-CS137-Internet-Applications-Engineering\\PA1\\products\\motherboards\" />\r\n      <recent name=\"D:\\Documents\\Lectures of Courses in UCI\\CS137 Internet Application\\UCI-CS137-Internet-Applications-Engineering\\PA1\\products\\memory(ram)\" />\r\n      <recent name=\"D:\\Documents\\Lectures of Courses in UCI\\CS137 Internet Application\\UCI-CS137-Internet-Applications-Engineering\\PA1\\products\\hard_drives_&amp;_ssd_&amp;_storage\" />\r\n      <recent name=\"D:\\Documents\\Lectures of Courses in UCI\\CS137 Internet Application\\UCI-CS137-Internet-Applications-Engineering\\PA1\\img\\products\\cpus_&amp;_processors\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"f673c8f3-68a5-4da4-a013-5fcd82fd7bf8\" name=\"Changes\" comment=\"\" />\r\n      <created>1650240895394</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1650240895394</updated>\r\n      <workItem from=\"1650240896540\" duration=\"7732000\" />\r\n      <workItem from=\"1650261567674\" duration=\"5911000\" />\r\n      <workItem from=\"1650269170903\" duration=\"969000\" />\r\n      <workItem from=\"1650271020638\" duration=\"1282000\" />\r\n      <workItem from=\"1650273140337\" duration=\"2497000\" />\r\n      <workItem from=\"1650304946706\" duration=\"2671000\" />\r\n      <workItem from=\"1650311554892\" duration=\"2517000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"update the memory_category\">\r\n      <created>1650270136245</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1650270136245</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"update the memory_category\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"update the memory_category\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision df45638357412d1d2028e8890e271a8eccedf29c)
++++ b/.idea/workspace.xml	(date 1650321330130)
+@@ -2,18 +2,16 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="f673c8f3-68a5-4da4-a013-5fcd82fd7bf8" name="Changes" comment="update the memory_category">
+-      <change beforePath="$PROJECT_DIR$/.idea/PA1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PA1.iml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/products/computer_cases/computer_cases_detail_H501i.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/products/cpus_&amp;_processors/cpus_&amp;_processors_category_detail_Core_i7.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/products/cpus_&amp;_processors/cpus_&amp;_processors_category_detail_Ryzen_9.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category_Kraken_Z63.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category_iCUE_H100i.html" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/products/mouses/mouses_catgory.html" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/products.html" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/products/computer_cases/computer_cases_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/computer_cases/computer_cases_category.html" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/products/cpus_&amp;_processors/cpus_&amp;_processors_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/cpus_&amp;_processors/cpus_&amp;_processors_category.html" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/products/hard_drives_&amp;_ssd_&amp;_storage/hard_drives_&amp;_ssd_&amp;_storage_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/hard_drives_&amp;_ssd_&amp;_storage/hard_drives_&amp;_ssd_&amp;_storage_category.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/products/memory(ram)/memory(ram).html" beforeDir="false" afterPath="$PROJECT_DIR$/products/memory(ram)/memory(ram)_category.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/products/motherboards/motherboards.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/motherboards/motherboards_category.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/products/power_supplies/power_supplies_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/power_supplies/power_supplies_category.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/products/video_graphics_cards/video_graphics_cards.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/video_graphics_cards/video_graphics_cards_category.html" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -40,23 +38,23 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;D:/Documents/Lectures of Courses in UCI/CS137 Internet Application/UCI-CS137-Internet-Applications-Engineering/PA1/products/video_craphics_cards&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "DefaultHtmlFileTemplate": "HTML File",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "last_opened_file_path": "D:/Documents/Lectures of Courses in UCI/CS137 Internet Application/UCI-CS137-Internet-Applications-Engineering/PA1/products/fans_heatsinks_cooling",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
++      <recent name="D:\Documents\Lectures of Courses in UCI\CS137 Internet Application\UCI-CS137-Internet-Applications-Engineering\PA1\products\fans_heatsinks_cooling" />
++      <recent name="D:\Documents\Lectures of Courses in UCI\CS137 Internet Application\UCI-CS137-Internet-Applications-Engineering\PA1\products\cpus_&amp;_processors" />
++      <recent name="D:\Documents\Lectures of Courses in UCI\CS137 Internet Application\UCI-CS137-Internet-Applications-Engineering\PA1\products\computer_cases" />
+       <recent name="D:\Documents\Lectures of Courses in UCI\CS137 Internet Application\UCI-CS137-Internet-Applications-Engineering\PA1\products\video_craphics_cards" />
+       <recent name="D:\Documents\Lectures of Courses in UCI\CS137 Internet Application\UCI-CS137-Internet-Applications-Engineering\PA1\products\motherboards" />
+-      <recent name="D:\Documents\Lectures of Courses in UCI\CS137 Internet Application\UCI-CS137-Internet-Applications-Engineering\PA1\products\memory(ram)" />
+-      <recent name="D:\Documents\Lectures of Courses in UCI\CS137 Internet Application\UCI-CS137-Internet-Applications-Engineering\PA1\products\hard_drives_&amp;_ssd_&amp;_storage" />
+-      <recent name="D:\Documents\Lectures of Courses in UCI\CS137 Internet Application\UCI-CS137-Internet-Applications-Engineering\PA1\img\products\cpus_&amp;_processors" />
+     </key>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+@@ -74,6 +72,7 @@
+       <workItem from="1650273140337" duration="2497000" />
+       <workItem from="1650304946706" duration="2671000" />
+       <workItem from="1650311554892" duration="2517000" />
++      <workItem from="1650314618448" duration="5168000" />
+     </task>
+     <task id="LOCAL-00001" summary="update the memory_category">
+       <created>1650270136245</created>
+@@ -102,5 +101,6 @@
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="update the memory_category" />
+     <option name="LAST_COMMIT_MESSAGE" value="update the memory_category" />
++    <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: products/cpus_&_processors/cpus_&_processors_category.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <link href=\"../../css/style.css\" rel=\"stylesheet\">\r\n    <link href=\"../../css/products.css\" rel=\"stylesheet\">\r\n    <link href=\"../../css/product_category.css\" rel =\"stylesheet\">\r\n\r\n    <script src=\"../../js/product_category.js\"></script>\r\n    <header>\r\n        <div class=\"topNav\">\r\n            <!-- Left-aligned links -->\r\n\r\n            <a href=\"../../index.html\">Home</a>\r\n            <!-- https://www.w3schools.com/howto/howto_css_subnav.asp -->\r\n            <a class=\"active\" href = \"../../products.html\">Products</a>\r\n            <a href=\"../../team.html\">Team</a>\r\n            <a href=\"../../contact.html\">Contact</a>\r\n\r\n            <!-- Right-aligned links-->\r\n            <div class=\"topNav-right\">\r\n                <a><i class=\"fas fa-shopping-cart\"></i>Shopping Cart</a>\r\n            </div>\r\n        </div>\r\n    </header>\r\n</head>\r\n<body>\r\n\r\n<!-- Computer Cases Categories -->\r\n<div class=\"main-container\">\r\n    <div class=\"main\">\r\n        <a href=\"../../products.html\"><button>Back to Products Page</button></a>\r\n\r\n        <!-- Product Table -->\r\n        <div class=\"product-table\">\r\n            <table>\r\n                <caption><h1>CPUs & Processors</h1></caption>\r\n                <thead>\r\n                <tr>\r\n                    <!--<th>Table Header</th>-->\r\n                </tr>\r\n                </thead>\r\n                <tfoot>\r\n                <tr>\r\n                    <!--<td colspan=\"3\">Copyright &copy; 2018 Example Organization</td>-->\r\n                </tr>\r\n                </tfoot>\r\n                <tbody>\r\n\r\n                <!-- First Row -->\r\n                <tr>\r\n                    <td>\r\n                        <div class=\"productcategory-card\">\r\n                            <a href=\"productdetails_PS4_ff7remake.html\">\r\n                                <img src=\"../../img/products/cpus_&_processors/Core_i7.jpg\" alt=\"Core_i7\" style=\"width:100%\">\r\n                            </a>\r\n                            <div class=\"productcategory-card-container\">\r\n                                <h4><b>Core i7-12700K Desktop Processor 12 (8P+4E) Cores up to 5.0 GHz </b></h4>\r\n                                <p>Producer: Intel</p>\r\n                                <p>Price: $59.9</p>\r\n                                <p>Currently In Stock: 10</p>\r\n                            </div>\r\n                        </div>\r\n                    </td>\r\n\r\n                    <td>\r\n                        <div class=\"productcategory-card\">\r\n                            <a href=\"productdetails_PS4_TLOU2.html\">\r\n                                <img src=\"../../img/products/cpus_&_processors/Ryzen_9.jpg\" alt=\"Ryzen_9\" style=\"max-width:100%\">\r\n                            </a>\r\n                            <div class=\"productcategory-card-container\">\r\n                                <h4><b>Ryzen 9 5900X 4th Gen 12-core, 24-threads Unlocked Desktop Processor</b></h4>\r\n                                <p>Producer: AMD</p>\r\n                                <p>Price: $59.9</p>\r\n                                <p>Currently Out of Stock</p>\r\n                            </div>\r\n                        </div>\r\n                    </td>\r\n                </tr>\r\n                </tbody>\r\n            </table>\r\n        </div> <!-- end of \"product-table\" div tag -->\r\n    </div> <!-- end of \"main\" div tag -->\r\n</div>\r\n\r\n\r\n<!-- Footer -->\r\n<!-- <div class=\"footer\">\r\n  <p>Footer</p>\r\n</div> -->\r\n<footer>\r\n    <p>BestDuck Web Design, Copyright &copy; 2022</p>\r\n</footer>\r\n\r\n\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/products/cpus_&_processors/cpus_&_processors_category.html b/products/cpus_&_processors/cpus_&_processors_category.html
+--- a/products/cpus_&_processors/cpus_&_processors_category.html	(revision df45638357412d1d2028e8890e271a8eccedf29c)
++++ b/products/cpus_&_processors/cpus_&_processors_category.html	(date 1650319712330)
+@@ -51,11 +51,11 @@
+                 <tr>
+                     <td>
+                         <div class="productcategory-card">
+-                            <a href="productdetails_PS4_ff7remake.html">
++                            <a href="cpus_&_processors_category_detail_Core_i7.html">
+                                 <img src="../../img/products/cpus_&_processors/Core_i7.jpg" alt="Core_i7" style="width:100%">
+                             </a>
+                             <div class="productcategory-card-container">
+-                                <h4><b>Core i7-12700K Desktop Processor 12 (8P+4E) Cores up to 5.0 GHz </b></h4>
++                                <h4><b>Core i7-12700K Desktop Processor 12 (8P+4E) Cores up to 5.0 GHz</b></h4>
+                                 <p>Producer: Intel</p>
+                                 <p>Price: $59.9</p>
+                                 <p>Currently In Stock: 10</p>
+@@ -65,14 +65,14 @@
+ 
+                     <td>
+                         <div class="productcategory-card">
+-                            <a href="productdetails_PS4_TLOU2.html">
++                            <a href="cpus_&_processors_category_detail_Ryzen_9.html">
+                                 <img src="../../img/products/cpus_&_processors/Ryzen_9.jpg" alt="Ryzen_9" style="max-width:100%">
+                             </a>
+                             <div class="productcategory-card-container">
+                                 <h4><b>Ryzen 9 5900X 4th Gen 12-core, 24-threads Unlocked Desktop Processor</b></h4>
+                                 <p>Producer: AMD</p>
+                                 <p>Price: $59.9</p>
+-                                <p>Currently Out of Stock</p>
++                                <p>Currently in Stock: 5</p>
+                             </div>
+                         </div>
+                     </td>
+Index: products/mouses/mouses_catgory.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/products/mouses/mouses_catgory.html b/products/mouses/mouses_catgory.html
+new file mode 100644
+--- /dev/null	(date 1650318933415)
++++ b/products/mouses/mouses_catgory.html	(date 1650318933415)
+@@ -0,0 +1,99 @@
++<!DOCTYPE html>
++<html lang="en">
++<head>
++    <meta charset="UTF-8">
++    <link href="../../css/style.css" rel="stylesheet">
++    <link href="../../css/products.css" rel="stylesheet">
++    <link href="../../css/product_category.css" rel ="stylesheet">
++
++    <script src="../../js/product_category.js"></script>
++    <header>
++        <div class="topNav">
++            <!-- Left-aligned links -->
++
++            <a href="../../index.html">Home</a>
++            <!-- https://www.w3schools.com/howto/howto_css_subnav.asp -->
++            <a class="active" href = "../../products.html">Products</a>
++            <a href="../../team.html">Team</a>
++            <a href="../../contact.html">Contact</a>
++
++            <!-- Right-aligned links-->
++            <div class="topNav-right">
++                <a><i class="fas fa-shopping-cart"></i>Shopping Cart</a>
++            </div>
++        </div>
++    </header>
++</head>
++<body>
++<main-container>
++    <div class="basic-grid">
++        <div class="card"><!--1-->
++            <a href="./products/hard_drives_&_ssd_&_storage/hard_drives_&_ssd_&_storage_category.html">
++                <img class= "product-img" src="img/storage.jpg" alt="storage">
++                <h2 style="alignment-baseline: baseline;alignment: center">Hard Drives, SSD & Storage</h2>
++
++            </a>
++        </div>
++        <div class="card"><!--2-->
++            <a href="products/video_graphics_cards/video_graphics_cards_category.html">
++                <img class= "product-img" src="img/graphicCard.jpg" alt="Video Graphics Cards">
++                <h2 style="alignment-baseline: baseline;alignment: center">Video Graphics Cards</h2>
++            </a>
++        </div>
++        <div class="card"><!--3-->
++            <a href="./products/cpus_&_processors/cpus_&_processors_category.html">
++                <img class= "product-img" src="img/cpu.jpg" alt="CPUs & Processors">
++                <h2 style="alignment-baseline: baseline;alignment: center">CPUs & Processors</h2>
++            </a>
++        </div>
++        <div class="card"><!--4-->
++            <a href="products/memory(ram)/memory(ram)_category.html">
++                <img class= "product-img" src="img/RAM.jpeg" alt="Memory (RAM)">
++                <h2 style="alignment-baseline: baseline;alignment: center">Memory (RAM)</h2>
++            </a>
++        </div>
++        <div class="card"><!--5-->
++            <a href="./products/motherboards/motherboards_category.html">
++                <img class= "product-img" src="img/motherboard.jpeg" alt="Accessories">
++                <h2 >Motherboards</h2>
++            </a>
++        </div>
++        <div class="card"><!--6-->
++            <a href="./products/computer_cases/computer_cases_category.html">
++                <img class="product-img" src="img/computercases.jpeg" alt="Computer Cases">
++                <h2>Computer Cases</h2>
++            </a>
++        </div>
++        <div class="card"><!--7-->
++            <a href="./products/power_supplies/power_supplies_category.html">
++                <img class="product-img" src="img/powerSupply.jpg" alt="Power Supplies">
++                <h2>Power Supplies</h2>
++            </a>
++        </div>
++        <div class="card"><!--7-->
++            <a href="./products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html">
++                <img class="product-img" src="img/fans.jpg" alt="Fans, Heatsinks & Cooling">
++                <h2>Fans, Heatsinks & Cooling</h2>
++            </a>
++        </div>
++        <div class="card"><!--7-->
++            <a href="./products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html">
++                <img class="product-img" src="img/fans.jpg" alt="Fans, Heatsinks & Cooling">
++                <h2>Fans, Heatsinks & Cooling</h2>
++            </a>
++        </div>
++        <div class="card"><!--7-->
++            <a href="./products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html">
++                <img class="product-img" src="img/fans.jpg" alt="Fans, Heatsinks & Cooling">
++<!--                <h2>Fans, Heatsinks & Cooling</h2>-->
++                <h4><b>RM1000x 80 PLUS Gold Fully Modular ATX Power Supply</b></h4>
++                <p>Producer: CORSAIR</p>
++                <p>Color: Black</p>
++                <p>Price: $59.9</p>
++                <p>Currently In Stock: 10</p>
++            </a>
++        </div>
++        </div>
++</main-container>
++</body>
++</html>
+\ No newline at end of file
