@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f673c8f3-68a5-4da4-a013-5fcd82fd7bf8" name="Changes" comment="update the memory_category">
-      <change afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products/computer_cases/computer_cases_detail_iCUE.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/team.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PA1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PA1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/products/computer_cases/computer_cases_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/computer_cases/computer_cases_category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/cpus_&amp;_processors/cpus_&amp;_processors_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/cpus_&amp;_processors/cpus_&amp;_processors_category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/fans_heatsinks_cooling/fans_heatsinks_cooling_category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/hard_drives_&amp;_ssd_&amp;_storage/hard_drives_&amp;_ssd_&amp;_storage_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/hard_drives_&amp;_ssd_&amp;_storage/hard_drives_&amp;_ssd_&amp;_storage_category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/memory(ram)/memory(ram).html" beforeDir="false" afterPath="$PROJECT_DIR$/products/memory(ram)/memory(ram)_category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/motherboards/motherboards.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/motherboards/motherboards_category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/power_supplies/power_supplies_category.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/power_supplies/power_supplies_category.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/video_graphics_cards/video_graphics_cards.html" beforeDir="false" afterPath="$PROJECT_DIR$/products/video_graphics_cards/video_graphics_cards_category.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +72,8 @@
       <workItem from="1650269170903" duration="969000" />
       <workItem from="1650271020638" duration="1282000" />
       <workItem from="1650273140337" duration="2497000" />
+      <workItem from="1650304946706" duration="2671000" />
+      <workItem from="1650311554892" duration="2517000" />
     </task>
     <task id="LOCAL-00001" summary="update the memory_category">
       <created>1650270136245</created>
