@@ -11,6 +11,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -28,12 +29,21 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Documents/Lectures of Courses in UCI/CS137 Internet Application/UCI-CS137-Internet-Applications-Engineering/PA1/products/hard_drives_&_ssd_&_storage",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Documents\Lectures of Courses in UCI\CS137 Internet Application\UCI-CS137-Internet-Applications-Engineering\PA1\products\hard_drives_&amp;_ssd_&amp;_storage" />
+      <recent name="D:\Documents\Lectures of Courses in UCI\CS137 Internet Application\UCI-CS137-Internet-Applications-Engineering\PA1\img\products\cpus_&amp;_processors" />
+      <recent name="D:\Documents\Lectures of Courses in UCI\CS137 Internet Application\UCI-CS137-Internet-Applications-Engineering\PA1\img\products\power_supplies" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -43,6 +53,7 @@
       <option name="presentableId" value="Default" />
       <updated>1650240895394</updated>
       <workItem from="1650240896540" duration="7732000" />
+      <workItem from="1650261567674" duration="5911000" />
     </task>
     <servers />
   </component>
