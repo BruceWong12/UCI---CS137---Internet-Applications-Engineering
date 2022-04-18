@@ -17,8 +17,6 @@ button{
     transition: 0.3s;
     border-radius: 5px; /* 5px rounded corners */
     margin: 10px;
-
-
 }
 
 /* Add rounded corners to the top left and the top right corner of the image */
@@ -39,6 +37,6 @@ button{
 /* Add some padding inside the card container */
 .productcategory-card-container {
     padding: 40px;/*2px 16px;*/
-    max-height: auto;
+    max-height: 80%;
     max-width: 300px;
 }
