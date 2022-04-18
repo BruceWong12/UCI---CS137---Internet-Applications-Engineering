@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f673c8f3-68a5-4da4-a013-5fcd82fd7bf8" name="Changes" comment="update the computer_cases_category" />
+    <list default="true" id="f673c8f3-68a5-4da4-a013-5fcd82fd7bf8" name="Changes" comment="update the computer_cases_category">
+      <change afterPath="$PROJECT_DIR$/products/memory(ram)/memory(ram).html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,12 +36,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Documents/Lectures of Courses in UCI/CS137 Internet Application/UCI-CS137-Internet-Applications-Engineering/PA1/products/hard_drives_&_ssd_&_storage",
+    "last_opened_file_path": "D:/Documents/Lectures of Courses in UCI/CS137 Internet Application/UCI-CS137-Internet-Applications-Engineering/PA1/products/memory(ram)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Documents\Lectures of Courses in UCI\CS137 Internet Application\UCI-CS137-Internet-Applications-Engineering\PA1\products\memory(ram)" />
       <recent name="D:\Documents\Lectures of Courses in UCI\CS137 Internet Application\UCI-CS137-Internet-Applications-Engineering\PA1\products\hard_drives_&amp;_ssd_&amp;_storage" />
       <recent name="D:\Documents\Lectures of Courses in UCI\CS137 Internet Application\UCI-CS137-Internet-Applications-Engineering\PA1\img\products\cpus_&amp;_processors" />
       <recent name="D:\Documents\Lectures of Courses in UCI\CS137 Internet Application\UCI-CS137-Internet-Applications-Engineering\PA1\img\products\power_supplies" />
@@ -54,10 +58,22 @@
       <updated>1650240895394</updated>
       <workItem from="1650240896540" duration="7732000" />
       <workItem from="1650261567674" duration="5911000" />
+      <workItem from="1650269170903" duration="750000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
