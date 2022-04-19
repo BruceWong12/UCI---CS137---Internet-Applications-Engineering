@@ -9,7 +9,7 @@ function generateOrderDetail(){
     let sku = document.getElementById("SKU").value;
     let quantity = document.getElementById("qty").value;
     let ccnum = document.getElementById("ccnum").value;
-    let expMonth = document.getElementById("expmonth").value;
+    let expMonth = document.getElementById("expMonth").value;
     let expYear = document.getElementById("expYear").value;
     let cvv = document.getElementById("cvv").value;
     let phoneNum = document.getElementById("phone").value;
