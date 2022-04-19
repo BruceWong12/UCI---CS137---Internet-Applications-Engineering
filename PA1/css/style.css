@@ -94,3 +94,10 @@ html,body{
     min-width: 100px;
     min-height: 100px;
 }
+footer{
+    float: bottom;
+    padding: 20px;
+    text-align-all: center;
+    background-color: lightyellow;/*#333;*/
+    overflow: hidden;
+}
