@@ -40,7 +40,7 @@
     </div>
 <!-- order form-->
     <div class="w3-card-4 orderForm-card" style="width:48%; float:right;">
-        <form action="" name="orderForm" onsubmit="return(validate());">
+        <form action="" name="orderForm" onsubmit="return(generateOrderDetail());">
             <div class="col-50">
                 <strong><h2>Order Form</h2></strong>
                 <h4>Shipping Information</h4>
@@ -139,8 +139,8 @@
                 <h4>Billing Information</h4>
                 <div class="row">
                     <div class="col-50">
-                        <label id="SKU">SKU</label>
-                        <input type="text"  name="SKU" placeholder="6459246">
+                        <label for ="SKU">SKU</label>
+                        <input type="text" id = "SKU"  name="SKU" placeholder="6459246">
                     </div>
                     <div class="col-50">
                         <label for="qty">Quantity (5 Max)</label>

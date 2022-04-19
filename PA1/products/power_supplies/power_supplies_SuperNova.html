@@ -23,7 +23,7 @@
 <body>
 <!-- product detail-->
     <div class="product_detail-card" >
-        <img src="../../img/products/video_graphics_cards/SuperNova.jpg" alt="EVGA - GP Series SuperNOVA 1000W ATX 80 Plus Gold Fully Modular Power Supply - Black" >
+        <img src="../../img/products/power_supplies/SuperNova.jpg" alt="EVGA - GP Series SuperNOVA 1000W ATX 80 Plus Gold Fully Modular Power Supply - Black" >
         <h4><b>EVGA - GP Series SuperNOVA 1000W ATX 80 Plus Gold Fully Modular Power Supply - Black</b></h4>
         <p>SKU:6209800</p>
         <p>Producer: EVGA</p>
@@ -39,7 +39,7 @@
     </div>
 <!-- order form-->
     <div class="w3-card-4 orderForm-card" style="width:48%; float:right;">
-        <form action="" name="orderForm" onsubmit="return(validate());">
+        <form action="" name="orderForm" onsubmit="return(generateOrderDetail());">
             <div class="col-50">
                 <strong><h2>Order Form</h2></strong>
                 <h4>Shipping Information</h4>
@@ -138,8 +138,8 @@
                 <h4>Billing Information</h4>
                 <div class="row">
                     <div class="col-50">
-                        <label id="SKU">SKU</label>
-                        <input type="text"  name="SKU" placeholder="6209800">
+                        <label for ="SKU">SKU</label>
+                        <input type="text" id="SKU" name="SKU" placeholder="6209800">
                     </div>
                     <div class="col-50">
                         <label for="qty">Quantity (5 Max)</label>
