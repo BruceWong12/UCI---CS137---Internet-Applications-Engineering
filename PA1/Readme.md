@@ -26,7 +26,7 @@ For two decades, **BestDuck** has been at the forefront of e-commerce. Founded i
 
 We have a two-level directory of products. The first directory is the category of the product;
 
-<img src="Readme.assets/image-20220418164806325.png" alt="image-20220418164806325" style="zoom:67%;" />
+![image-20220418164806325.png](Readme.assets/image-20220418164806325.png)
 
 - Each category links to a directory/category.
 
@@ -34,7 +34,7 @@ We have a two-level directory of products. The first directory is the category o
 
 Under each category, we put several sample products.
 
-<img src="Readme.assets/image-20220418164911117.png" alt="image-20220418164911117" style="zoom:80%;" />
+![image-20220418164911117.png](Readme.assets/image-20220418164911117.png)
 
 
 
