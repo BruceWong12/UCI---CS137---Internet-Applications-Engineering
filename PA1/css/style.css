@@ -78,3 +78,26 @@ html,body{
 .center:hover{
    font-weight: bold;
 }
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+    margin: 10px;
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+.card img{
+    border-radius: 5px 5px 0 0;
+    max-width: 300px;
+    max-height: 300px;
+    min-width: 100px;
+    min-height: 100px;
+}
+footer{
+    float: bottom;
+    padding: 20px;
+    text-align-all: center;
+    background-color: lightyellow;/*#333;*/
+    overflow: hidden;
+}
