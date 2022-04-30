@@ -1,0 +1,104 @@
+html,body{
+    font: 15px/1.5 Arial, Helvetica,sans-serif;
+    padding:0;
+    margin:0;
+    background-color:white; /*#f4f4f4;*/
+    height: 100%;
+    position: relative;
+}
+
+
+.main-container{
+    align-content: center;
+    min-height: 100vh; /* will cover the 100% of viewport */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 100px; /* height of your footer */
+
+}
+.topNav {
+    /*position: relative;*/
+    background-color: lightyellow;/*#333;*/
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topNav a {
+    float: left;
+    color: black; /*#f2f2f2;*/
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 12px;/*17px;*/
+    font-family: Tahoma, Verdana, Arial, sans-serif; /* RG: added this */
+}
+
+/* Change the color of links on hover */
+.topNav a:hover {
+    background-color: #ddd;
+    color: black;
+    font-weight: bold;
+}
+
+/* Add a color to the active/current link */
+.topNav a.active{
+    background-color: orange; /*#4CAF50;*/
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;   font-weight: bold;
+    font-style : italic;
+}
+
+/* Right-aligned section inside the top navigation */
+.topNav-right {
+    float: right;
+}
+
+.intro{
+    font-family: "ui-rounded";
+    font-size: 40px;
+    background-color: white;
+    margin: 1px;
+    text-align: center;
+    line-height: 80%;
+}
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-family: ui-rounded;
+    font-size: 50px;
+    background-color: orange;
+    border-radius: 20px;
+    border: 0px;
+}
+.center:hover{
+   font-weight: bold;
+}
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+    margin: 10px;
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+.card img{
+    border-radius: 5px 5px 0 0;
+    max-width: 300px;
+    max-height: 300px;
+    min-width: 100px;
+    min-height: 100px;
+}
+footer{
+    float: bottom;
+    padding: 20px;
+    text-align-all: center;
+    background-color: lightyellow;/*#333;*/
+    overflow: hidden;
+    width: 100%;
+}
