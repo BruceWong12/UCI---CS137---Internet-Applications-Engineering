@@ -5,12 +5,14 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 public class Database {
 	
 	// JDBC driver name and database URL
-	static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";  
-	static final String DB_URL = "jdbc:mysql://localhost/best_duck?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+	static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/best_duck?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
 	//  Database credentials
 	static final String USER = "root";
 	static final String PASS = "LeoYoung981028";//"testdb124";
@@ -22,10 +24,12 @@ public class Database {
 	private static Connection openConnection() {
 		Connection conn = null;	
 	    try {
-	    	Class.forName(JDBC_DRIVER); //Register JDBC driver
+	    	Class.forName("com.mysql.jdbc.Driver"); //Register JDBC driver
 
 		    System.out.println("Connecting to database..."); //Open a connection
-		    conn = DriverManager.getConnection(DB_URL,USER,PASS);
+		    conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/" +
+					"best_duck?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCo" +
+					"de=false&serverTimezone=UTC",USER,PASS);
 			
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -105,7 +109,7 @@ public class Database {
 		try {
 
 			String sql;
-			sql = "SELECT * FROM ecommerce.product WHERE productcategory=?";
+			sql = "SELECT * FROM best_duck.product WHERE category=?";
 
 			//prepare statement
 			PreparedStatement ps = conn.prepareStatement(sql);

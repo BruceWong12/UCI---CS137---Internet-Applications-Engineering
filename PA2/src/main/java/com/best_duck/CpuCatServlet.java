@@ -80,7 +80,7 @@ public class CpuCatServlet extends HttpServlet {
 //            String[] imageLinksArray = imageLinks.split(",");
 //            String mainImage = imageLinksArray[0];
 
-            ArrayList<Map<String, Object>> productList = Database.getAllProductsByCategory("Cases");
+            ArrayList<Map<String, Object>> productList = Database.getAllProductsByCategory("CPUs & Processors");
             int i=0;
             for(Map<String, Object> product : productList) {
                 if( (i%3)==0 ) {
@@ -104,7 +104,7 @@ public class CpuCatServlet extends HttpServlet {
                         ////iCUE 220T RGB Airflow ATX Mid-Tower Smart Case
                         + product.get("name")
                         + "</b></h4>\n"
-                        + "<p>" +
+                        + "<p>Producer: " +
                         ////"Producer: CORSAIR" +
                         product.get("producer") +
                         "</p>\n"
@@ -112,7 +112,7 @@ public class CpuCatServlet extends HttpServlet {
                         ////"$59.9" +
                         product.get("price") +
                         "</p>\n"
-                        + "<p>" +
+                        + "<p>Currently In Stock: " +
                         ////"Currently In Stock: 10" +
                         product.get("stock") +
                         "</p>\n"
