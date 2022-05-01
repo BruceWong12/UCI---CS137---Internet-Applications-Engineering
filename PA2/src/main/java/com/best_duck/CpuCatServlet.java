@@ -80,7 +80,7 @@ public class CpuCatServlet extends HttpServlet {
 //            String[] imageLinksArray = imageLinks.split(",");
 //            String mainImage = imageLinksArray[0];
 
-            ArrayList<Map<String, Object>> productList = Database.getAllProductsByCategory("CPUs & Processors");
+            ArrayList<Map<String, Object>> productList = best_duck.Database.getAllProductsByCategory("CPUs & Processors");
             int i=0;
             for(Map<String, Object> product : productList) {
                 if( (i%3)==0 ) {
@@ -93,7 +93,6 @@ public class CpuCatServlet extends HttpServlet {
                         + "computer_cases_detail_"+ product.get("name") + ".html"
                         +        "\">\n"
                         + "<img src=\""
-                        ////../../img/products/computer_cases/iCue220T.jpg
                         + product.get("image")
                         + "\" alt=\"" +
                         product.get("name") +
