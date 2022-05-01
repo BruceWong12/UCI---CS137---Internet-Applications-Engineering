@@ -1,13 +1,16 @@
 package com.best_duck;
 
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Map;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.io.PrintWriter;
 
-@WebServlet(name = "cpuCatServlet", urlPatterns = "/cpu",description = "cpu")
+@WebServlet(name = "StorageCatServlet", urlPatterns = "/storage",description = "storage")
 public class StorageCatServlet extends HttpServlet {
     PrintWriter output;
     HttpServletResponse response;
@@ -50,9 +53,9 @@ public class StorageCatServlet extends HttpServlet {
                 "    </header>\n" +
                 "</head>");
         //body
-        p("<body>\n" +
-                "\n" +
-                "<div class=\"main-container\">\n" +
+        p("<body>");
+        //start of table
+        p("<div class=\"main-container\">\n" +
                 "    <div class=\"main\">\n" +
                 "        <a href=\"../../products.html\"><button>Back to Products Page</button></a>\n" +
                 "\n" +
@@ -70,51 +73,68 @@ public class StorageCatServlet extends HttpServlet {
                 "                    <!--<td colspan=\"3\">Copyright &copy; 2018 Example Organization</td>-->\n" +
                 "                </tr>\n" +
                 "                </tfoot>\n" +
-                "                <tbody>\n" +
-                "\n" +
-                "                <!-- First Row -->\n" +
-                "                <tr>\n" +
-                "                    <td>\n" +
-                "                        <div class=\"productcategory-card\">\n" +
-                "                            <a href=\"cpus_&_processors_category_detail_Core_i7.html\">\n" +
-                "                                <img src=\"./img/products/cpus_&_processors/Core_i7.jpg\" alt=\"Core_i7\" style=\"width:100%\">\n" +
-                "                            </a>\n" +
-                "                            <div class=\"productcategory-card-container\">\n" +
-                "                                <h4><b>Core i7-12700K Desktop Processor 12 (8P+4E) Cores up to 5.0 GHz</b></h4>\n" +
-                "                                <p>Producer: Intel</p>\n" +
-                "                                <p>Price: $59.9</p>\n" +
-                "                                <p>Currently In Stock: 10</p>\n" +
-                "                            </div>\n" +
-                "                        </div>\n" +
-                "                    </td>\n" +
-                "\n" +
-                "                    <td>\n" +
-                "                        <div class=\"productcategory-card\">\n" +
-                "                            <a href=\"cpus_&_processors_category_detail_Ryzen_9.html\">\n" +
-                "                                <img src=\"./img/products/cpus_&_processors/Ryzen_9.jpg\" alt=\"Ryzen_9\" style=\"max-width:100%\">\n" +
-                "                            </a>\n" +
-                "                            <div class=\"productcategory-card-container\">\n" +
-                "                                <h4><b>Ryzen 9 5900X 4th Gen 12-core, 24-threads Unlocked Desktop Processor</b></h4>\n" +
-                "                                <p>Producer: AMD</p>\n" +
-                "                                <p>Price: $59.9</p>\n" +
-                "                                <p>Currently in Stock: 5</p>\n" +
-                "                            </div>\n" +
-                "                        </div>\n" +
-                "                    </td>\n" +
-                "                </tr>\n" +
+                "                <tbody>\n");
+        //cards
+        //Retrieve the main image. This is the first image in the array.
+//            String imageLinks = (String) product.get("ImageLinks");
+//            String[] imageLinksArray = imageLinks.split(",");
+//            String mainImage = imageLinksArray[0];
+
+        ArrayList<Map<String, Object>> productList = best_duck.Database.getAllProductsByCategory("Storage");
+        int i=0;
+        for(Map<String, Object> product : productList) {
+            if( (i%3)==0 ) {
+                p("<tr>");
+            }
+            p("<td>\n"
+                    // dynamically generate the cards
+                    + "<div class=\"productcategory-card\">\n"
+                    + "<a href=\""
+                    + "computer_cases_detail_"+ product.get("name") + ".html"
+                    +        "\">\n"
+                    + "<img src=\""
+                    + product.get("image")
+                    + "\" alt=\"" +
+                    product.get("name") +
+                    "\" style=\"width:100%\">\n"
+                    + "</a>\n"
+                    + "<div class=\"productcategory-card-container\">\n"
+                    + "<h4><b>"
+                    ////iCUE 220T RGB Airflow ATX Mid-Tower Smart Case
+                    + product.get("name")
+                    + "</b></h4>\n"
+                    + "<p>Producer: " +
+                    ////"Producer: CORSAIR" +
+                    product.get("producer") +
+                    "</p>\n"
+                    + "<p>Price: " +
+                    ////"$59.9" +
+                    product.get("price") +
+                    "</p>\n"
+                    + "<p>Currently In Stock: " +
+                    ////"Currently In Stock: 10" +
+                    product.get("stock") +
+                    "</p>\n"
+                    + "</div>\n"
+                    + "</div>\n"
+                    + "</td>\n");
+            if( (i%3)==2 ) {
+                p("</tr>");
+            }
+            i++;
+        }
+
+
+
+
+
+        //end of table
+        p("                </tr>\n" +
                 "                </tbody>\n" +
                 "            </table>\n" +
                 "        </div> <!-- end of \"product-table\" div tag -->\n" +
                 "    </div> <!-- end of \"main\" div tag -->\n" +
-                "</div>\n" +
-                "\n" +
-                "\n" +
-                "<footer>\n" +
-                "    <p>BestDuck Web Design, Copyright &copy; 2022</p>\n" +
-                "</footer>\n" +
-                "\n" +
-                "</body>\n" +
-                "</html>");
+                "</div>");
         output = null;
         response = null;
     }

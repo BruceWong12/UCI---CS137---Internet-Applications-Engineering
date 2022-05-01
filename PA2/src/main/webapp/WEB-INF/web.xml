@@ -5,20 +5,19 @@
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
   <servlet>
-    <servlet-name>cpuCatServlet</servlet-name>
+    <servlet-name>CpuCatServlet</servlet-name>
     <servlet-class>com.best_duck.CpuCatServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>cpuCatServlet</servlet-name>
+    <servlet-name>CpuCatServlet</servlet-name>
     <url-pattern>/cpu</url-pattern>
   </servlet-mapping>
-
   <servlet>
-    <servlet-name>storageCatServlet</servlet-name>
+    <servlet-name>StorageCatServlet</servlet-name>
     <servlet-class>com.best_duck.StorageCatServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>storageCatServlet</servlet-name>
+    <servlet-name>StorageCatServlet</servlet-name>
     <url-pattern>/storage</url-pattern>
   </servlet-mapping>
 </web-app>

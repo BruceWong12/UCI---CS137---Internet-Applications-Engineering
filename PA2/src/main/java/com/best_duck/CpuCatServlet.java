@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "cpuCatServlet", urlPatterns = "/cpu",description = "cpu")
+@WebServlet(name = "CpuCatServlet", urlPatterns = "/cpu",description = "cpu")
 public class CpuCatServlet extends HttpServlet {
     PrintWriter output;
     HttpServletResponse response;
