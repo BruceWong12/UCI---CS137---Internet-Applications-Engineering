@@ -4,21 +4,80 @@
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
   </welcome-file-list>
+  <!--Case Servlet-->
   <servlet>
-    <servlet-name>cpuCatServlet</servlet-name>
+    <servlet-name>CaseCatServlet</servlet-name>
+    <servlet-class>com.best_duck.CaseCatServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CaseCatServlet</servlet-name>
+    <url-pattern>/case</url-pattern>
+  </servlet-mapping>
+  <!--Cooler Servlet-->
+<!--  <servlet>-->
+<!--    <servlet-name>CoolerCatServlet</servlet-name>-->
+<!--    <servlet-class>com.best_duck.CoolerCatServlet</servlet-class>-->
+<!--  </servlet>-->
+<!--  <servlet-mapping>-->
+<!--    <servlet-name>CoolerCatServlet</servlet-name>-->
+<!--    <url-pattern>/cooler</url-pattern>-->
+<!--  </servlet-mapping>-->
+  <!--Cpu Servlet-->
+  <servlet>
+    <servlet-name>CpuCatServlet</servlet-name>
     <servlet-class>com.best_duck.CpuCatServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>cpuCatServlet</servlet-name>
+    <servlet-name>CpuCatServlet</servlet-name>
     <url-pattern>/cpu</url-pattern>
   </servlet-mapping>
-
+  <!--Memory Servlet-->
   <servlet>
-    <servlet-name>storageCatServlet</servlet-name>
+    <servlet-name>MemoryCatServlet</servlet-name>
+    <servlet-class>com.best_duck.MemoryCatServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MemoryCatServlet</servlet-name>
+    <url-pattern>/memory</url-pattern>
+  </servlet-mapping>
+  <!--Motherboard Servlet-->
+  <servlet>
+    <servlet-name>MotherboardCatServlet</servlet-name>
+    <servlet-class>com.best_duck.MotherboardCatServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MotherboardCatServlet</servlet-name>
+    <url-pattern>/motherboard</url-pattern>
+  </servlet-mapping>
+  <!--Power Supply Servlet-->
+  <servlet>
+    <servlet-name>PowerSupplyCatServlet</servlet-name>
+    <servlet-class>com.best_duck.PowerSupplyCatServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PowerSupplyCatServlet</servlet-name>
+    <url-pattern>/power_supply</url-pattern>
+  </servlet-mapping>
+
+  <!--Storage Servlet-->
+  <servlet>
+    <servlet-name>StorageCatServlet</servlet-name>
     <servlet-class>com.best_duck.StorageCatServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>storageCatServlet</servlet-name>
+    <servlet-name>StorageCatServlet</servlet-name>
     <url-pattern>/storage</url-pattern>
   </servlet-mapping>
+  <!--Video Card Servlet-->
+  <servlet>
+    <servlet-name>VideoCardCatServlet</servlet-name>
+    <servlet-class>com.best_duck.VideoCardCatServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>VideoCardCatServlet</servlet-name>
+    <url-pattern>/video_card</url-pattern>
+  </servlet-mapping>
+
+
+
 </web-app>

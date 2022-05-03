@@ -1,17 +1,16 @@
 package com.best_duck;
 
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Map;
 
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-@WebServlet(name = "StorageCatServlet", urlPatterns = "/storage")
-public class StorageCatServlet extends HttpServlet {
+@WebServlet(name = "CoolerCatServlet", value = "/cooler")
+public class CoolerCatServlet extends HttpServlet {
     PrintWriter output;
     HttpServletResponse response;
 
@@ -30,9 +29,10 @@ public class StorageCatServlet extends HttpServlet {
         p("<html lang=\"en\">");
         //Head
         p("<head>\n" +
+                "<title>Coolers</title>\n"+
                 "    <meta charset=\"UTF-8\">\n" +
                 "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n" +
-                "   <link href=\"./css/style.css\" rel=\"stylesheet\">\n" +
+                "    <link href=\"./css/style.css\" rel=\"stylesheet\">\n" +
                 "    <link href=\"./css/products.css\" rel=\"stylesheet\">\n" +
                 "    <link href=\"./css/product_category.css\" rel =\"stylesheet\">\n" +
                 "\n" +
@@ -62,7 +62,7 @@ public class StorageCatServlet extends HttpServlet {
                 "        <!-- Product Table -->\n" +
                 "        <div class=\"product-table\">\n" +
                 "            <table>\n" +
-                "                <caption><h1>Storage</h1></caption>\n" +
+                "                <caption><h1>Fans, Heatsinks & Cooling</h1></caption>\n" +
                 "                <thead>\n" +
                 "                <tr>\n" +
                 "                    <!--<th>Table Header</th>-->\n" +
@@ -75,58 +75,52 @@ public class StorageCatServlet extends HttpServlet {
                 "                </tfoot>\n" +
                 "                <tbody>\n");
         //cards
-        //Retrieve the main image. This is the first image in the array.
-//            String imageLinks = (String) product.get("ImageLinks");
-//            String[] imageLinksArray = imageLinks.split(",");
-//            String mainImage = imageLinksArray[0];
+            //Retrieve the main image. This is the first image in the array.
 
-        ArrayList<Map<String, Object>> productList = best_duck.Database.getAllProductsByCategory("Storage");
-        int i=0;
-        for(Map<String, Object> product : productList) {
-            if( (i%3)==0 ) {
-                p("<tr>");
-            }
-            p("<td>\n"
-                    // dynamically generate the cards
-                    + "<div class=\"productcategory-card\">\n"
-                    + "<a href=\""
-                    + "computer_cases_detail_"+ product.get("name") + ".html"
-                    +        "\">\n"
-                    + "<img src=\""
-                    + product.get("image")
-                    + "\" alt=\"" +
-                    product.get("name") +
-                    "\" style=\"width:100%\">\n"
-                    + "</a>\n"
-                    + "<div class=\"productcategory-card-container\">\n"
-                    + "<h4><b>"
-                    ////iCUE 220T RGB Airflow ATX Mid-Tower Smart Case
-                    + product.get("name")
-                    + "</b></h4>\n"
-                    + "<p>Producer: " +
-                    ////"Producer: CORSAIR" +
-                    product.get("producer") +
-                    "</p>\n"
-                    + "<p>Price: " +
-                    ////"$59.9" +
-                    product.get("price") +
-                    "</p>\n"
-                    + "<p>Currently In Stock: " +
-                    ////"Currently In Stock: 10" +
-                    product.get("stock") +
-                    "</p>\n"
-                    + "</div>\n"
-                    + "</div>\n"
-                    + "</td>\n");
+
+            ArrayList<Map<String, Object>> productList = best_duck.Database.getAllProductsByCategory("Fans, Heatsinks & Cooling");
+            int i=0;
+            for(Map<String, Object> product : productList) {
+                if( (i%3)==0 ) {
+                    p("<tr>");
+                }
+                p("<td>\n"
+                        // dynamically generate the cards
+                        + "<div class=\"productcategory-card\">\n"
+                        + "<a href=\""
+                        + "computer_cases_detail_"+ product.get("name") + ".html"
+                        +        "\">\n"
+                        + "<img src=\""
+                        + product.get("image")
+                        + "\" alt=\"" +
+                        product.get("name") +
+                        "\" style=\"width:100%\">\n"
+                        + "</a>\n"
+                        + "<div class=\"productcategory-card-container\">\n"
+                        + "<h4><b>"
+                        ////iCUE 220T RGB Airflow ATX Mid-Tower Smart Case
+                        + product.get("name")
+                        + "</b></h4>\n"
+                        + "<p>Producer: " +
+                        ////"Producer: CORSAIR" +
+                        product.get("producer") +
+                        "</p>\n"
+                        + "<p>Price: " +
+                        ////"$59.9" +
+                        product.get("price") +
+                        "</p>\n"
+                        + "<p>Currently In Stock: " +
+                        ////"Currently In Stock: 10" +
+                        product.get("stock") +
+                        "</p>\n"
+                        + "</div>\n"
+                        + "</div>\n"
+                        + "</td>\n");
             if( (i%3)==2 ) {
                 p("</tr>");
             }
             i++;
         }
-
-
-
-
 
         //end of table
         p("                </tr>\n" +

@@ -30,6 +30,7 @@ public class CpuCatServlet extends HttpServlet {
         p("<html lang=\"en\">");
         //Head
         p("<head>\n" +
+                "<title>CPU</title>\n"+
                 "    <meta charset=\"UTF-8\">\n" +
                 "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n" +
                 "    <link href=\"./css/style.css\" rel=\"stylesheet\">\n" +
@@ -57,7 +58,7 @@ public class CpuCatServlet extends HttpServlet {
         //start of table
         p("<div class=\"main-container\">\n" +
                 "    <div class=\"main\">\n" +
-                "        <a href=\"../../products.html\"><button>Back to Products Page</button></a>\n" +
+                "        <a href=\"./products.html\"><button>Back to Products Page</button></a>\n" +
                 "\n" +
                 "        <!-- Product Table -->\n" +
                 "        <div class=\"product-table\">\n" +
