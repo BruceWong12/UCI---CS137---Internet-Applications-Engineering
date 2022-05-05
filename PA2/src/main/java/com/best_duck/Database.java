@@ -324,7 +324,7 @@ public class Database {
             sql = "INSERT INTO best_duck.order (order_id, sku, first_name, last_name, address, " +
                     "city, state, zip, shipping_method, quantity, credit_num, " +
                     "exp_mon, exp_year, cvv, phone_num, email, user_id)" +
-                    " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                    " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
             //prepare statement
             PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             //ps.setInt(1, order_num);
