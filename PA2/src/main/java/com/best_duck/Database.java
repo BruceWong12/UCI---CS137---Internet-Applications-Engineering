@@ -1,4 +1,4 @@
-package best_duck;
+package com.best_duck;
 
 import java.io.PrintWriter;
 import java.sql.*;
@@ -437,5 +437,71 @@ public class Database {
         }
         return row;
     }
+    /**
+     * getAllOrdersByUserid
+     * @param userid
+     * @return
+     */
+    public static ArrayList<Map<String, Object>> getAllOrdersByUserid(String userid) {
+        ArrayList<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
+        Connection conn = openConnection();
 
+        //Statement stmt = null;
+        System.out.println("Creating statement...");
+        try {
+
+            String sql;
+            sql = "SELECT * FROM best_duck.order WHERE userid=?";
+
+            //prepare statement
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1,userid); // fill the category
+
+            //execute statement
+            ResultSet rs = ps.executeQuery();
+
+            //used to printing the results of ResultSet
+            //and store ResultSet into an arraylist of hashmaps
+            ResultSetMetaData rsmd = rs.getMetaData();
+            System.out.println("querying " + sql + "(?= " + userid + ")");
+            int columnsNumber = rsmd.getColumnCount();
+
+            while(rs.next()){
+                Map<String, Object> row = new HashMap<String, Object>();
+
+                row.put("order_num", rs.getInt("order_num"));
+                row.put("sku", rs.getInt("sku"));
+                row.put("first_name", rs.getString("first_name"));
+                row.put("last_name", rs.getString("last_name"));
+                row.put("address", rs.getString("address"));
+                row.put("city", rs.getString("city"));
+                row.put("state", rs.getString("state"));
+                row.put("zip", rs.getString("zip"));
+                row.put("shipping_method", rs.getString("shipping_method"));
+                row.put("quantity", rs.getInt("quantity"));
+                row.put("credit_num", rs.getInt("credit_num"));
+                row.put("exp_mon", rs.getInt("exp_mon"));
+                row.put("exp_year", rs.getInt("exp_year"));
+                row.put("cvv", rs.getInt("cvv"));
+                row.put("phone_num", rs.getInt("phone_num"));
+                row.put("email", rs.getString("email"));
+                list.add(row);
+            }
+
+
+            System.out.println("List Created");
+
+            rs.close();
+            //stmt.close();
+            conn.close();
+
+
+
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return list;
+
+    }
 }
