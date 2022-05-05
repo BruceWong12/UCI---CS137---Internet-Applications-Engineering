@@ -288,8 +288,8 @@ public class Database {
 
 
 
-    public static int setOrder(
-            int order_num,
+    public static void setOrder(
+            String order_id,
             int sku,
             String first_name,
             String last_name,
@@ -304,11 +304,12 @@ public class Database {
             int exp_year,
             int cvv,
             int phone_num,
-            String email
+            String email,
+            String user_id
     ) {
 
         // return value
-        int recordID = 0;
+        //int recordID = 0;
         int numOfRowsUpdated = 0;
 
         // convert java date to mysql date
@@ -320,13 +321,14 @@ public class Database {
         System.out.println("Creating statement...");
         try {
             String sql;
-            sql = "INSERT INTO best_duck.order (order_num, sku, first_name, last_name, address, " +
+            sql = "INSERT INTO best_duck.order (order_id, sku, first_name, last_name, address, " +
                     "city, state, zip, shipping_method, quantity, credit_num, " +
-                    "exp_mon, exp_year, cvv, phone_num, email)" +
-                    " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                    "exp_mon, exp_year, cvv, phone_num, email, user_id)" +
+                    " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
             //prepare statement
             PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
-            ps.setInt(1, order_num);
+            //ps.setInt(1, order_num);
+            ps.setString(1, order_id);
             ps.setInt(2, sku);
             ps.setString(3, first_name);
             ps.setString(4, last_name);
@@ -342,6 +344,7 @@ public class Database {
             ps.setInt(14, cvv);
             ps.setInt(15, phone_num);
             ps.setString(16, email);
+            ps.setString(17, user_id);
 
 
             //execute statement
@@ -352,19 +355,13 @@ public class Database {
             if(numOfRowsUpdated == 0) {
                 throw new SQLException("Creating order record failed, no rows affected.");
             }
-            try (ResultSet generatedKeys = ps.getGeneratedKeys()) {
-                if(generatedKeys.next()) {
-                    recordID = (int) generatedKeys.getLong(1);
-                } else {
-                    throw new SQLException("Creating order record failed, no record ID obtained.");
-                }
-            }
+
 
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        return recordID;
+        //return recordID;
     }
 
 
