@@ -124,7 +124,9 @@ public class ShoppingCart extends HttpServlet {
             Map<String, Object> product = Database.getProduct(prodID);
             String productname = (String) product.get("name");
             float price = (float) product.get("price");
+            price = ( float )(Math.round(price* 100 )/ 100 );
             String productprice = Float.toString( price );
+
 
             // add to subtotal
             subtotal+= (qty * price);
