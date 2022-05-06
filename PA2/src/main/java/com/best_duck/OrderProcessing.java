@@ -195,7 +195,7 @@ public class OrderProcessing extends HttpServlet {
   		session.setAttribute("orderrecordid", newrecordID);
 		// Get session object
 		// Get the cart
-		cart.clear();
+
 
 		output = null;
 		response = null;

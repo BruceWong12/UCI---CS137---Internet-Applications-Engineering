@@ -138,13 +138,6 @@ public class OrderConfirmation extends HttpServlet {
 		              //"<p>"+ OrderDate +"</p> <!-- Date of Purchase -->\n" +
 		              "");
 		              p("<div class=\"productimageandsummary-container\">\n" +
-		                /*"<div class=\"productimage\">\n" +
-		                  "<?php\n" +
-		                    "//<img class= \"product-img\" src=\"../img/products/ps4.jpeg\" alt=\"PS4\">\n" +
-		                    "echo \"<img class='product-img' src='\".$mainImagePath.\"' alt='product image'>"\n" +
-		                  "?>\n" +
-		                "</div>\n" +*/ //TODO
-		                  
 		                "<div class=\"productimage\">\n" +
 		              "");
 		              
@@ -182,33 +175,26 @@ public class OrderConfirmation extends HttpServlet {
 		              		p("</table>");
 		              	p("</div>");
 		                
-		                p("<div class=\"productsummary\">\n" +
-		                  "<p style=\"border-top: 1px solid lightgrey; padding-top: 5px;\">\n" +
-		                    "<span style=\"font-weight: bold;\">Product Name</span>\n" +
-		                    "<span class=\"alignright\" style=\"font-weight: bold;\">See product table to the right.<span>\n" +
-		                  "</p>\n" +
-		                  //"<p>Product ID <span class=\"alignright\">"+ProductList+"</span></p>\n" +
-		                  //"<p>Product Price <span class=\"alignright\"><?php echo "$".$product['Price'].""; ?></span></p>\n" +
-		                  //"<p>Quantity <span class=\"alignright\"><?php echo "".$order['Quantity'].""; ?></span></p>\n" +
-		                  //"<p>Product Price X Quantity <span class=\"alignright\"><?php echo "$".$order['OrderPriceQuantity'].""; ?></span></p>\n" +
-		                  //"<p>Order Subtotal <span class=\"alignright\">$"+OrderPriceQuantity+"</p>\n" +
-		                  //"<p>Discount <span class=\"alignright\">$"+OrderDiscount+"</span></p>\n" +
-		                  //"<p>Price After Discount <span class=\"alignright\">$"+OrderSubtotalAfterDiscount+"</p>\n" +
-
-
-		                "</div>\n" +
-		              "</div>\n" +
-		              "");
+//		                p(
+//								"<div class=\"productsummary\">\n" +
+//		                  "<p style=\"border-top: 1px solid lightgrey; padding-top: 5px;\">\n" +
+//		                    "<span style=\"font-weight: bold;\">Product Name</span>\n" +
+//		                    "<span class=\"alignright\" style=\"font-weight: bold;\">See product table to the right.<span>\n" +
+//		                  "</p>\n" +
+//		                  //"<p>Product ID <span class=\"alignright\">"+ProductList+"</span></p>\n" +
+//		                  //"<p>Product Price <span class=\"alignright\"><?php echo "$".$product['Price'].""; ?></span></p>\n" +
+//		                  //"<p>Quantity <span class=\"alignright\"><?php echo "".$order['Quantity'].""; ?></span></p>\n" +
+//		                  //"<p>Product Price X Quantity <span class=\"alignright\"><?php echo "$".$order['OrderPriceQuantity'].""; ?></span></p>\n" +
+//		                  //"<p>Order Subtotal <span class=\"alignright\">$"+OrderPriceQuantity+"</p>\n" +
+//		                  //"<p>Discount <span class=\"alignright\">$"+OrderDiscount+"</span></p>\n" +
+//		                  //"<p>Price After Discount <span class=\"alignright\">$"+OrderSubtotalAfterDiscount+"</p>\n" +
+//
+//
+//		                "</div>\n" +
+//		              "</div>\n" +
+//		              "");
 		              
 		            p("</div>\n" +
-
-		            "<div class=\"ordertotal\">\n" +
-		             "<div class=\"sectionheading\"><p>Order Total</p></div>\n" +
-		              "<p style=\"border-top: 1px solid lightgrey; padding-top: 5px;\">\n" +
-		                //"<span style=\"font-weight: bold;\">Total price: </span>\n" +
-		                //"<span class=\"alignright\" style=\"font-weight: bold; color: blue;\">$"+OrderTotalPrice+"</span>\n" +
-		              "</p>\n" +
-		            "</div>\n" +
 
 		            "<div class=\"billingandshipping\">\n" +
 		              "<div class=\"sectionheading\"><p>Billing and Shipping</p></div>\n" +
@@ -264,7 +250,7 @@ public class OrderConfirmation extends HttpServlet {
 
 		  p("</body>");
 		  p("</html>");
-		
+		cart.clear();
 		
 		//clean up
 		output = null;

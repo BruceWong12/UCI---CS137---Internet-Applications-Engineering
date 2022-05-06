@@ -223,39 +223,6 @@ public class ShoppingCart extends HttpServlet {
                 "<!-- end of order form card div -->\n" +
                 "");
 
-//		      		//Viewed Items
-//		      		if (viewed != null) {
-//		      			p("<!-- Shopping Cart Detail Card -->\n" +
-//		    		 	  "<div class=\"w3-card-4 ordersummarycard\" style=\"width:48%; float:right;\">\n" +
-//		    		 	  	"<center><strong><h2>Most Recent Viewed Items</h2></strong></center>\n" +
-//		    		 			"");
-//			      			p("<div class=\"product-table\"> \n" +
-//									"<table>\n" +
-//						              "<tbody>\n" +
-//						              "");
-//			      			for (String id : viewed) {
-//								Map<String, Object> product = Database.getProduct(id);
-//								String imgLinks = (String) product.get("ImageLinks");
-//								String[] imgLinksArray = imgLinks.split(",");
-//								String mainImg = imgLinksArray[0];
-//								p(
-//										"<td>\n" +
-//										"<div class=\"productcategory-card\"> \n" +
-//											"<a href=\"productdetails?pageFrom=productcategory_"+ ((String)product.get("Platform")).toLowerCase() +"&productCategory="+product.get("ProductCategory")+"&productID="+product.get("ProductID")+"\">\n" +
-//												"<img src=\""+mainImg+"\" alt=\"cover\" style=\"width:100%\">" +
-//											"</a> \n" +
-//												"<div class=\"productcategory-card-container\">\n" +
-//													"<p>Product Name:" + product.get("ProductName") + "</p> \n" +
-//													"<p>Price: " + product.get("Price") + "</p> \n" +
-//												"</div> \n" +
-//										"</div> \n"+
-//										"</td>");
-//							}
-//							p(
-//										"</tbody>\n" +
-//									"</table> \n"
-//												);
-//		      		}
 
         p("</div>\n" +
                 "<!-- end of main div -->\n" +
