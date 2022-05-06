@@ -13,6 +13,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.Map.Entry;
 
+import java.util.Date;
 import java.util.UUID;
 
 
@@ -103,8 +104,13 @@ public class OrderProcessing extends HttpServlet {
 		p("Products and Quantity ordered: \n");
 		String sku = null;
 		String order_id = getUUID();
+		//System.out.println(order_id.length());
 		String user_id = "0";
-  		for(Entry<String, Integer> entry: cart.entrySet()) {
+		//Get today's date
+		Date todaysDate = new Date();
+
+
+		for(Entry<String, Integer> entry: cart.entrySet()) {
   			sku = entry.getKey();
   			Integer qty = entry.getValue();
   			String qtyString = Integer.toString(qty);
@@ -117,6 +123,28 @@ public class OrderProcessing extends HttpServlet {
   			p("product:" + sku + " productname: " + productname + " qty: " + qtyString + "\n");
 
 			productIDList.add(sku);
+			System.out.println("----Set order----");
+			System.out.println(order_id);
+			System.out.println(Integer.parseInt(sku));
+			System.out.println(firstname);
+			System.out.println(lastname);
+			System.out.println(address);
+			System.out.println(city);
+			System.out.println(state);
+			System.out.println(zip);
+			System.out.println(shippingmethod);
+			System.out.println(qty);
+			System.out.println(cardnumber);
+			System.out.println(expMonthInt);
+			System.out.println(expyearInt);
+			System.out.println(cvvInt);
+			System.out.println(phone);
+			System.out.println(email);
+			System.out.println(user_id);
+			System.out.println(todaysDate);
+
+			System.out.println("--- --- ---");
+
 			Database.setOrder(
 					order_id,
 					Integer.parseInt(sku),
@@ -128,13 +156,15 @@ public class OrderProcessing extends HttpServlet {
 					zip,
 					shippingmethod,
 					qty,
-					Integer.parseInt(cardnumber),
+					cardnumber,
 					expMonthInt,
 					expyearInt,
 					cvvInt,
-					Integer.parseInt(phone),
+					phone,
 					email,
-					user_id); // user id: need input
+					user_id,
+					todaysDate
+			); // user id: need input
 		
   		}
   		p("subtotal: " + subtotal + "\n");
@@ -163,9 +193,8 @@ public class OrderProcessing extends HttpServlet {
   		
   		// Set orderrecord session attribute
   		session.setAttribute("orderrecordid", newrecordID);
-  		
-  		
-		//clean up
+
+
 		output = null;
 		response = null;
 		
@@ -174,10 +203,11 @@ public class OrderProcessing extends HttpServlet {
 		//Call a servlet from a servlet using RequestDispatcher
 		//RequestDispatcher rd = req.getRequestDispatcher("sq");
 				//rd.forward(req, res); //this forwards the req and res objects to the sq servlet
-		
+		System.out.println("Before forward");
 		RequestDispatcher rd = req.getRequestDispatcher("order_confirmation");
 		rd.forward(req, res); //this forwards the req and res objects to the order confirmation servlet
-  		
+		//clean up
+
 	}
 	
 	/**

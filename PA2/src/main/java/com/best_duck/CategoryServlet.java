@@ -44,13 +44,13 @@ public class CategoryServlet extends HttpServlet {
                 "            <!-- Left-aligned links -->\n" +
                 "            <a href=\"./index.html\">Home</a>\n" +
                 "            <!-- https://www.w3schools.com/howto/howto_css_subnav.asp -->\n" +
-                "            <a class=\"active\" href = \"./products.html\">Products</a>\n" +
+                "            <a class=\"active\" href = \"categories\">Products</a>\n" +
                 "            <a href=\"./team.html\">Team</a>\n" +
                 "            <a href=\"./about.html\">Contact</a>\n" +
                 "\n" +
                 "            <!-- Right-aligned links-->\n" +
                 "            <div class=\"topNav-right\">\n" +
-                "                <a><i class=\"fas fa-shopping-cart\"></i>Shopping Cart</a>\n" +
+                "                <a href =\"shoppingcart\"><i class=\"fas fa-shopping-cart\"></i>Shopping Cart</a>\n" +
                 "            </div>\n" +
                 "        </div>\n" +
                 "    </header>\n" +

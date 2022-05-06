@@ -20,9 +20,11 @@ public class OrderList extends HttpServlet {
     HttpServletResponse response;
 
     public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
+        System.out.println("Inside include servlet");
         renderPage(req,res);
     }
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
+        System.out.println("Inside include servlet");
         renderPage(req,res);
     }
 
@@ -31,10 +33,10 @@ public class OrderList extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
 
         String category= req.getParameter("category");
-
-        p("");
-        p("<!doctype html>");
-        p("<html lang=\"en\">");
+        System.out.println("Inside include servlet");
+        //p("");
+        //p("<!doctype html>");
+        //p("<html lang=\"en\">");
         //Head
         p("<head>\n" +
                 "    <meta charset=\"UTF-8\">\n" +
@@ -64,7 +66,6 @@ public class OrderList extends HttpServlet {
         //start of table
         p("<div class=\"main-container\">\n" +
                 "    <div class=\"main\">\n" +
-                "        <a href=\"products.html\"><button>Back to Products Page</button></a>\n" +
                 "\n" +
                 "        <!-- Product Table -->\n" +
                 "        <div class=\"product-table\">\n" +

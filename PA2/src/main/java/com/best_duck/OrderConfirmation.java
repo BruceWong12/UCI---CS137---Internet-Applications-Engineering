@@ -2,6 +2,7 @@ package com.best_duck;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Map;
 
@@ -26,7 +27,7 @@ public class OrderConfirmation extends HttpServlet {
 		renderPage(req,res);
 	}
 	private void renderPage(HttpServletRequest req, HttpServletResponse res) throws IOException {
-		System.out.println("Shabi professor");
+		System.out.println("in confirmation page");
 		response = res;
 		response.setContentType("text/html;charset=UTF-8");
 		
@@ -38,144 +39,75 @@ public class OrderConfirmation extends HttpServlet {
 		Map<String, Integer> cart = (Map<String, Integer>) session.getAttribute("cart");
 		
 		// get new order record id
-		int orderrecordid = (int) session.getAttribute("orderrecordid");
+		String orderrecordid = (String) session.getAttribute("orderrecordid");
 		
 		//Get order
-		Map<String, Object> order = Database.getOrder(orderrecordid);
-		
-		int OrderID = (int) order.get("OrderID");
-		Date OrderDate = (Date) order.get("OrderDate");
-		String OrderProductName = (String) order.get("OrderProductName");
-		float OrderPriceQuantity = (float) order.get("OrderPriceQuantity");
-		float OrderDiscount = (float) order.get("OrderDiscount");
-		float OrderSubtotalAfterDiscount = (float) order.get("OrderSubtotalAfterDiscount");
-		float OrderShippingPrice = (float) order.get("OrderShippingPrice");
-		float OrderSubtotalAfterShipping=(float) order.get("OrderSubtotalAfterShipping");
-		float OrderTaxRate =(float) order.get("OrderTaxRate");
-		float OrderAmountTaxed =(float) order.get("OrderAmountTaxed");
-		float OrderSubtotalAfterTax =(float) order.get("OrderSubtotalAfterTax");
-		float OrderTotalPrice = (float) order.get("OrderTotalPrice");
-		String FirstName = (String) order.get("FirstName");
-		String LastName = (String) order.get("LastName");
-		String Address = (String) order.get("Address");
-		String City = (String) order.get("City");
-		String State = (String) order.get("State");
-		int Zip = (int) order.get("Zip");
-		String ShippingMethod = (String) order.get("ShippingMethod");
-		String ProductID = (String) order.get("ProductID");
-		String ProductList = (String) order.get("ProductList");
-		int Quantity= (int) order.get("Quantity");
-		String QuantityList= (String) order.get("QuantityList");
-		String CreditCardNumber= (String) order.get("CreditCardNumber");
-		String ExpMonth= (String) order.get("ExpMonth");
-		int ExpYear=(int) order.get("ExpYear");
-		int CVV= (int) order.get("CVV");
-		String PhoneNumber=(String) order.get("PhoneNumber");
-		String Email=(String) order.get("Email");
+		ArrayList<Map<String, Object>> orderproducts = Database.getOrderProducts(orderrecordid);
+		//Map<String, Object> order = Database.getOrderProducts(orderrecordid);
+		//Get shared information
+		Map<String, Object> orderInfo = Database.getOrderInfo(orderrecordid);
+
+		String OrderID = (String) orderInfo.get("order_num");
+		String FirstName = (String) orderInfo.get("first_name");
+		String LastName = (String) orderInfo.get("last_name");
+		String Address = (String) orderInfo.get("address");
+		String City = (String) orderInfo.get("city");
+		String State = (String) orderInfo.get("state");
+		String Zip = (String) orderInfo.get("zip");
+		String ShippingMethod = (String) orderInfo.get("shipping_method");
+		String CreditCardNumber= (String) orderInfo.get("credit_num");
+		int ExpMonth= (int) orderInfo.get("exp_mon");
+		int ExpYear=(int) orderInfo.get("exp_year");
+		int CVV = (int) orderInfo.get("cvv");
+		String PhoneNumber = (String) orderInfo.get("phone_num");
+		String Email = (String) orderInfo.get("email");
+		/*float OrderTotalPrice = (float) orderInfo.get("price");
+		String FirstName = (String) orderInfo.get("firstName");
+		String LastName = (String) orderInfo.get("lastName");
+		String Address = (String) orderInfo.get("Address");
+		String City = (String) orderInfo.get("City");
+		String State = (String) orderInfo.get("State");
+		int Zip = (int) orderInfo.get("Zip");
+		String ShippingMethod = (String) orderInfo.get("ShippingMethod");
+		String ProductID = (String) orderInfo.get("ProductID");
+		String ProductList = (String) orderInfo.get("ProductList");
+		int Quantity= (int) orderInfo.get("Quantity");
+		String QuantityList= (String) orderInfo.get("QuantityList");
+		String CreditCardNumber= (String) orderInfo.get("CreditCardNumber");
+		String ExpMonth= (String) orderInfo.get("ExpMonth");
+		int ExpYear=(int) orderInfo.get("ExpYear");
+		int CVV= (int) orderInfo.get("CVV");
+		String PhoneNumber=(String) orderInfo.get("PhoneNumber");
+		String Email=(String) orderInfo.get("Email");*/
 		
 		
 		
 		// Render the Order Confirmation Page
 		p("");
 		p("<!doctype html>\n" +
-		"<html lang=\"en\">\n" +
-		  "<head>\n" +
-		    "<meta charset=\"utf-8\">\n" +
-		    "<meta name=\"author\" content=\"\">\n" +
-		    "<meta name=\"description\" content=\"\">\n" +
+		"<html lang=\"en\">\n");
+		p("<header>\n" +
+				"    <link href=\"./css/style.css\" rel=\"stylesheet\">\n" +
+				"    <link href=\"./css/shoppingCart.css\" rel=\"stylesheet\">\n" +
+				"    <link href=\"./css/product_category.css\" rel =\"stylesheet\">\n" +
+						"<link href=\"./css/orderconfirmation.css\" rel =\"stylesheet\">\n"+
+				"        <div class=\"topNav\">\n" +
+				"            <!-- Left-aligned links -->\n" +
+				"            <a class=\"active\" href=\"index.html\">Home</a>\n" +
+				"            <a href = \"categories\">Products</a>\n" +
+				"            <a href=\"team.html\">Team</a>\n" +
+				"            <a href=\"about.html\">About</a>\n" +
+				"\n" +
+				"            <!-- Right-aligned links-->\n" +
+				"            <div class=\"topNav-right\">\n" +
+				"                <a href =\"shoppingcart\"><i class=\"fas fa-shopping-cart\"></i> Shopping Cart</a>\n" +
+				"            </div>\n" +
+				"        </div>\n" +
+				"    </header>");
 
-		    "<title>Products</title>\n" +
 
-		    "<!-- external css file -->\n" +
-		    "<script src=\"https://use.fontawesome.com/releases/v5.11.1/js/all.js\"></script>\n" +
-		    "<link href=\"./css/style.css\" rel=\"stylesheet\">\n" +
-		    "<link href=\"./css/orderconfirmation.css\" rel=\"stylesheet\">\n" +
-
-
-		    "<!-- JavaScript -->\n" +
-		    "<!--<script type=\"text/javascript\">-->\n" +
-		    "<script>\n" +
-		      "$(document).ready(function () {\n" +
-		        "/* Go to Top Button */\n" +
-		        "var elmClass = '.gotopbtn'; // Adjust this accordingly.\n" +
-
-		        "//Check to see if the window is top if not then display button\n" +
-		        "$(window).scroll(function () {\n" +
-		          "if ($(this).scrollTop() > 300) { // 300px from top\n" +
-		            "$(elmClass).fadeIn();\n" +
-		          "} else {\n" +
-		            "$(elmClass).fadeOut();\n" +
-		          "}\n" +
-		        "});\n" +
-
-		        "//Click event to scroll to top\n" +
-		        "$(elmClass).click(function () {\n" +
-		          "$('html, body').animate({ scrollTop: 0 }, 800);\n" +
-		          "return false;\n" +
-		        "});\n" +
-		        "/*----------------------------*/\n" +
-		      "});\n" +
-		      "function openSearch() {\n" +
-		        "document.getElementById(\"myOverlay\").style.display = \"block\";\n" +
-		      "}\n" +
-
-		      "function closeSearch() {\n" +
-		        "document.getElementById(\"myOverla\").style.display = \"none\";\n" +
-		      "}\n" +
-		    "</script>\n" +
-
-		  "</head>");
-		
-		  //BODY TAG
+		//BODY TAG
 		  p("<body>");
-		  
-		  p("<!-- Overlay for Search button --> \n" +
-			  "<div id=\"myOverlay\" class=\"overlay\">\n" +
-			    "<span class=\"closebtn\" onclick=\"closeSearch()\" title=\"Close Overlay\">×</span>\n" +
-			    "<div class=\"overlay-content\">\n" +
-			      "<form action=\"#\">\n" +
-			        "<input type=\"text\" placeholder=\"Search..\" name=\"search\">\n" +
-			        "<button type=\"submit\"><i class=\"fa fa-search\"></i></button>\n" +
-			      "</form>\n" +
-			    "</div>\n" +
-			  "</div>\n" +
-	
-	
-			  "<div class=\"main-container\">\n" +
-			    "<!--<p>hello world!</p>-->\n" +
-	
-			    "<!-- Nav -->\n" +
-			    "<!-- https://www.w3schools.com/howto/howto_css_topnav_right.asp-->\n" +
-			    "<header>\n" +
-			      "<div class=\"topnav\">\n" +
-			        "<!-- Left-aligned links -->\n" +
-			        "<!--<a id=\"topnav-logo\" href=\"index.html\"><img src=\"img/logo_placeholder.png\" alt=\"Logo\"></a>-->\n" +
-			        "<a href=\"./index.html\">Home</a>\n" +
-			        "<a class=\"active\" href=\"./products.html\">Products</a>\n" +
-	
-			        "<!-- https://www.w3schools.com/howto/howto_css_subnav.asp -->\n" +
-			        "<!--<a href=\"#about\">About</a>-->\n" +
-			        "<div class=\"subnav\">\n" +
-			          "<button class=\"subnavbtn\">About <i class=\"fa fa-caret-down\"></i></button>\n" +
-			          "<div class=\"subnav-content\">\n" +
-			            "<a href=\"./company.html\">Company</a>\n" +
-			            "<a href=\"./team.html\">Team</a>\n" +
-			            "<!-- <a href=\"#careers\">Careers</a> -->\n" +
-			            "<a href=\"./contact.html\">Contact</a>\n" +
-			          "</div>\n" +
-			        "</div>\n" +
-	
-			        "<!-- Right-aligned links-->\n" +
-			        "<div class=\"topnav-right\">\n" +
-			          "<!--<a href=\"#search\">Search</a>-->\n" +
-			          "<button class=\"searchBtn\" onClick=\"openSearch()\" style=\"float:left;\"><i class=\"fas fa-search\"></i> Search</button>\n" +
-			          "<a href=\"shoppingcart\"><i class=\"fas fa-shopping-cart\"></i> Shopping Cart</a>\n" +
-			        "</div>\n" +
-	
-			      "</div>\n" +
-			    "</header>\n" +
-			    "");
-
 
 		  	//MAIN CONTAINER
 		    p("<div class=\"main-container\">\n" +
@@ -203,7 +135,7 @@ public class OrderConfirmation extends HttpServlet {
 
 		            "<div class=\"ordersummary\">\n" +
 		              "<div class=\"sectionheading\"><p>Order Summary</p></div>\n" +
-		              "<p>"+ OrderDate +"</p> <!-- Date of Purchase -->\n" +
+		              //"<p>"+ OrderDate +"</p> <!-- Date of Purchase -->\n" +
 		              "");
 		              p("<div class=\"productimageandsummary-container\">\n" +
 		                /*"<div class=\"productimage\">\n" +
@@ -226,28 +158,26 @@ public class OrderConfirmation extends HttpServlet {
 				 				"<th>PRICE</th>\n" +
 				 			"</tr>\n" +
 				 			"");
-		              
+
 		              		for(Map.Entry<String, Integer> entry: cart.entrySet()) {
 		              			String prodID = entry.getKey();
 				      			Integer qty = entry.getValue();
 				      			String qtyString = Integer.toString(qty);
 				      			Map<String, Object> product = Database.getProduct(prodID);
-				      			String productname = (String) product.get("ProductName");
-				      			float price = (float) product.get("Price");
+				      			String productname = (String) product.get("name");
+				      			float price = (float) product.get("price");
 				      			String productprice = Float.toString( price );
-				      			
+
 		              			//Retrieve the main image. This is the first image in the array.
-				    			String imageLinks = (String) product.get("ImageLinks"); 
-				    			String[] imageLinksArray = imageLinks.split(",");
-				    			String mainImage = imageLinksArray[0];
-				    			
+				    			String imageLink = (String) product.get("image");
+
 		              			p("<tr>\n" +
-		              					"<td><center><img src=\""+mainImage+"\" alt=\"product image\"></center></td>\n" +
+		              					"<td><center><img src=\""+imageLink+"\" alt=\"product image\"></center></td>\n" +
 		    		      				"<td>"+productname+"</td>\n" +
-		    		      				"<td>"+qtyString+"</td>\n" +			
+		    		      				"<td>"+qtyString+"</td>\n" +
 		    		      				"<td>$"+productprice+"</td>\n" +
     		      				"</tr>\n" +
-        		      			"");		
+        		      			"");
 		              		}
 		              		p("</table>");
 		              	p("</div>");
@@ -257,13 +187,13 @@ public class OrderConfirmation extends HttpServlet {
 		                    "<span style=\"font-weight: bold;\">Product Name</span>\n" +
 		                    "<span class=\"alignright\" style=\"font-weight: bold;\">See product table to the right.<span>\n" +
 		                  "</p>\n" +
-		                  "<p>Product ID <span class=\"alignright\">"+ProductList+"</span></p>\n" +
+		                  //"<p>Product ID <span class=\"alignright\">"+ProductList+"</span></p>\n" +
 		                  //"<p>Product Price <span class=\"alignright\"><?php echo "$".$product['Price'].""; ?></span></p>\n" +
 		                  //"<p>Quantity <span class=\"alignright\"><?php echo "".$order['Quantity'].""; ?></span></p>\n" +
 		                  //"<p>Product Price X Quantity <span class=\"alignright\"><?php echo "$".$order['OrderPriceQuantity'].""; ?></span></p>\n" +
-		                  "<p>Order Subtotal <span class=\"alignright\">$"+OrderPriceQuantity+"</p>\n" +
-		                  "<p>Discount <span class=\"alignright\">$"+OrderDiscount+"</span></p>\n" +
-		                  "<p>Price After Discount <span class=\"alignright\">$"+OrderSubtotalAfterDiscount+"</p>\n" +
+		                  //"<p>Order Subtotal <span class=\"alignright\">$"+OrderPriceQuantity+"</p>\n" +
+		                  //"<p>Discount <span class=\"alignright\">$"+OrderDiscount+"</span></p>\n" +
+		                  //"<p>Price After Discount <span class=\"alignright\">$"+OrderSubtotalAfterDiscount+"</p>\n" +
 
 
 		                "</div>\n" +
@@ -275,13 +205,8 @@ public class OrderConfirmation extends HttpServlet {
 		            "<div class=\"ordertotal\">\n" +
 		             "<div class=\"sectionheading\"><p>Order Total</p></div>\n" +
 		              "<p style=\"border-top: 1px solid lightgrey; padding-top: 5px;\">\n" +
-		                "Subtotal price <span class=\"alignright\">$"+OrderPriceQuantity+"</span></p>\n" +
-		              "<p>Discount <span class=\"alignright\" style=\"color: green;\">(0% discount rate) -$0.00</span></p>\n" +
-		              "<p>Shipping price <span class=\"alignright\" style=\"color: red;\" >"+"("+ShippingMethod+") +$"+OrderShippingPrice+"</span></p>\n" +
-		              "<P>Tax <span class=\"alignright\" style=\"color: red;\">"+"("+OrderTaxRate+"% tax rate) +$"+OrderAmountTaxed+"</span></p>\n" +
-		              "<p style=\"border-top: 1px solid lightgrey; padding-top: 5px;\">\n" +
-		                "<span style=\"font-weight: bold;\">Total price: </span>\n" +
-		                "<span class=\"alignright\" style=\"font-weight: bold; color: blue;\">$"+OrderTotalPrice+"</span>\n" +
+		                //"<span style=\"font-weight: bold;\">Total price: </span>\n" +
+		                //"<span class=\"alignright\" style=\"font-weight: bold; color: blue;\">$"+OrderTotalPrice+"</span>\n" +
 		              "</p>\n" +
 		            "</div>\n" +
 
@@ -333,17 +258,10 @@ public class OrderConfirmation extends HttpServlet {
 			        "<p>Footer</p> \n" +
 			      "</div> --> \n" +
 			    "<footer> \n" +
-			      "<p>Acme Web Design, Copyright &copy; 2020</p> \n" +
+			      "<p>BestDuck Web Design, Copyright &copy; 2020</p> \n" +
 			    "</footer> \n" +
-			  "</div> \n" +
+			  "</div> \n");
 
-			  "<!-- go to top button --> \n" +
-			  "<a class=\"gotopbtn\" href=\"#\"><span class=\"fas fa-caret-square-up\"></span></a> \n" +
-			  "");
-
-		    p("<!-- go to top button -->\n"+
-		    "<a class=\"gotopbtn\" href=\"#\"><span class=\"fas fa-caret-square-up\"></span></a>\n"+
-		    "");
 		  p("</body>");
 		  p("</html>");
 		

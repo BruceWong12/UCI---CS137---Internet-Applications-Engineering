@@ -34,13 +34,13 @@ public class Checkout extends HttpServlet {
                 "        <div class=\"topNav\">\n" +
                 "            <!-- Left-aligned links -->\n" +
                 "            <a class=\"active\" href=\"index.html\">Home</a>\n" +
-                "            <a href = \"products.html\">Products</a>\n" +
+                "            <a href = \"categories\">Products</a>\n" +
                 "            <a href=\"team.html\">Team</a>\n" +
                 "            <a href=\"about.html\">About</a>\n" +
                 "\n" +
                 "            <!-- Right-aligned links-->\n" +
                 "            <div class=\"topNav-right\">\n" +
-                "                <a><i class=\"fas fa-shopping-cart\"></i> Shopping Cart</a>\n" +
+                "                <a href =\"shoppingcart\"><i class=\"fas fa-shopping-cart\"></i> Shopping Cart</a>\n" +
                 "            </div>\n" +
                 "        </div>\n" +
                 "    </header>");

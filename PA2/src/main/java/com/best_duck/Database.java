@@ -6,11 +6,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class Database {
 
     // JDBC driver name and database URL
     static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-    static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/best_duck?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+    static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/best_duck";//?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
     //  Database credentials
     static final String USER = "root";
     static final String PASS = "LeoYoung981028";//"testdb124";
@@ -211,13 +212,92 @@ public class Database {
         return row;
     }
 
+
     /**
-     * getOrder
+     * getOrderProducts
      * @param orderID
      * @return
      */
-    public static Map<String, Object> getOrder(int orderID) {
+    public static Map<String, Object> getOrderInfo(String orderID) {
         Map<String, Object> row = new HashMap<String, Object>();
+        Connection conn = openConnection();
+
+        System.out.println("Creating statement...");
+        try {
+
+            String sql;
+
+            /*
+            *   order_id,
+                firstname,
+                lastname,
+                address,
+                city,
+                state,
+                zip,
+                shippingmethod,
+                card
+                expMonthInt,
+                expyearInt,
+                cvvInt,
+                Integer.parseInt(phone),
+                email,
+                user_id
+            *
+            */
+
+            sql = "SELECT DISTINCT " +
+                    "order_num, first_name, last_name, address, city, " +
+                    "state, zip, shipping_method, credit_num, exp_mon, " +
+                    "exp_year, cvv, phone_num, email, userid, datetime " +
+                    "FROM best_duck.order " +
+                    "WHERE order_num=?";
+                    //"GROUP BY order_num";
+
+            //prepare statement
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, orderID);
+
+            System.out.println(ps.toString());
+
+            //execute statement
+            ResultSet rs = ps.executeQuery();
+
+            while(rs.next()){
+                row.put("order_num", rs.getString("order_num"));
+                row.put("first_name", rs.getString("first_name"));
+                row.put("last_name", rs.getString("last_name"));
+                row.put("address", rs.getString("address"));
+                row.put("city", rs.getString("city"));
+                row.put("state", rs.getString("state"));
+                row.put("zip", rs.getString("zip"));
+                row.put("shipping_method", rs.getString("shipping_method"));
+                row.put("credit_num", rs.getString("credit_num"));
+                row.put("exp_mon", rs.getInt("exp_mon"));
+                row.put("exp_year", rs.getInt("exp_year"));
+                row.put("cvv", rs.getInt("cvv"));
+                row.put("phone_num", rs.getString("phone_num"));
+                row.put("email", rs.getString("email"));
+            }
+
+            rs.close();
+            //stmt.close();
+            conn.close();
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        return row;
+    }
+
+    /**
+     * getOrderProducts
+     * @param orderID
+     * @return
+     */
+    public static ArrayList<Map<String, Object>> getOrderProducts(String orderID) {
+        ArrayList<Map<String, Object>> orderproducts = new ArrayList<Map<String, Object>>();
         Connection conn = openConnection();
 
         /*
@@ -251,13 +331,15 @@ public class Database {
 
             //prepare statement
             PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setInt(1, orderID);
+            ps.setString(1, orderID);
 
             //execute statement
             ResultSet rs = ps.executeQuery();
 
             while(rs.next()){
-                row.put("order_num", rs.getInt("order_num"));
+                Map<String, Object> row = new HashMap<String, Object>();
+
+                row.put("order_num", rs.getString("order_num"));
                 row.put("sku", rs.getInt("sku"));
                 row.put("first_name", rs.getString("first_name"));
                 row.put("last_name", rs.getString("last_name"));
@@ -267,12 +349,14 @@ public class Database {
                 row.put("zip", rs.getString("zip"));
                 row.put("shipping_method", rs.getString("shipping_method"));
                 row.put("quantity", rs.getInt("quantity"));
-                row.put("credit_num", rs.getInt("credit_num"));
+                row.put("credit_num", rs.getString("credit_num"));
                 row.put("exp_mon", rs.getInt("exp_mon"));
                 row.put("exp_year", rs.getInt("exp_year"));
                 row.put("cvv", rs.getInt("cvv"));
-                row.put("phone_num", rs.getInt("phone_num"));
+                row.put("phone_num", rs.getString("phone_num"));
                 row.put("email", rs.getString("email"));
+
+                orderproducts.add(row);
             }
 
             rs.close();
@@ -282,7 +366,7 @@ public class Database {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        return row;
+        return orderproducts;
     }
 
 
@@ -299,13 +383,14 @@ public class Database {
             String zip,
             String shipping_method,
             int quantity,
-            int credit_num,
+            String credit_num,
             int exp_mon,
             int exp_year,
             int cvv,
-            int phone_num,
+            String phone_num,
             String email,
-            String user_id
+            String user_id,
+            java.util.Date todaysDate
     ) {
 
         // return value
@@ -313,18 +398,19 @@ public class Database {
         int numOfRowsUpdated = 0;
 
         // convert java date to mysql date
-        //java.sql.Date mysqlTodaysDate = new java.sql.Date( todaysDate.getTime() );
+        java.sql.Date mysqlTodaysDate = new java.sql.Date( todaysDate.getTime() );
 
         Connection conn = openConnection();
 
         //Statement stmt = null;
-        System.out.println("Creating statement...");
+        System.out.println("Creating set-order statement set order...");
         try {
             String sql;
-            sql = "INSERT INTO best_duck.order (order_id, sku, first_name, last_name, address, " +
+            sql = "INSERT INTO best_duck.order " +
+                    "(order_num, sku, first_name, last_name, address, " +
                     "city, state, zip, shipping_method, quantity, credit_num, " +
-                    "exp_mon, exp_year, cvv, phone_num, email, user_id)" +
-                    " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                    "exp_mon, exp_year, cvv, phone_num, email, userid, datetime)" +
+                    " VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
             //prepare statement
             PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             //ps.setInt(1, order_num);
@@ -338,14 +424,15 @@ public class Database {
             ps.setString(8, zip);
             ps.setString(9, shipping_method);
             ps.setInt(10, quantity);
-            ps.setInt(11, credit_num);
+            ps.setString(11, credit_num);
             ps.setInt(12, exp_mon);
             ps.setInt(13, exp_year);
             ps.setInt(14, cvv);
-            ps.setInt(15, phone_num);
+            ps.setString(15, phone_num);
             ps.setString(16, email);
             ps.setString(17, user_id);
-
+            ps.setDate(18, mysqlTodaysDate);
+            System.out.println(ps.toString());
 
             //execute statement
             numOfRowsUpdated = ps.executeUpdate();
@@ -359,6 +446,7 @@ public class Database {
 
         } catch (SQLException e) {
             // TODO Auto-generated catch block
+            System.out.println("Fail to access the Datebase.");
             e.printStackTrace();
         }
         //return recordID;
@@ -461,12 +549,13 @@ public class Database {
             //and store ResultSet into an arraylist of hashmaps
             ResultSetMetaData rsmd = rs.getMetaData();
             System.out.println("querying " + sql + "(?= " + userid + ")");
+            System.out.println(ps.toString());
             int columnsNumber = rsmd.getColumnCount();
 
             while(rs.next()){
                 Map<String, Object> row = new HashMap<String, Object>();
-
-                row.put("order_num", rs.getInt("order_num"));
+                System.out.println("Get info");
+                row.put("order_num", rs.getString("order_num"));
                 row.put("sku", rs.getInt("sku"));
                 row.put("first_name", rs.getString("first_name"));
                 row.put("last_name", rs.getString("last_name"));
@@ -476,11 +565,11 @@ public class Database {
                 row.put("zip", rs.getString("zip"));
                 row.put("shipping_method", rs.getString("shipping_method"));
                 row.put("quantity", rs.getInt("quantity"));
-                row.put("credit_num", rs.getInt("credit_num"));
+                row.put("credit_num", rs.getString("credit_num"));
                 row.put("exp_mon", rs.getInt("exp_mon"));
                 row.put("exp_year", rs.getInt("exp_year"));
                 row.put("cvv", rs.getInt("cvv"));
-                row.put("phone_num", rs.getInt("phone_num"));
+                row.put("phone_num", rs.getString("phone_num"));
                 row.put("email", rs.getString("email"));
                 list.add(row);
             }

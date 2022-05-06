@@ -68,16 +68,52 @@ public class ProductDetails extends HttpServlet {
                 "<link href=\"./css/style.css\" rel=\"stylesheet\">\n" +
                 "<link href=\"./css/product_details.css\" rel=\"products stylesheet\">\n" +
                 "<link href=\"https://www.w3schools.com/w3css/4/w3.css\" rel=\"stylesheet\">\n" +
+                "<style>"+
+                ".rate {\n" +
+                "    float: ;\n" +
+                "    height: 46px;\n" +
+                "    padding: 0 8px;\n" +
+                "}\n" +
+                ".rate:not(:checked) > input {\n" +
+                "    position:absolute;\n" +
+                "    top:-9999px;\n" +
+                "}\n" +
+                ".rate:not(:checked) > label {\n" +
+                "    float:right;\n" +
+                "    width:1em;\n" +
+                "    overflow:hidden;\n" +
+                "    white-space:nowrap;\n" +
+                "    cursor:pointer;\n" +
+                "    font-size:30px;\n" +
+                "    color:#ccc;\n" +
+                "}\n" +
+                ".rate:not(:checked) > label:before {\n" +
+                "    content: '★ ';\n" +
+                "}\n" +
+                ".rate > input:checked ~ label {\n" +
+                "    color: #ffc700;    \n" +
+                "}\n" +
+                ".rate:not(:checked) > label:hover,\n" +
+                ".rate:not(:checked) > label:hover ~ label {\n" +
+                "    color: #deb217;  \n" +
+                "}\n" +
+                ".rate > input:checked + label:hover,\n" +
+                ".rate > input:checked + label:hover ~ label,\n" +
+                ".rate > input:checked ~ label:hover,\n" +
+                ".rate > input:checked ~ label:hover ~ label,\n" +
+                ".rate > label:hover ~ input:checked ~ label {\n" +
+                "    color: #c59b08;\n" +
+                "}</style>"+
                 "<script src = ../../js/product_detail.js></script>\n" +
                 "<header>\n" +
                 "<div class=\"topNav\">\n" +
                 "<a href=\"index.html\">Home</a>\n" +
-                "<a class=\"active\" href = \"../../products.html\">Products</a>\n" +
+                "<a class=\"active\" href = \"categories\">Products</a>\n" +
                 "<a href=\"team.html\">Team</a>\n" +
                 "<a href=\"about.html\">About</a>\n" +
                 "<!-- Right-aligned links-->\n" +
                 "<div class=\"topNav-right\">\n" +
-                "<a><i class=\"fas fa-shopping-cart\"></i> Shopping Cart</a>\n" +
+                "<a href =\"shoppingcart\"><i class=\"fas fa-shopping-cart\"></i> Shopping Cart</a>\n" +
                 "</div>\n" +
                 "</div>\n" +
                 "</header>\n");
@@ -89,6 +125,19 @@ public class ProductDetails extends HttpServlet {
                 "<div class=\"product_detail-card\" >\n" +
                 "<img src=\"" + imagelink + "\">\n" +
                 "<h4><b>\n" + name + "</b></h4>\n" +
+                " <div class=\"rate\">\n" +
+                "    <input type=\"radio\" id=\"star5\" name=\"rate\" value=\"5\" />\n" +
+                "    <label for=\"star5\" title=\"text\">5 stars</label>\n" +
+                "    <input type=\"radio\" id=\"star4\" name=\"rate\" value=\"4\" />\n" +
+                "    <label for=\"star4\" title=\"text\">4 stars</label>\n" +
+                "    <input type=\"radio\" id=\"star3\" name=\"rate\" value=\"3\" />\n" +
+                "    <label for=\"star3\" title=\"text\">3 stars</label>\n" +
+                "    <input type=\"radio\" id=\"star2\" name=\"rate\" value=\"2\" />\n" +
+                "    <label for=\"star2\" title=\"text\">2 stars</label>\n" +
+                "    <input type=\"radio\" id=\"star1\" name=\"rate\" value=\"1\" />\n" +
+                "    <label for=\"star1\" title=\"text\">1 star</label>\n" +
+                "  </div>"+
+                "<tr>"+
                 "<p>SKU:" + sku + "</p>\n" +
                 "<p>Producer: " + producer + "</p>\n" +
                 "<p>Price:" + price + "</p>\n" +
@@ -102,7 +151,7 @@ public class ProductDetails extends HttpServlet {
                         "<form action=\"shoppingcart\" align=\"left\">\n" +
                             "<input type=\"hidden\" id=\"sku\" name=\"sku\" value=\"" + product.get("sku") + "\">\n" +
                             "<label align=\"left\">Quantity (5 Max)\n" +
-                                    "<input type=\"number\" id=\"qty\" name=\"qty\" placeholder=\"1\" min=\"0\" max=\"5\" required>\n" +
+                                    "<input type=\"number\" id=\"qty\" name=\"qty\" placeholder=\"1\" min=\"1\" max=\"5\" required>\n" +
                             "</label>\n" +
                             "<button id=\"add-to-cartbutton\" type=\"submit\"><i class=\"fas fa-cart-plus\"></i> ADD TO CART</button>\n" +
                         "</form>\n" +
