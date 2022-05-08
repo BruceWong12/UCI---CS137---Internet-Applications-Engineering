@@ -82,11 +82,6 @@ public class OrderList extends HttpServlet {
                 "                </tr>\n" +
                 "                </tfoot>\n" +
                 "                <tbody>\n");
-        //cards
-        //Retrieve the main image. This is the first image in the array.
-//            String imageLinks = (String) product.get("ImageLinks");
-//            String[] imageLinksArray = imageLinks.split(",");
-//            String mainImage = imageLinksArray[0];
 
         String userid="0";
 

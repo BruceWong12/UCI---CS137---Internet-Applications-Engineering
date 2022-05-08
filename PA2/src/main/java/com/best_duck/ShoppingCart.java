@@ -134,9 +134,6 @@ public class ShoppingCart extends HttpServlet {
             //Retrieve the main image. This is the first image in the array.
             String imageLink = (String) product.get("image");
 
-		      			/*p("<div class=\"productrow\">\n" +
-		      			"<p>product id: "+prodID+", quantity: "+qty+"</p>\n" +
-		      			"</div>\n");*/
             p("<tr>\n" +
                     "<td><center><img src=\""+imageLink+"\" alt=\"product image\"></center></td>\n" +
                     "<td>"+productname+"</td>\n" +
@@ -241,9 +238,6 @@ public class ShoppingCart extends HttpServlet {
                 "<p>BestDuck Web Design, Copyright &copy; 2020</p> \n" +
                 "</footer> \n" +
                 "</div> \n"+
-
-//                "<!-- go to top button --> \n" +
-//                "<a class=\"gotopbtn\" href=\"#\"><span class=\"fas fa-caret-square-up\"></span></a> \n" +
                 "");
         p("</body>");
         p("</html>");
