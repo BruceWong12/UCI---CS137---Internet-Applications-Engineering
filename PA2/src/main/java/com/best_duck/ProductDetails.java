@@ -3,7 +3,6 @@ package com.best_duck;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.Writer;
 import java.util.LinkedList;
 import java.util.Map;
 

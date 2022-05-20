@@ -55,30 +55,6 @@ public class OrderConfirmation extends HttpServlet {
 		String State = (String) orderInfo.get("state");
 		String Zip = (String) orderInfo.get("zip");
 		String ShippingMethod = (String) orderInfo.get("shipping_method");
-		String CreditCardNumber= (String) orderInfo.get("credit_num");
-		int ExpMonth= (int) orderInfo.get("exp_mon");
-		int ExpYear=(int) orderInfo.get("exp_year");
-		int CVV = (int) orderInfo.get("cvv");
-		String PhoneNumber = (String) orderInfo.get("phone_num");
-		String Email = (String) orderInfo.get("email");
-		/*float OrderTotalPrice = (float) orderInfo.get("price");
-		String FirstName = (String) orderInfo.get("firstName");
-		String LastName = (String) orderInfo.get("lastName");
-		String Address = (String) orderInfo.get("Address");
-		String City = (String) orderInfo.get("City");
-		String State = (String) orderInfo.get("State");
-		int Zip = (int) orderInfo.get("Zip");
-		String ShippingMethod = (String) orderInfo.get("ShippingMethod");
-		String ProductID = (String) orderInfo.get("ProductID");
-		String ProductList = (String) orderInfo.get("ProductList");
-		int Quantity= (int) orderInfo.get("Quantity");
-		String QuantityList= (String) orderInfo.get("QuantityList");
-		String CreditCardNumber= (String) orderInfo.get("CreditCardNumber");
-		String ExpMonth= (String) orderInfo.get("ExpMonth");
-		int ExpYear=(int) orderInfo.get("ExpYear");
-		int CVV= (int) orderInfo.get("CVV");
-		String PhoneNumber=(String) orderInfo.get("PhoneNumber");
-		String Email=(String) orderInfo.get("Email");*/
 		
 		
 		
@@ -174,25 +150,7 @@ public class OrderConfirmation extends HttpServlet {
 		              		}
 		              		p("</table>");
 		              	p("</div>");
-		                
-//		                p(
-//								"<div class=\"productsummary\">\n" +
-//		                  "<p style=\"border-top: 1px solid lightgrey; padding-top: 5px;\">\n" +
-//		                    "<span style=\"font-weight: bold;\">Product Name</span>\n" +
-//		                    "<span class=\"alignright\" style=\"font-weight: bold;\">See product table to the right.<span>\n" +
-//		                  "</p>\n" +
-//		                  //"<p>Product ID <span class=\"alignright\">"+ProductList+"</span></p>\n" +
-//		                  //"<p>Product Price <span class=\"alignright\"><?php echo "$".$product['Price'].""; ?></span></p>\n" +
-//		                  //"<p>Quantity <span class=\"alignright\"><?php echo "".$order['Quantity'].""; ?></span></p>\n" +
-//		                  //"<p>Product Price X Quantity <span class=\"alignright\"><?php echo "$".$order['OrderPriceQuantity'].""; ?></span></p>\n" +
-//		                  //"<p>Order Subtotal <span class=\"alignright\">$"+OrderPriceQuantity+"</p>\n" +
-//		                  //"<p>Discount <span class=\"alignright\">$"+OrderDiscount+"</span></p>\n" +
-//		                  //"<p>Price After Discount <span class=\"alignright\">$"+OrderSubtotalAfterDiscount+"</p>\n" +
-//
-//
-//		                "</div>\n" +
-//		              "</div>\n" +
-//		              "");
+
 		              
 		            p("</div>\n" +
 

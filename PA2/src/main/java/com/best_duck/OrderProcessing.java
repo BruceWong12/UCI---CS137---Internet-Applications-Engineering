@@ -96,9 +96,6 @@ public class OrderProcessing extends HttpServlet {
 		//Order Summary
 		Float subtotal = (float) 0;
 		ArrayList<String> productIDList = new ArrayList<String>();
-		//int productCount = 0;
-		//ArrayList<String> quantityList;
-		//int quantityCount = 0;
 		
 		//Print items in shopping cart. Use HTTP session's cart attribute
 		p("Products and Quantity ordered: \n");
@@ -203,8 +200,6 @@ public class OrderProcessing extends HttpServlet {
 		
 		//Send to next servlet
 		//Call a servlet from a servlet using RequestDispatcher
-		//RequestDispatcher rd = req.getRequestDispatcher("sq");
-				//rd.forward(req, res); //this forwards the req and res objects to the sq servlet
 		System.out.println("Before forward");
 		RequestDispatcher rd = req.getRequestDispatcher("order_confirmation");
 		rd.forward(req, res); //this forwards the req and res objects to the order confirmation servlet

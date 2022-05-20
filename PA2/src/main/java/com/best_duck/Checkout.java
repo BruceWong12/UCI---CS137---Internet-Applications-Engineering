@@ -47,7 +47,7 @@ public class Checkout extends HttpServlet {
         // Get session object
         HttpSession session = req.getSession();
 
-        // Get the cart
+        // Get the cart from session
         Map<String, Integer> cart = (Map<String, Integer>) session.getAttribute("cart");
 
         //Order Summary
@@ -76,9 +76,6 @@ public class Checkout extends HttpServlet {
                 "<p>DISCOUNT<span class=\"alignright\" style=\"\">$0.00</span></p>\n" +
                 "<p>ESTIMATED TOTAL<span class=\"alignright\" style=\"\">$"+subtotal+"</span></p>\n" +
                 "<div class=\"container\" align=\"left\">\n" +
-	          	/*"<form action = \"checkout\" align=\"left\">\n" +
-	          		"<button id=\"checkoutbutton\" type=\"submit\" ><i class=\"fas fa-arrow-right\"></i> PROCEED TO CHECKOUT</button>\n" +
-	          	"</form>\n" +*/
                 "<br>\n" +
                 "<center><strong><h2>Your Shopping Cart</h2></strong></center>\n" +
                 "");
@@ -92,7 +89,7 @@ public class Checkout extends HttpServlet {
                 "<th>PRICE</th>\n" +
                 "</tr>\n" +
                 "");
-
+        //读取cart信息，打印商品信息
         for(Map.Entry<String, Integer> entry: cart.entrySet()) {
             String prodID = entry.getKey();
             Integer qty = entry.getValue();
@@ -106,9 +103,6 @@ public class Checkout extends HttpServlet {
             String[] imageLinksArray = imageLinks.split(",");
             String mainImage = imageLinksArray[0];
 
-      			/*p("<div class=\"productrow\">\n" +
-      			"<p>product id: "+prodID+", quantity: "+qty+"</p>\n" +
-      			"</div>\n");*/
             p("<tr>\n" +
                     "<td><center><img src=\""+mainImage+"\" alt=\"product image\"></center></td>\n" +
                     "<td>"+productName+"</td>\n" +
@@ -257,7 +251,6 @@ public class Checkout extends HttpServlet {
                 "<label for=\"email\">Email</label>\n" +
                 "<input type=\"text\" id=\"email\" name=\"email\" placeholder=\"john@example.com\" required>\n" +
 
-                //"<input type=\"submit\" id=\"submitbtn\" value=\"Submit\" />\n" +
                 "<button id=\"submitbtn\" type=\"submit\" value=\"Submit\" >SUBMIT</button>\n" +
                 "</div>\n" +
                 "</form>\n" +

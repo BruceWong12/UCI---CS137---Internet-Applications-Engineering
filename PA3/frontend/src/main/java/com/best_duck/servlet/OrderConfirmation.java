@@ -1,0 +1,277 @@
+package com.best_duck.servlet;
+
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Map;
+
+import static com.best_duck.config.HttpConfig.http;
+
+@WebServlet(name = "OrderConfirmation", value = "/order_confirmation")
+public class OrderConfirmation extends HttpServlet {
+  PrintWriter output;
+  HttpServletResponse response;
+
+  public void doGet(HttpServletRequest req, HttpServletResponse res)
+      throws ServletException, IOException {
+    renderPage(req, res);
+  }
+
+  public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
+    renderPage(req, res);
+  }
+
+  private void renderPage(HttpServletRequest req, HttpServletResponse res) throws IOException {
+    System.out.println("in confirmation page");
+    response = res;
+    response.setContentType("text/html;charset=UTF-8");
+
+    // Get session object
+    HttpSession session = req.getSession();
+
+    // Get the cart
+    Map<String, Integer> cart = (Map<String, Integer>) session.getAttribute("cart");
+
+    // get new order record id
+    String orderrecordid = (String) session.getAttribute("orderrecordid");
+
+    // Get order
+    //		ArrayList<Map<String, Object>> orderproducts = Database.getOrderProducts(orderrecordid);
+
+    JSONArray orderproducts =
+        JSON.parseArray(
+            http.sync("/getOrderProducts/" + orderrecordid)
+                .bodyType("application/json")
+                .get()
+                .getBody()
+                .toString());
+
+    //    Map<String, Object> orderInfo = Database.getOrderInfo(orderrecordid);
+
+    JSONObject orderInfo =
+        JSON.parseObject(
+            http.sync("/getOrderInfo/" + orderrecordid)
+                .bodyType("application/json")
+                .get()
+                .getBody()
+                .toString());
+
+    String OrderID = (String) orderInfo.get("order_num");
+    String FirstName = (String) orderInfo.get("first_name");
+    String LastName = (String) orderInfo.get("last_name");
+    String Address = (String) orderInfo.get("address");
+    String City = (String) orderInfo.get("city");
+    String State = (String) orderInfo.get("state");
+    String Zip = (String) orderInfo.get("zip");
+    String ShippingMethod = (String) orderInfo.get("shipping_method");
+
+    // Render the Order Confirmation Page
+    p("");
+    p("<!doctype html>\n" + "<html lang=\"en\">\n");
+    p(
+        "<header>\n"
+            + "    <link href=\"./css/style.css\" rel=\"stylesheet\">\n"
+            + "    <link href=\"./css/shoppingCart.css\" rel=\"stylesheet\">\n"
+            + "    <link href=\"./css/product_category.css\" rel =\"stylesheet\">\n"
+            + "<link href=\"./css/orderconfirmation.css\" rel =\"stylesheet\">\n"
+            + "        <div class=\"topNav\">\n"
+            + "            <!-- Left-aligned links -->\n"
+            + "            <a class=\"active\" href=\"index.html\">Home</a>\n"
+            + "            <a href = \"jsp/products.jsp\">Products</a>\n"
+            + "            <a href=\"team.html\">Team</a>\n"
+            + "            <a href=\"about.html\">About</a>\n"
+            + "\n"
+            + "            <!-- Right-aligned links-->\n"
+            + "            <div class=\"topNav-right\">\n"
+            + "                <a href =\"shoppingcart\"><i class=\"fas fa-shopping-cart\"></i> Shopping Cart</a>\n"
+            + "            </div>\n"
+            + "        </div>\n"
+            + "    </header>");
+
+    // BODY TAG
+    p("<body>");
+
+    // MAIN CONTAINER
+    p(
+        "<div class=\"main-container\">\n"
+            + "<!-- Main -->\n"
+            + "<section>\n"
+            + "<div class=\"main\">\n"
+            + "<div class=\"redbox\">\n"
+            + "<div class=\"orderconfirmation\" >\n"
+            + "<div class=\"sectionheading\"><p>ORDER CONFIRMATION</p></div>\n"
+            + "<p><span style=\"font-size: 30px;\"><i class=\"fas fa-cart-arrow-down\"></i></span></p>\n"
+            + "<p>\n"
+            + ""
+            + FirstName
+            + " "
+            + LastName
+            + ", thank you for your order!\n"
+            + "</p>\n"
+            + "<p>We've recieved your order and will contact you as soon as your package is shipped.\n"
+            + "You can find your purchase information below.</p>\n"
+            + "</div>\n"
+            + "<div class=\"ordersummary\">\n"
+            + "<div class=\"sectionheading\"><p>Order Summary</p></div>\n"
+            +
+            // "<p>"+ OrderDate +"</p> <!-- Date of Purchase -->\n" +
+            "");
+    p("<div class=\"productimageandsummary-container\">\n" + "<div class=\"productimage\">\n" + "");
+
+    // Create product cart table
+    p("<table>");
+
+    p(
+        "<tr>\n"
+            + "<th></th>\n"
+            + "<th>PRODUCT</th>\n"
+            + "<th>QTY</th>\n"
+            + "<th>PRICE</th>\n"
+            + "</tr>\n"
+            + "");
+
+    for (Map.Entry<String, Integer> entry : cart.entrySet()) {
+      String prodID = entry.getKey();
+      Integer qty = entry.getValue();
+      String qtyString = Integer.toString(qty);
+//      Map<String, Object> product = Database.getProduct(prodID);
+      JSONObject product =
+              JSON.parseObject(
+                      http.sync("/getproducts/" + prodID)
+                              .bodyType("application/json")
+                              .get()
+                              .getBody()
+                              .toString());
+      String productname = (String) product.getString("name");
+      String productprice = product.getString("price");
+
+      // Retrieve the main image. This is the first image in the array.
+      String imageLink = (String) product.getString("image");
+
+      p(
+          "<tr>\n"
+              + "<td><center><img src=\""
+              + imageLink
+              + "\" alt=\"product image\"></center></td>\n"
+              + "<td>"
+              + productname
+              + "</td>\n"
+              + "<td>"
+              + qtyString
+              + "</td>\n"
+              + "<td>$"
+              + productprice
+              + "</td>\n"
+              + "</tr>\n"
+              + "");
+    }
+    p("</table>");
+    p("</div>");
+
+    p(
+        "</div>\n"
+            + "<div class=\"billingandshipping\">\n"
+            + "<div class=\"sectionheading\"><p>Billing and Shipping</p></div>\n"
+            + "<div class=\"billingandshipping-container\">\n"
+            + "<div class=\"billingandshipping-box\">\n"
+            + "<p><span style=\"font-weight: bold;\">Billing</span></p>\n"
+            + "<p>"
+            + FirstName
+            + " "
+            + LastName
+            + "</p>\n"
+            + "<p>"
+            + Address
+            + "</p>\n"
+            + "<p>"
+            + City
+            + ","
+            + State
+            + "</p>\n"
+            + "<p>"
+            + Zip
+            + "</p>\n"
+            + "<p>USA</p>\n"
+            + "</div>\n"
+            + "<div class=\"billingandshipping-box\">\n"
+            + "<p><span style=\"font-weight: bold;\">Shipping</span></p>\n"
+            + "<p>"
+            + FirstName
+            + " "
+            + LastName
+            + "</p>\n"
+            + "<p>"
+            + Address
+            + "</p>\n"
+            + "<p>"
+            + City
+            + ","
+            + State
+            + "</p>\n"
+            + "<p>"
+            + Zip
+            + "</p>\n"
+            + "<p>USA</p>\n"
+            + "</div>\n"
+            + "<div class=\"billingandshipping-box\">\n"
+            + "<p><span style=\"font-weight: bold;\">Payment method</span></p>\n"
+            + "<p>Credit Card</p>\n"
+            + "</div>\n"
+            + "<div class=\"billingandshipping-box\">\n"
+            + "<p><span style=\"font-weight: bold;\">Shipping method</span></p>\n"
+            + "<p>"
+            + ShippingMethod
+            + "</p>\n"
+            + "</div>\n"
+            + "</div>\n"
+            + "</div>\n"
+            + "</div> <!--end of redbox class -->\n"
+            + "</div>\n"
+            + "</section>\n"
+            + "</div> <!--end of main container class -->\n"
+            + "");
+
+    // FOOTER TAG
+    p(
+        "<!-- Footer --> \n"
+            + "<!-- \n"
+            + "<div class=\"footer\"> \n"
+            + "<p>Footer</p> \n"
+            + "</div> --> \n"
+            + "<footer> \n"
+            + "<p>BestDuck Web Design, Copyright &copy; 2020</p> \n"
+            + "</footer> \n"
+            + "</div> \n");
+
+    p("</body>");
+    p("</html>");
+    cart.clear();
+
+    // clean up
+    output = null;
+    response = null;
+  }
+
+  /**
+   * Helper Method
+   *
+   * @param message
+   * @throws IOException
+   */
+  private void p(String message) throws IOException {
+    if (output != null) {
+      output.println(message);
+    } else {
+      output = response.getWriter();
+    }
+  }
+}

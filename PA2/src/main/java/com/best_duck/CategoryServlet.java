@@ -77,16 +77,11 @@ public class CategoryServlet extends HttpServlet {
                 "                </tr>\n" +
                 "                </tfoot>\n" +
                 "                <tbody>\n");
-        //cards
-            //Retrieve the main image. This is the first image in the array.
-//            String imageLinks = (String) product.get("ImageLinks");
-//            String[] imageLinksArray = imageLinks.split(",");
-//            String mainImage = imageLinksArray[0];
+
 
 
             ArrayList<Map<String, Object>> productList = com.best_duck.Database.getAllProductsByCategory(category);
             int i=0;
-
             for(Map<String, Object> product : productList) {
                 if( (i%3)==0 ) {
                     p("<tr>");
@@ -102,19 +97,15 @@ public class CategoryServlet extends HttpServlet {
                         + "</a>\n"
                         + "<div class=\"productcategory-card-container\">\n"
                         + "<h4><b>"
-                        ////iCUE 220T RGB Airflow ATX Mid-Tower Smart Case
                         + product.get("name")
                         + "</b></h4>\n"
                         + "<p>Producer: " +
-                        ////"Producer: CORSAIR" +
                         product.get("producer") +
                         "</p>\n"
                         + "<p>Price: " +
-                        ////"$59.9" +
                         product.get("price") +
                         "</p>\n"
                         + "<p>Currently In Stock: " +
-                        ////"Currently In Stock: 10" +
                         product.get("stock") +
                         "</p>\n"
                         + "</div>\n"

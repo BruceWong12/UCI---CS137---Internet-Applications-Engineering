@@ -123,23 +123,8 @@ public class Database {
 
             while(rs.next()){
                 //Retrieve by column name
-                //String productName = rs.getString("ProductName");
-                //String productID = rs.getString("ProductID");
-
-                //System.out.print("product name: " + productName);
-                //System.out.println(", product id: " + productID);
 
                 Map<String, Object> row = new HashMap<String, Object>();
-
-                //outuput result set values
-                //for (int i = 1; i <= columnsNumber; i++) {
-                //if (i > 1) System.out.print(",  ");
-                //String columnValue = rs.getString(i);
-                //System.out.print(columnValue + " " + rsmd.getColumnName(i));
-
-                //row.put(rsmd.getColumnName(i),rs.getObject(i));
-                //}
-                //System.out.println("");
 
                 row.put("sku",rs.getInt("sku"));
                 row.put("producer",rs.getString("producer"));
@@ -226,25 +211,6 @@ public class Database {
         try {
 
             String sql;
-
-            /*
-            *   order_id,
-                firstname,
-                lastname,
-                address,
-                city,
-                state,
-                zip,
-                shippingmethod,
-                card
-                expMonthInt,
-                expyearInt,
-                cvvInt,
-                Integer.parseInt(phone),
-                email,
-                user_id
-            *
-            */
 
             sql = "SELECT DISTINCT " +
                     "order_num, first_name, last_name, address, city, " +
@@ -509,7 +475,6 @@ public class Database {
             System.out.println("List Created");
 
             rs.close();
-            //stmt.close();
             conn.close();
 
 
