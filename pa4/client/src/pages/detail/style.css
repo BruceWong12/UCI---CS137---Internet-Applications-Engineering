@@ -1,0 +1,51 @@
+.detail {
+  padding: 50px 0;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.detail .no-data {
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+}
+
+.detail dl {
+  display: flex;
+}
+
+.detail dl dd {
+  padding-left: 20px;
+}
+
+.detail dl dd h2 {
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.detail dl dd .price {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.detail dl dd .price span {
+  font-size: 20px;
+  color: #f00;
+  padding-left: 5px;
+}
+
+.detail dl dd .number {
+  font-size: 14px;
+}
+.detail dl dd .number span {
+  color: #424242;
+  padding-left: 5px;
+}
+
+
+.detail .content {
+  padding-top: 30px;
+  font-size: 14px;
+  line-height: 160%;
+  color: #424242;
+}
