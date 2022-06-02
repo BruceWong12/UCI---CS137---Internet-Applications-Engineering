@@ -4,7 +4,7 @@ const Op = db.Sequelize.Op;
 
 // Create and Save a new goods
 exports.create = (req, res) => {
-  const { title, imgs, category, categoryId, user, userId, description, price, number, published } = req.body
+  const { title, imgs, category, categoryId, description, price, number, published } = req.body
   // Validate request
   if (!title) {
     res.status(400).send({
@@ -19,8 +19,6 @@ exports.create = (req, res) => {
     imgs,
     category,
     categoryId,
-    user,
-    userId,
     description,
     price,
     number,

@@ -14,8 +14,6 @@ const initialValues = {
   imgs: null,
   price: null,
   number: null,
-  user: "admin",
-  userId: "00ebd457-3604-49e8-8e77-82e892f94669",
   description: null,
   published: false
 }
@@ -318,5 +316,4 @@ const User = () => {
     </section>
   );
 };
-
 export default User;

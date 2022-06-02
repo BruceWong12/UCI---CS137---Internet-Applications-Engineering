@@ -61,6 +61,7 @@ const Categorie = () => {
       title: "Category Name",
       dataIndex: "name",
       key: "name",
+      align: "center",
     },
     {
       title: "Create At",
@@ -132,7 +133,7 @@ const Categorie = () => {
           <Form.Item
             label="Category"
             name="name"
-            rules={[{ required: true, message: "Category can't be empty" }]}
+            rules={[{ required: true, message: "Category can't be empty " }]}
           >
             <Input />
           </Form.Item>

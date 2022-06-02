@@ -27,7 +27,7 @@ const Detail = () => {
       <dd>
         <h2>{data.title}</h2>
         <p className='price'>
-          Price:<span>￥{data.price}</span>
+          Price:<span>${data.price}</span>
         </p>
         <p className='number'>
           Qty:<span>{data.number}</span>

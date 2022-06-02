@@ -10,43 +10,36 @@ module.exports = (sequelize, Sequelize) => {
     },
     title: {
       type: Sequelize.STRING,
-      comment: "标题",
+      comment: "Title",
     },
     imgs: {
       type: Sequelize.STRING,
-      comment: "图片",
+      comment: "Image",
     },
     category: {
       type: Sequelize.STRING(128),
-      comment: "分类",
+      comment: "Category",
     },
     categoryId: {
       type: Sequelize.STRING(128),
-      comment: "分类ID",
+      comment: "Category ID",
     },
-    user: {
-      type: Sequelize.STRING,
-      comment: "作者",
-    },
-    userId: {
-      type: Sequelize.STRING,
-      comment: "作者ID",
-    },
+
     description: {
       type: Sequelize.STRING,
-      comment: "描述",
+      comment: "Description",
     },
     price: {
       type: Sequelize.DOUBLE,
-      comment: "价格",
+      comment: "Price",
     },
     number: {
       type: Sequelize.BIGINT,
-      comment: "数量",
+      comment: "Quantity",
     },
     published: {
       type: Sequelize.BOOLEAN,
-      comment: "是否发布",
+      comment: "Published",
       defaultValue: false
     }
   });
