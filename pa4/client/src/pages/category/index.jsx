@@ -24,7 +24,7 @@ const Categorie = () => {
     const datas = formRef.current.getFieldsValue();
     CategorieDataService.create(datas).then((res) => {
       if (res.status === 200) {
-        message.success("添加分类成功", 1, () => {
+        message.success("Successfully add category", 1, () => {
           HandleRefresh();
         });
         setVisible(false);
@@ -39,7 +39,7 @@ const Categorie = () => {
   const handleDelete = ({ id }) => {
     CategorieDataService.delete(id).then((res) => {
       if (res.status === 200) {
-        message.success("删除成功", 1, () => {
+        message.success("Successfully delete", 1, () => {
           HandleRefresh();
         });
       } else {
@@ -49,7 +49,7 @@ const Categorie = () => {
   };
   const columns = [
     {
-      title: "序号",
+      title: "Index",
       render: (text, round, index) => {
         return <span>{index + 1}</span>;
       },
@@ -58,12 +58,12 @@ const Categorie = () => {
       key: "id",
     },
     {
-      title: "分类名称",
+      title: "Category Name",
       dataIndex: "name",
       key: "name",
     },
     {
-      title: "创建时间",
+      title: "Create At",
       dataIndex: "createdAt",
       key: "createdAt",
       width: 160,
@@ -73,7 +73,7 @@ const Categorie = () => {
       },
     },
     {
-      title: "更新时间",
+      title: "Update At",
       dataIndex: "updatedAt",
       key: "updatedAt",
       width: 160,
@@ -83,7 +83,7 @@ const Categorie = () => {
       },
     },
     {
-      title: "操作",
+      title: "Edit",
       key: "id",
       align: "center",
       width: 70,
@@ -110,13 +110,13 @@ const Categorie = () => {
             setVisible(true)
           }}
         >
-          添加
+          Add
         </Button>
       </div>
       <Modal
-        title="添加分类"
-        cancelText="取消"
-        okText="保存"
+        title="Add Category"
+        cancelText="Cancel"
+        okText="Save"
         visible={visible}
         onOk={handleOk}
         onCancel={handleCancel}
@@ -130,9 +130,9 @@ const Categorie = () => {
           ref={formRef}
         >
           <Form.Item
-            label="分类"
+            label="Category"
             name="name"
-            rules={[{ required: true, message: "分类名称不能为空" }]}
+            rules={[{ required: true, message: "Category can't be empty" }]}
           >
             <Input />
           </Form.Item>

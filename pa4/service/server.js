@@ -14,13 +14,13 @@ const corsOptions = {
   origin: "*"
 };
 
-//配置 
+//config
 const storage = multer.diskStorage({ 
-//文件保存路径 注意路径必须存在
+//the address to save files, must exists
 	destination: function (req, file, cb) { 
 		cb(null, 'upload/') 
 	},
-	//修改文件名称 
+	//edit file name
 	filename: function (req, file, cb) { 
 		var fileFormat = (file.originalname).split(".");
 		cb(null, Date.now() + "." + fileFormat[fileFormat.length - 1]); 
@@ -46,7 +46,7 @@ db.sequelize.sync();
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
+  res.json({ message: "Welcome to bestduck application." });
 });
 
 app.post('/api/upload', upload.single("imgs"), function (req, res) {
@@ -57,7 +57,6 @@ app.post('/api/upload', upload.single("imgs"), function (req, res) {
 });
 
 require("./app/routes/goods")(app);
-require("./app/routes/user")(app);
 require("./app/routes/category")(app);
 
 // set port, listen for requests

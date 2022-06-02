@@ -35,7 +35,7 @@ const Home = () => {
         <Form.Item
           name="categoryId"
         >
-          <Select placeholder="选择分类">
+          <Select placeholder="Choose Category">
             {
               categoryList.map(item => {
                 return <Select.Option key={item.id} value={item.id}>{item.name}</Select.Option>
@@ -46,7 +46,7 @@ const Home = () => {
         <Form.Item
           name="price"
         >
-          <Select placeholder="价格区间">
+          <Select placeholder="Price range">
             <Select.Option value={1}>0 ~ 1000</Select.Option>
             <Select.Option value={2}>1000 ~ 5000</Select.Option>
             <Select.Option value={3}>5000 ~ 10000</Select.Option>
@@ -56,11 +56,11 @@ const Home = () => {
         <Form.Item
           name="title"
         >
-          <Input placeholder='请搜索' />
+          <Input placeholder='Search' />
         </Form.Item>
         <Form.Item>
           <Button type="primary" htmlType="submit">
-            搜索
+            search
           </Button>
         </Form.Item>
       </Form>

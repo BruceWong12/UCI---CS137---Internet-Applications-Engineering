@@ -21,6 +21,5 @@ db.sequelize = sequelize;
 
 db.goods = require("./goods.model")(sequelize, Sequelize);
 db.category = require("./category.model")(sequelize, Sequelize);
-db.user = require("./user.model")(sequelize, Sequelize);
 
 module.exports = db;

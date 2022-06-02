@@ -4,7 +4,6 @@ import "antd/dist/antd.css";
 import { Layout, Menu, Avatar } from "antd";
 import Home from "./pages/home";
 import CateGory from "./pages/category";
-import User from "./pages/user";
 import Goods from "./pages/goods";
 import Detail from './pages/detail';
 import "./App.css";
@@ -23,15 +22,12 @@ const App = () => {
     if (pathname.includes("category")) {
       return "category";
     }
-    if (pathname.includes("user")) {
-      return "user";
-    }
     return "home";
   }, [location]);
   return (
     <Layout>
       <Header>
-        <h1 className="logo">LOGO</h1>
+        <h1 className="logo">BD</h1>
         <Menu
           theme="dark"
           mode="horizontal"
@@ -46,15 +42,11 @@ const App = () => {
             },
             {
               key: "goods",
-              label: "Goods",
+              label: "Products",
             },
             {
               key: "category",
               label: "Category",
-            },
-            {
-              key: "user",
-              label: "User",
             },
           ]}
         />
@@ -75,7 +67,6 @@ const App = () => {
           <Route exact path="/goods" component={Goods} />
           <Route exact path="/good/:id" component={Detail} />
           <Route exact path="/category" component={CateGory} />
-          <Route exact path="/user" component={User} />
         </Switch>
       </Content>
     </Layout>

@@ -1,11 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 4.9.1
--- https://www.phpmyadmin.net/
---
--- 主机： 172.19.0.1:3306
--- 生成日期： 2022-06-01 08:27:31
--- 服务器版本： 5.7.22
--- PHP 版本： 7.2.31
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +12,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- 数据库： `testdb`
+-- Database： `testdb`
 --
 
 -- --------------------------------------------------------

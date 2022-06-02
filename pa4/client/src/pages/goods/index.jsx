@@ -53,7 +53,7 @@ const User = () => {
       case "delete":
         GoodsDataService.delete(record.id).then((res) => {
           if (res.status === 200) {
-            message.success("删除成功");
+            message.success("Successfully delete");
             HandleRefresh();
           } else {
             message.warning(res.data.message);
@@ -69,26 +69,28 @@ const User = () => {
     if (!formRef.current.isFieldsTouched()) {
       return
     }
-    const datas = formRef.current.getFieldsValue();
-    const find = categoryList.find(item => item.id === datas.categoryId)
-    datas.category = find ? find.name : null
-    datas.userId = "00ebd457-3604-49e8-8e77-82e892f94669"
-    if (datas.id) { // 编辑
-      GoodsDataService.update(datas.id, datas).then(res => {
+    const data = formRef.current.getFieldsValue();
+    const find = categoryList.find(item => item.id === data.categoryId)
+    data.category = find ? find.name : null
+    data.userId = "00ebd457-3604-49e8-8e77-82e892f94669"
+    if (data.id) { // Edit
+      GoodsDataService.update(data.id, data).then(res => {
         if (res.status === 200) {
           setVisible(false);
-          message.success("编辑成功", 1, () => {
+          message.success("Edit Successfully", 1, () => {
             HandleRefresh();
           });
         } else {
           message.warning(res.data.message);
         }
       })
-    } else { // 添加
-      GoodsDataService.create(datas).then(res => {
+    }
+    // add
+    else {
+      GoodsDataService.create(data).then(res => {
         if (res.status === 200) {
           setVisible(false);
-          message.success("添加成功", 1, () => {
+          message.success("Add Successfully", 1, () => {
             HandleRefresh();
           });
         } else {
@@ -99,7 +101,7 @@ const User = () => {
   };
   const columns = [
     {
-      title: "序号",
+      title: "Index",
       render: (text, round, index) => {
         return <span>{index + 1}</span>;
       },
@@ -108,17 +110,17 @@ const User = () => {
       key: "id",
     },
     {
-      title: "状态",
+      title: "Status",
       dataIndex: "published",
       key: "published",
       width: 90,
       align: "center",
       render: (text) => {
-        return <Switch checkedChildren="上架" unCheckedChildren="下架" defaultChecked={text} />
+        return <Switch checkedChildren="Published" unCheckedChildren="Pending" defaultChecked={text} />
       }
     },
     {
-      title: "图片",
+      title: "Image",
       dataIndex: "imgs",
       key: "imgs",
       render: (text) => {
@@ -134,12 +136,12 @@ const User = () => {
       }
     },
     {
-      title: "标题",
+      title: "Title",
       dataIndex: "title",
       key: "title",
     },
     {
-      title: "价格",
+      title: "Price",
       dataIndex: "price",
       key: "price",
       width: 90,
@@ -149,32 +151,26 @@ const User = () => {
       },
     },
     {
-      title: "数量",
+      title: "Qty",
       dataIndex: "number",
       key: "number",
       align: "center",
       width: 80
     },
     {
-      title: "描述",
+      title: "Description",
       dataIndex: "description",
       key: "description",
     },
     {
-      title: "分类",
+      title: "Category",
       dataIndex: "category",
       key: "category",
       align: "center",
       width: 100
     },
     {
-      title: "作者",
-      dataIndex: "user",
-      width: 80,
-      key: "user",
-    },
-    {
-      title: "创建时间",
+      title: "Create At",
       dataIndex: "createdAt",
       key: "createdAt",
       width: 160,
@@ -184,7 +180,7 @@ const User = () => {
       },
     },
     {
-      title: "更新时间",
+      title: "Update At",
       dataIndex: "updatedAt",
       key: "updatedAt",
       width: 160,
@@ -194,7 +190,7 @@ const User = () => {
       },
     },
     {
-      title: "操作",
+      title: "Edit",
       key: "id",
       align: "center",
       width: 70,
@@ -226,7 +222,7 @@ const User = () => {
           icon={<PlusOutlined />}
           onClick={() => handleAction("add")}
         >
-          添加
+          Add
         </Button>
       </div>
       <Table
@@ -237,9 +233,9 @@ const User = () => {
         columns={columns}
       />
       <Modal
-        title="添加商品"
-        cancelText="取消"
-        okText="保存"
+        title="Add Products"
+        cancelText="Cancel"
+        okText="Save"
         visible={visible}
         onOk={handleOk}
         onCancel={() => setVisible(false)}
@@ -260,33 +256,21 @@ const User = () => {
           >
             <Input />
           </Form.Item>
-          <Form.Item
-            label="用户"
-            name="user"
-            style={{display: 'none'}}
-          >
-            <Input />
-          </Form.Item>
-          <Form.Item
-            label="用户Id"
-            name="userId"
-            style={{display: 'none'}}
-          >
-            <Input />
-          </Form.Item>
+
+
           <Row gutter={20}>
             <Col span={12}>
               <Form.Item
-                label="标题"
+                label="Title"
                 name="title"
-                rules={[{ required: true, message: "标题不能为空" }]}
+                rules={[{ required: true, message: "Title can't be empty" }]}
               >
-                <Input placeholder="请输入标题" />
+                <Input placeholder="Input title" />
               </Form.Item>
             </Col>
             <Col span={12}>
-              <Form.Item label="分类" name="categoryId" rules={[{ required: true, message: "分类不能为空" }]}>
-                <Select placeholder="请选择分类">
+              <Form.Item label="Category" name="categoryId" rules={[{ required: true, message: "Category can't be empty" }]}>
+                <Select placeholder="Please choose category">
                   {
                     categoryList.map(item => <Select.Option key={item.id} value={item.id}>{item.name}</Select.Option> )
                   }
@@ -297,37 +281,37 @@ const User = () => {
           <Row gutter={20}>
             <Col span={12}>
               <Form.Item
-                label="金额"
+                label="Price"
                 name="price"
-                rules={[{ required: true, message: "标题不能为空" }]}
+                rules={[{ required: true, message: "Price can't be empty" }]}
               >
-                <InputNumber style={{width: 180}} placeholder="请输入金额" />
+                <InputNumber style={{width: 180}} placeholder="Please input price" />
               </Form.Item>
             </Col>
             <Col span={12}>
               <Form.Item
-                label="数量"
+                label="Qty"
                 name="number"
-                rules={[{ required: true, message: "标题不能为空" }]}
+                rules={[{ required: true, message: "Qty can't be empty" }]}
               >
-                <InputNumber style={{width: 180}} placeholder="请输入数量"/>
+                <InputNumber style={{width: 180}} placeholder="Please input qty"/>
               </Form.Item>
             </Col>
           </Row>
           <Form.Item
-            label="图片"
+            label="image"
             name="imgs"
           >
             <Upload />
           </Form.Item>
           <Form.Item
-            label="描述"
+            label="Description"
             name="description"
           >
-            <TextArea rows={4} placeholder="请输入描述" />
+            <TextArea rows={4} placeholder="Please type in description" />
           </Form.Item>
           <Form.Item name="published" valuePropName="checked">
-            <Checkbox>是否上架</Checkbox>
+            <Checkbox>Publish</Checkbox>
           </Form.Item>
         </Form>
       </Modal>

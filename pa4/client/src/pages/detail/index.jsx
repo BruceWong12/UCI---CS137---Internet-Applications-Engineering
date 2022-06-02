@@ -16,7 +16,7 @@ const Detail = () => {
   }, [id])
   if (Object.keys(data).length < 1) {
     return <section className='detail'>
-      <span className='no-data'>暂无此商品</span>
+      <span className='no-data'>No product available to show</span>
     </section>
   }
   return <section className='detail'>
@@ -27,10 +27,10 @@ const Detail = () => {
       <dd>
         <h2>{data.title}</h2>
         <p className='price'>
-          价格:<span>￥{data.price}</span>
+          Price:<span>￥{data.price}</span>
         </p>
         <p className='number'>
-          数量:<span>{data.number}</span>
+          Qty:<span>{data.number}</span>
         </p>
       </dd>
     </dl>
