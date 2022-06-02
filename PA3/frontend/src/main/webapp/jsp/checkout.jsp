@@ -264,7 +264,7 @@
         <br>
     </div>
 </section>
-<footer><p>BestDuck Web Design, Copyright &copy; 2020</p></footer>
+<footer><p>BestDuck Web Design, Copyright &copy; 2022</p></footer>
 </body>
 <script src="jquery-3.6.0-min.js"></script>
 <script>
